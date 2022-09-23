@@ -113,6 +113,8 @@ namespace CppCLRWinFormsProject {
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
+        
+        //add clicks
 		void InitializeComponent(void)
 		{
             this->label1 = (gcnew System::Windows::Forms::Label());
