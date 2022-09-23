@@ -242,6 +242,7 @@ namespace CppCLRWinFormsProject {
             this->label3->Size = System::Drawing::Size(76, 16);
             this->label3->TabIndex = 32;
             this->label3->Text = L"Blue Player";
+            this->label3->Click += gcnew System::EventHandler(this, &Form1::label3_Click_1);
             // 
             // groupBox1
             // 
@@ -1207,5 +1208,7 @@ namespace CppCLRWinFormsProject {
         }
     }
  
+private: System::Void label3_Click_1(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
