@@ -871,6 +871,7 @@ namespace CppCLRWinFormsProject {
             this->textBox1->Size = System::Drawing::Size(47, 22);
             this->textBox1->TabIndex = 37;
             this->textBox1->Text = L"6";
+            this->textBox1->TextChanged += gcnew System::EventHandler(this, &Form1::textBox1_TextChanged);
             // 
             // label4
             // 
@@ -1044,83 +1045,163 @@ namespace CppCLRWinFormsProject {
 
         }
 #pragma endregion
+        int Blue_Score = 0;
+        int Red_Score = 0;
+        int matrixRow = 3;
+        int matrixCol = 9;
+        char symbol;
+        String^ Type_Game;
+        //need this many?
+
+        array<Button^, 2>^ b = gcnew array<Button^, 2>(3, 9)
+        {
+            {SOSbutton10, SOSbutton11, SOSbutton12, SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18},
+            { SOSbutton19,SOSbutton20,SOSbutton21,SOSbutton22,SOSbutton23,SOSbutton24,SOSbutton25,SOSbutton26,SOSbutton27 },
+            { SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31,SOSbutton32,SOSbutton33,SOSbutton34,SOSbutton35,SOSbutton36 }//27 elts in both
+        };
+
+        array<Button^, 1>^ b2 = gcnew array<Button^, 1>(27)
+        {
+            SOSbutton10, SOSbutton11, SOSbutton12, SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18,
+                SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24, SOSbutton25, SOSbutton26, SOSbutton27,
+                SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36
+        };
+
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
     private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
     }
-private: System::Void SOSbutton16_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton15_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton14_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton13_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton12_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton3_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton2_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton1_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton4_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton5_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton6_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton7_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton8_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton9_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton10_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton11_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton17_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton18_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton19_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton20_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton21_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton22_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton23_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton24_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton25_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton26_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton27_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton28_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton29_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton30_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton31_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton32_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton33_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton34_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton35_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void SOSbutton36_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
+    private: System::Void SOSbutton16_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton15_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton14_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton13_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton12_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton3_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton2_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton1_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton4_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton5_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton6_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton7_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton8_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton9_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton10_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton11_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton17_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton18_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton19_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton20_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton21_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton22_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton23_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton24_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton25_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton26_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton27_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton28_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton29_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton30_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton31_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton32_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton33_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton34_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton35_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void SOSbutton36_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+        }
+    private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+        if (String::IsNullOrEmpty(textBox1->Text)) {
+            textBox1->Text = "3";
+        }
+        int num = Convert::ToInt32(textBox1->Text);
+
+        if (num == 3) {
+            ;
+            //int matrixRow = 9, matrixCol = 3;
+            for (int i = matrixRow - 1; i == 0; i--) {
+                for (int j = matrixCol - 1; j == 0; j--) {
+                    b[i, j]->Enabled = false;
+                    b[i, j]->Visible = false;
+                }
+            }
+            tableLayoutPanel1->ColumnCount = num;
+            tableLayoutPanel1->RowCount = num;
+
+        }
+        if (num == 4) {
+            for (int i = 0; i == 6; i++) {
+                b2[i]->Enabled = true;
+                b2[i]->Visible = true;
+            }
+            for (int i = 7; i == 26; i++) {
+                b2[i]->Enabled = false;
+                b2[i]->Visible = false;
+            }
+            tableLayoutPanel1->ColumnCount = num;
+            tableLayoutPanel1->RowCount = num;
+        }
+        if (num == 5) {
+            for (int i = 26; i == 16; i--) {
+                b2[i]->Enabled = false;
+                b2[i]->Visible = false;
+            }
+            for (int i = 15; i == 0; i--) {
+                b2[i]->Enabled = true;
+                b2[i]->Visible = true;
+            }
+            tableLayoutPanel1->ColumnCount = num;
+            tableLayoutPanel1->RowCount = num;
+
+        }
+        if (num == 6) {
+            for (int i = matrixRow - 1; i == 0; i--) {
+                for (int j = matrixCol - 1; j == 0; j--) {
+                    b[i, j]->Enabled = true;
+                    b[i, j]->Visible = true;
+                }
+            }
+            tableLayoutPanel1->ColumnCount = num;
+            tableLayoutPanel1->RowCount = num;
+        }
+        if (num >= 7)
+        {
+            textBox1->Text = "6";
+        }
 };
 }
