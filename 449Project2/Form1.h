@@ -22,6 +22,18 @@ namespace CppCLRWinFormsProject {
 			//
 			//TODO: Add the constructor code here
 			//
+            b2 = gcnew array<Button^, 1>(27)
+            {
+                SOSbutton10, SOSbutton11, SOSbutton12, SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18,
+                    SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24, SOSbutton25, SOSbutton26, SOSbutton27,
+                    SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36
+            };
+            b = gcnew array<Button^, 2>(3, 9)
+            {
+                {SOSbutton10, SOSbutton11, SOSbutton12, SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18},
+                { SOSbutton19,SOSbutton20,SOSbutton21,SOSbutton22,SOSbutton23,SOSbutton24,SOSbutton25,SOSbutton26,SOSbutton27 },
+                { SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31,SOSbutton32,SOSbutton33,SOSbutton34,SOSbutton35,SOSbutton36 }//27 elts in both
+            };
 		}
 
 	protected:
@@ -107,6 +119,8 @@ namespace CppCLRWinFormsProject {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
+        array<Button^, 1>^ b2;
+        array<Button^, 2>^ b;
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
@@ -184,6 +198,7 @@ namespace CppCLRWinFormsProject {
             this->RedTurn = (gcnew System::Windows::Forms::RadioButton());
             this->BlueTurn = (gcnew System::Windows::Forms::RadioButton());
             this->label5 = (gcnew System::Windows::Forms::Label());
+
             this->groupBox3->SuspendLayout();
             this->groupBox1->SuspendLayout();
             this->groupBox5->SuspendLayout();
@@ -243,7 +258,6 @@ namespace CppCLRWinFormsProject {
             this->label3->Size = System::Drawing::Size(76, 16);
             this->label3->TabIndex = 32;
             this->label3->Text = L"Blue Player";
-            this->label3->Click += gcnew System::EventHandler(this, &Form1::label3_Click_1);
             // 
             // groupBox1
             // 
@@ -417,78 +431,19 @@ namespace CppCLRWinFormsProject {
             this->tableLayoutPanel1->Size = System::Drawing::Size(487, 476);
             this->tableLayoutPanel1->TabIndex = 35;
             // 
-            // SOSbutton16
+            // SOSbutton1
             // 
-            this->SOSbutton16->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+            this->SOSbutton1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
-            this->SOSbutton16->Location = System::Drawing::Point(246, 162);
-            this->SOSbutton16->Name = L"SOSbutton16";
-            this->SOSbutton16->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton16->TabIndex = 16;
-            this->SOSbutton16->UseVisualStyleBackColor = true;
-            // 
-            // SOSbutton15
-            // 
-            this->SOSbutton15->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
-            this->SOSbutton15->Location = System::Drawing::Point(166, 162);
-            this->SOSbutton15->Name = L"SOSbutton15";
-            this->SOSbutton15->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton15->TabIndex = 15;
-            this->SOSbutton15->UseVisualStyleBackColor = true;
-            // 
-            // SOSbutton14
-            // 
-            this->SOSbutton14->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
-            this->SOSbutton14->Location = System::Drawing::Point(86, 162);
-            this->SOSbutton14->Name = L"SOSbutton14";
-            this->SOSbutton14->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton14->TabIndex = 14;
-            this->SOSbutton14->UseVisualStyleBackColor = true;
-            // 
-            // SOSbutton13
-            // 
-            this->SOSbutton13->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
-            this->SOSbutton13->Location = System::Drawing::Point(6, 162);
-            this->SOSbutton13->Name = L"SOSbutton13";
-            this->SOSbutton13->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton13->TabIndex = 13;
-            this->SOSbutton13->UseVisualStyleBackColor = true;
-            // 
-            // SOSbutton12
-            // 
-            this->SOSbutton12->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
-            this->SOSbutton12->Location = System::Drawing::Point(406, 84);
-            this->SOSbutton12->Name = L"SOSbutton12";
-            this->SOSbutton12->Size = System::Drawing::Size(75, 69);
-            this->SOSbutton12->TabIndex = 12;
-            this->SOSbutton12->UseVisualStyleBackColor = true;
-            // 
-            // SOSbutton3
-            // 
-            this->SOSbutton3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->SOSbutton1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->SOSbutton3->Location = System::Drawing::Point(166, 6);
-            this->SOSbutton3->Name = L"SOSbutton3";
-            this->SOSbutton3->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton3->TabIndex = 2;
-            this->SOSbutton3->UseVisualStyleBackColor = true;
+            this->SOSbutton1->Location = System::Drawing::Point(6, 6);
+            this->SOSbutton1->Name = L"SOSbutton1";
+            this->SOSbutton1->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton1->TabIndex = 9;
+            this->SOSbutton1->UseVisualStyleBackColor = true;
+            this->SOSbutton1->Click += gcnew System::EventHandler(this, &Form1::SOSbutton1_Click);
             // 
             // SOSbutton2
             // 
@@ -503,18 +458,18 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton2->TabIndex = 1;
             this->SOSbutton2->UseVisualStyleBackColor = true;
             // 
-            // SOSbutton1
+            // SOSbutton3
             // 
-            this->SOSbutton1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+            this->SOSbutton3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->SOSbutton3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->SOSbutton1->Location = System::Drawing::Point(6, 6);
-            this->SOSbutton1->Name = L"SOSbutton1";
-            this->SOSbutton1->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton1->TabIndex = 9;
-            this->SOSbutton1->UseVisualStyleBackColor = true;
+            this->SOSbutton3->Location = System::Drawing::Point(166, 6);
+            this->SOSbutton3->Name = L"SOSbutton3";
+            this->SOSbutton3->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton3->TabIndex = 2;
+            this->SOSbutton3->UseVisualStyleBackColor = true;
             // 
             // SOSbutton4
             // 
@@ -616,6 +571,68 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton11->Size = System::Drawing::Size(71, 69);
             this->SOSbutton11->TabIndex = 11;
             this->SOSbutton11->UseVisualStyleBackColor = true;
+            // 
+            // SOSbutton12
+            // 
+            this->SOSbutton12->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
+            this->SOSbutton12->Location = System::Drawing::Point(406, 84);
+            this->SOSbutton12->Name = L"SOSbutton12";
+            this->SOSbutton12->Size = System::Drawing::Size(75, 69);
+            this->SOSbutton12->TabIndex = 12;
+            this->SOSbutton12->UseVisualStyleBackColor = true;
+            // 
+            // SOSbutton13
+            // 
+            this->SOSbutton13->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
+            this->SOSbutton13->Location = System::Drawing::Point(6, 162);
+            this->SOSbutton13->Name = L"SOSbutton13";
+            this->SOSbutton13->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton13->TabIndex = 13;
+            this->SOSbutton13->UseVisualStyleBackColor = true;
+            // 
+            // SOSbutton14
+            // 
+            this->SOSbutton14->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
+            this->SOSbutton14->Location = System::Drawing::Point(86, 162);
+            this->SOSbutton14->Name = L"SOSbutton14";
+            this->SOSbutton14->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton14->TabIndex = 14;
+            this->SOSbutton14->UseVisualStyleBackColor = true;
+            // 
+            // SOSbutton15
+            // 
+            this->SOSbutton15->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
+            this->SOSbutton15->Location = System::Drawing::Point(166, 162);
+            this->SOSbutton15->Name = L"SOSbutton15";
+            this->SOSbutton15->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton15->TabIndex = 15;
+            this->SOSbutton15->UseVisualStyleBackColor = true;
+            //this->SOSbutton15->Click += gcnew System::EventHandler(this, &Form1::SOSbutton15_Click);
+            // 
+            // SOSbutton16
+            // 
+            this->SOSbutton16->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
+            this->SOSbutton16->Location = System::Drawing::Point(246, 162);
+            this->SOSbutton16->Name = L"SOSbutton16";
+            this->SOSbutton16->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton16->TabIndex = 16;
+            this->SOSbutton16->UseVisualStyleBackColor = true;
+            //this->SOSbutton16->Click += gcnew System::EventHandler(this, &Form1::SOSbutton16_Click);
             // 
             // SOSbutton17
             // 
@@ -968,6 +985,7 @@ namespace CppCLRWinFormsProject {
             this->button2->TabIndex = 40;
             this->button2->Text = L"button2";
             this->button2->UseVisualStyleBackColor = true;
+            this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
             // 
             // groupBox4
             // 
@@ -1055,21 +1073,7 @@ namespace CppCLRWinFormsProject {
         int matrixCol = 9;
         char symbol;
         String^ Type_Game;
-        //need this many?
-
-        array<Button^, 2>^ b = gcnew array<Button^, 2>(3, 9)
-        {
-            {SOSbutton10, SOSbutton11, SOSbutton12, SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18},
-            { SOSbutton19,SOSbutton20,SOSbutton21,SOSbutton22,SOSbutton23,SOSbutton24,SOSbutton25,SOSbutton26,SOSbutton27 },
-            { SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31,SOSbutton32,SOSbutton33,SOSbutton34,SOSbutton35,SOSbutton36 }//27 elts in both
-        };
-
-        array<Button^, 1>^ b2 = gcnew array<Button^, 1>(27)
-        {
-            SOSbutton10, SOSbutton11, SOSbutton12, SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18,
-                SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24, SOSbutton25, SOSbutton26, SOSbutton27,
-                SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36
-        };
+        //need this many? 
         
         void GameType()
         {
@@ -1182,6 +1186,9 @@ namespace CppCLRWinFormsProject {
             }
         }
 
+       
+        
+
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
         if (String::IsNullOrEmpty(textBox1->Text)) {
             textBox1->Text = "3";
@@ -1241,7 +1248,7 @@ namespace CppCLRWinFormsProject {
             textBox1->Text = "6";
         }
     }
-
+  
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
     private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1268,7 +1275,6 @@ namespace CppCLRWinFormsProject {
 
         }
     }
-
     private: System::Void SOSbutton2_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton2->Enabled = true;
@@ -1291,794 +1297,11 @@ namespace CppCLRWinFormsProject {
 
         }
     }
-
-    private: System::Void SOSbutton3_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton3->Enabled = true;
-            SOSbutton3->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton3->Enabled = true;
-            SOSbutton3->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton3->Enabled = true;
-            SOSbutton3->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton3->Enabled = true;
-            SOSbutton3->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton4_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton4->Enabled = true;
-            SOSbutton4->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton4->Enabled = true;
-            SOSbutton4->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton4->Enabled = true;
-            SOSbutton4->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton4->Enabled = true;
-            SOSbutton4->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton5_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton5->Enabled = true;
-            SOSbutton5->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton5->Enabled = true;
-            SOSbutton5->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton5->Enabled = true;
-            SOSbutton5->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton5->Enabled = true;
-            SOSbutton5->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton6_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton6->Enabled = true;
-            SOSbutton6->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton6->Enabled = true;
-            SOSbutton6->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton6->Enabled = true;
-            SOSbutton6->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton6->Enabled = true;
-            SOSbutton6->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton7_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton7->Enabled = true;
-            SOSbutton7->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton7->Enabled = true;
-            SOSbutton7->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton7->Enabled = true;
-            SOSbutton7->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton7->Enabled = true;
-            SOSbutton7->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton8_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton8->Enabled = true;
-            SOSbutton8->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton8->Enabled = true;
-            SOSbutton8->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton8->Enabled = true;
-            SOSbutton8->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton8->Enabled = true;
-            SOSbutton8->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton9_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton9->Enabled = true;
-            SOSbutton9->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton9->Enabled = true;
-            SOSbutton9->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton9->Enabled = true;
-            SOSbutton9->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton9->Enabled = true;
-            SOSbutton9->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton10_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton10->Enabled = true;
-            SOSbutton10->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton10->Enabled = true;
-            SOSbutton10->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton10->Enabled = true;
-            SOSbutton10->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton10->Enabled = true;
-            SOSbutton10->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton11_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton11->Enabled = true;
-            SOSbutton11->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton11->Enabled = true;
-            SOSbutton11->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton11->Enabled = true;
-            SOSbutton11->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton11->Enabled = true;
-            SOSbutton11->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton12_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton12->Enabled = true;
-            SOSbutton12->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton12->Enabled = true;
-            SOSbutton12->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton12->Enabled = true;
-            SOSbutton12->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton12->Enabled = true;
-            SOSbutton12->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton13_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton13->Enabled = true;
-            SOSbutton13->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton13->Enabled = true;
-            SOSbutton13->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton13->Enabled = true;
-            SOSbutton13->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton13->Enabled = true;
-            SOSbutton13->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton14_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton14->Enabled = true;
-            SOSbutton14->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton14->Enabled = true;
-            SOSbutton14->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton14->Enabled = true;
-            SOSbutton14->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton14->Enabled = true;
-            SOSbutton14->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton15_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton15->Enabled = true;
-            SOSbutton15->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton15->Enabled = true;
-            SOSbutton15->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton15->Enabled = true;
-            SOSbutton15->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton15->Enabled = true;
-            SOSbutton15->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton16_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton16->Enabled = true;
-            SOSbutton16->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton16->Enabled = true;
-            SOSbutton16->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton16->Enabled = true;
-            SOSbutton16->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton16->Enabled = true;
-            SOSbutton16->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton17_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton17->Enabled = true;
-            SOSbutton17->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton17->Enabled = true;
-            SOSbutton17->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton17->Enabled = true;
-            SOSbutton17->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton17->Enabled = true;
-            SOSbutton17->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton18_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton18->Enabled = true;
-            SOSbutton18->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton18->Enabled = true;
-            SOSbutton18->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton18->Enabled = true;
-            SOSbutton18->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton18->Enabled = true;
-            SOSbutton18->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton19_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton19->Enabled = true;
-            SOSbutton19->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton19->Enabled = true;
-            SOSbutton19->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton19->Enabled = true;
-            SOSbutton19->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton19->Enabled = true;
-            SOSbutton19->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton20_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton20->Enabled = true;
-            SOSbutton20->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton20->Enabled = true;
-            SOSbutton20->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton20->Enabled = true;
-            SOSbutton20->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton20->Enabled = true;
-            SOSbutton20->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton21_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton21->Enabled = true;
-            SOSbutton21->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton21->Enabled = true;
-            SOSbutton21->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton21->Enabled = true;
-            SOSbutton21->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton21->Enabled = true;
-            SOSbutton21->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton22_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton22->Enabled = true;
-            SOSbutton22->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton22->Enabled = true;
-            SOSbutton22->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton22->Enabled = true;
-            SOSbutton22->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton22->Enabled = true;
-            SOSbutton22->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton23_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton23->Enabled = true;
-            SOSbutton23->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton23->Enabled = true;
-            SOSbutton23->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton23->Enabled = true;
-            SOSbutton23->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton23->Enabled = true;
-            SOSbutton23->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton24_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton24->Enabled = true;
-            SOSbutton24->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton24->Enabled = true;
-            SOSbutton24->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton24->Enabled = true;
-            SOSbutton24->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton24->Enabled = true;
-            SOSbutton24->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton25_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton25->Enabled = true;
-            SOSbutton25->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton25->Enabled = true;
-            SOSbutton25->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton25->Enabled = true;
-            SOSbutton25->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton25->Enabled = true;
-            SOSbutton25->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton26_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton26->Enabled = true;
-            SOSbutton26->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton26->Enabled = true;
-            SOSbutton26->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton26->Enabled = true;
-            SOSbutton26->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton26->Enabled = true;
-            SOSbutton26->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton27_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton27->Enabled = true;
-            SOSbutton27->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton27->Enabled = true;
-            SOSbutton27->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton27->Enabled = true;
-            SOSbutton27->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton27->Enabled = true;
-            SOSbutton27->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton28_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton28->Enabled = true;
-            SOSbutton28->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton28->Enabled = true;
-            SOSbutton28->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton28->Enabled = true;
-            SOSbutton28->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton28->Enabled = true;
-            SOSbutton28->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton29_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton29->Enabled = true;
-            SOSbutton29->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton29->Enabled = true;
-            SOSbutton29->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton29->Enabled = true;
-            SOSbutton29->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton29->Enabled = true;
-            SOSbutton29->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton30_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton30->Enabled = true;
-            SOSbutton30->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton30->Enabled = true;
-            SOSbutton30->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton30->Enabled = true;
-            SOSbutton30->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton30->Enabled = true;
-            SOSbutton30->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton31_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton31->Enabled = true;
-            SOSbutton31->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton31->Enabled = true;
-            SOSbutton31->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton31->Enabled = true;
-            SOSbutton31->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton31->Enabled = true;
-            SOSbutton31->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton32_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton32->Enabled = true;
-            SOSbutton32->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton32->Enabled = true;
-            SOSbutton32->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton32->Enabled = true;
-            SOSbutton32->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton32->Enabled = true;
-            SOSbutton32->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton33_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton33->Enabled = true;
-            SOSbutton33->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton33->Enabled = true;
-            SOSbutton33->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton33->Enabled = true;
-            SOSbutton33->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton33->Enabled = true;
-            SOSbutton33->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton34_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton34->Enabled = true;
-            SOSbutton34->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton34->Enabled = true;
-            SOSbutton34->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton34->Enabled = true;
-            SOSbutton34->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton34->Enabled = true;
-            SOSbutton34->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton35_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton35->Enabled = true;
-            SOSbutton35->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton35->Enabled = true;
-            SOSbutton35->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton35->Enabled = true;
-            SOSbutton35->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton35->Enabled = true;
-            SOSbutton35->Text = "O";
-
-        }
-    }
-
-    private: System::Void SOSbutton36_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
-            SOSbutton36->Enabled = true;
-            SOSbutton36->Text = "S";
-
-        }
-        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
-            SOSbutton36->Enabled = true;
-            SOSbutton36->Text = "O";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
-            SOSbutton36->Enabled = true;
-            SOSbutton36->Text = "S";
-
-        }
-        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
-            SOSbutton36->Enabled = true;
-            SOSbutton36->Text = "O";
-
-        }
-    }
+    
 
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
         button2->Text = "Hello";
         }
 
-    private: System::Void label3_Click_1(System::Object^ sender, System::EventArgs^ e) {
-    }
 };
 }
