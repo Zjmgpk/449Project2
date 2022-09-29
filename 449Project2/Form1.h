@@ -580,6 +580,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton11->Size = System::Drawing::Size(71, 69);
             this->SOSbutton11->TabIndex = 11;
             this->SOSbutton11->UseVisualStyleBackColor = true;
+            this->SOSbutton11->Click += gcnew System::EventHandler(this, &Form1::SOSbutton11_Click);
             // 
             // SOSbutton12
             // 
@@ -1461,6 +1462,8 @@ namespace CppCLRWinFormsProject {
 
         }
     }
+    private: System::Void SOSbutton10_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton11_Click(System::Object^ sender, System::EventArgs^ e){}
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
         button2->Text = "Hello";
         }
