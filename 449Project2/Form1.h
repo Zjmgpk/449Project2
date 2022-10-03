@@ -593,6 +593,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton12->Size = System::Drawing::Size(75, 69);
             this->SOSbutton12->TabIndex = 12;
             this->SOSbutton12->UseVisualStyleBackColor = true;
+            this->SOSbutton12->Click += gcnew System::EventHandler(this, &Form1::SOSbutton12_Click);
             // 
             // SOSbutton13
             // 
@@ -605,6 +606,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton13->Size = System::Drawing::Size(71, 69);
             this->SOSbutton13->TabIndex = 13;
             this->SOSbutton13->UseVisualStyleBackColor = true;
+            this->SOSbutton13->Click += gcnew System::EventHandler(this, &Form1::SOSbutton13_Click);
             // 
             // SOSbutton14
             // 
@@ -617,6 +619,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton14->Size = System::Drawing::Size(71, 69);
             this->SOSbutton14->TabIndex = 14;
             this->SOSbutton14->UseVisualStyleBackColor = true;
+            this->SOSbutton14->Click += gcnew System::EventHandler(this, &Form1::SOSbutton14_Click);
             // 
             // SOSbutton15
             // 
@@ -655,6 +658,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton17->Size = System::Drawing::Size(71, 69);
             this->SOSbutton17->TabIndex = 17;
             this->SOSbutton17->UseVisualStyleBackColor = true;
+            this->SOSbutton17->Click += gcnew System::EventHandler(this, &Form1::SOSbutton17_Click);
             // 
             // SOSbutton18
             // 
@@ -667,6 +671,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton18->Size = System::Drawing::Size(75, 69);
             this->SOSbutton18->TabIndex = 18;
             this->SOSbutton18->UseVisualStyleBackColor = true;
+            this->SOSbutton18->Click += gcnew System::EventHandler(this, &Form1::SOSbutton18_Click);
             // 
             // SOSbutton19
             // 
@@ -679,6 +684,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton19->Size = System::Drawing::Size(71, 69);
             this->SOSbutton19->TabIndex = 19;
             this->SOSbutton19->UseVisualStyleBackColor = true;
+            this->SOSbutton19->Click += gcnew System::EventHandler(this, &Form1::SOSbutton19_Click);
             // 
             // SOSbutton20
             // 
@@ -691,6 +697,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton20->Size = System::Drawing::Size(71, 69);
             this->SOSbutton20->TabIndex = 20;
             this->SOSbutton20->UseVisualStyleBackColor = true;
+            this->SOSbutton20->Click += gcnew System::EventHandler(this, &Form1::SOSbutton20_Click);
             // 
             // SOSbutton21
             // 
@@ -703,6 +710,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton21->Size = System::Drawing::Size(71, 69);
             this->SOSbutton21->TabIndex = 21;
             this->SOSbutton21->UseVisualStyleBackColor = true;
+            this->SOSbutton21->Click += gcnew System::EventHandler(this, &Form1::SOSbutton21_Click);
             // 
             // SOSbutton22
             // 
@@ -715,6 +723,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton22->Size = System::Drawing::Size(71, 69);
             this->SOSbutton22->TabIndex = 22;
             this->SOSbutton22->UseVisualStyleBackColor = true;
+            this->SOSbutton22->Click += gcnew System::EventHandler(this, &Form1::SOSbutton22_Click);
             // 
             // SOSbutton23
             // 
@@ -727,6 +736,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton23->Size = System::Drawing::Size(71, 69);
             this->SOSbutton23->TabIndex = 23;
             this->SOSbutton23->UseVisualStyleBackColor = true;
+            this->SOSbutton23->Click += gcnew System::EventHandler(this, &Form1::SOSbutton23_Click);
             // 
             // SOSbutton24
             // 
@@ -739,6 +749,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton24->Size = System::Drawing::Size(75, 69);
             this->SOSbutton24->TabIndex = 24;
             this->SOSbutton24->UseVisualStyleBackColor = true;
+            this->SOSbutton24->Click += gcnew System::EventHandler(this, &Form1::SOSbutton24_Click);
             // 
             // SOSbutton25
             // 
@@ -751,6 +762,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton25->Size = System::Drawing::Size(71, 69);
             this->SOSbutton25->TabIndex = 25;
             this->SOSbutton25->UseVisualStyleBackColor = true;
+            this->SOSbutton25->Click += gcnew System::EventHandler(this, &Form1::SOSbutton25_Click);
             // 
             // SOSbutton26
             // 
@@ -763,6 +775,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton26->Size = System::Drawing::Size(71, 69);
             this->SOSbutton26->TabIndex = 26;
             this->SOSbutton26->UseVisualStyleBackColor = true;
+            this->SOSbutton26->Click += gcnew System::EventHandler(this, &Form1::SOSbutton26_Click);
             // 
             // SOSbutton27
             // 
@@ -775,6 +788,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton27->Size = System::Drawing::Size(71, 69);
             this->SOSbutton27->TabIndex = 27;
             this->SOSbutton27->UseVisualStyleBackColor = true;
+            this->SOSbutton27->Click += gcnew System::EventHandler(this, &Form1::SOSbutton27_Click);
             // 
             // SOSbutton28
             // 
@@ -787,6 +801,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton28->Size = System::Drawing::Size(71, 69);
             this->SOSbutton28->TabIndex = 29;
             this->SOSbutton28->UseVisualStyleBackColor = true;
+            this->SOSbutton28->Click += gcnew System::EventHandler(this, &Form1::SOSbutton28_Click);
             // 
             // SOSbutton29
             // 
@@ -799,6 +814,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton29->Size = System::Drawing::Size(71, 69);
             this->SOSbutton29->TabIndex = 31;
             this->SOSbutton29->UseVisualStyleBackColor = true;
+            this->SOSbutton29->Click += gcnew System::EventHandler(this, &Form1::SOSbutton29_Click);
             // 
             // SOSbutton30
             // 
@@ -811,6 +827,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton30->Size = System::Drawing::Size(75, 69);
             this->SOSbutton30->TabIndex = 32;
             this->SOSbutton30->UseVisualStyleBackColor = true;
+            this->SOSbutton30->Click += gcnew System::EventHandler(this, &Form1::SOSbutton30_Click);
             // 
             // SOSbutton31
             // 
@@ -823,6 +840,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton31->Size = System::Drawing::Size(71, 74);
             this->SOSbutton31->TabIndex = 30;
             this->SOSbutton31->UseVisualStyleBackColor = true;
+            this->SOSbutton31->Click += gcnew System::EventHandler(this, &Form1::SOSbutton31_Click);
             // 
             // SOSbutton32
             // 
@@ -835,6 +853,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton32->Size = System::Drawing::Size(71, 74);
             this->SOSbutton32->TabIndex = 28;
             this->SOSbutton32->UseVisualStyleBackColor = true;
+            this->SOSbutton32->Click += gcnew System::EventHandler(this, &Form1::SOSbutton32_Click);
             // 
             // SOSbutton33
             // 
@@ -848,6 +867,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton33->Size = System::Drawing::Size(71, 74);
             this->SOSbutton33->TabIndex = 33;
             this->SOSbutton33->UseVisualStyleBackColor = true;
+            this->SOSbutton33->Click += gcnew System::EventHandler(this, &Form1::SOSbutton33_Click);
             // 
             // SOSbutton34
             // 
@@ -860,6 +880,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton34->Size = System::Drawing::Size(71, 74);
             this->SOSbutton34->TabIndex = 34;
             this->SOSbutton34->UseVisualStyleBackColor = true;
+            this->SOSbutton34->Click += gcnew System::EventHandler(this, &Form1::SOSbutton34_Click);
             // 
             // SOSbutton35
             // 
@@ -872,6 +893,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton35->Size = System::Drawing::Size(71, 74);
             this->SOSbutton35->TabIndex = 35;
             this->SOSbutton35->UseVisualStyleBackColor = true;
+            this->SOSbutton35->Click += gcnew System::EventHandler(this, &Form1::SOSbutton35_Click);
             // 
             // SOSbutton36
             // 
@@ -885,6 +907,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton36->Size = System::Drawing::Size(75, 74);
             this->SOSbutton36->TabIndex = 36;
             this->SOSbutton36->UseVisualStyleBackColor = true;
+            this->SOSbutton36->Click += gcnew System::EventHandler(this, &Form1::SOSbutton36_Click);
             // 
             // label2
             // 
@@ -1462,8 +1485,55 @@ namespace CppCLRWinFormsProject {
 
         }
     }
-    private: System::Void SOSbutton10_Click(System::Object^ sender, System::EventArgs^ e) {}
-    private: System::Void SOSbutton11_Click(System::Object^ sender, System::EventArgs^ e){}
+    private: System::Void SOSbutton10_Click(System::Object^ sender, System::EventArgs^ e) {
+        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
+            SOSbutton10->Enabled = true;
+            SOSbutton10->Text = "S";
+
+        }
+        if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
+            SOSbutton10->Enabled = true;
+            SOSbutton10->Text = "O";
+
+        }
+        if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
+            SOSbutton10->Enabled = true;
+            SOSbutton10->Text = "S";
+
+        }
+        if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
+            SOSbutton10->Enabled = true;
+            SOSbutton10->Text = "O";
+
+        }
+    }
+    private: System::Void SOSbutton11_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void SOSbutton12_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton13_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton14_Click(System::Object^ sender, System::EventArgs^ e) {}   
+    private: System::Void SOSbutton15_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton16_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton17_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton18_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton19_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton20_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton21_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton22_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton23_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton24_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton25_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton26_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton27_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton28_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton29_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton30_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton31_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton32_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton33_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton34_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton35_Click(System::Object^ sender, System::EventArgs^ e) {}
+    private: System::Void SOSbutton36_Click(System::Object^ sender, System::EventArgs^ e) {}
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
         button2->Text = "Hello";
         }
