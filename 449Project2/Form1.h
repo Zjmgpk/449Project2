@@ -25,14 +25,16 @@ namespace CppCLRWinFormsProject {
             b = gcnew array<Button^, 2>(3,9)
             {
                 {SOSbutton10, SOSbutton11, SOSbutton12, SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18},
-                { SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24, SOSbutton25, SOSbutton26, SOSbutton27 },
-                { SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36 }
+                {SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24, SOSbutton25, SOSbutton26, SOSbutton27 },
+                {SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36 }
             };
-            
-            b_5 = gcnew array<Button^>(11) {
-                SOSbutton26, SOSbutton27, SOSbutton28, SOSbutton29,
-                    SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36
+            b_2 = gcnew array<Button^, 1>(27)
+            {
+                SOSbutton10, SOSbutton11, SOSbutton12, SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18,
+                    SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24, SOSbutton25, SOSbutton26, SOSbutton27,
+                    SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36
             };
+          
 		}
 
 	protected:
@@ -118,9 +120,8 @@ namespace CppCLRWinFormsProject {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-        array<Button^, 1>^ b2;
         array<Button^, 2>^ b;
-        array<Button^, 1>^ b_5;
+        array<Button^, 1>^ b_2;
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
@@ -198,7 +199,6 @@ namespace CppCLRWinFormsProject {
             this->RedTurn = (gcnew System::Windows::Forms::RadioButton());
             this->BlueTurn = (gcnew System::Windows::Forms::RadioButton());
             this->label5 = (gcnew System::Windows::Forms::Label());
-
             this->groupBox3->SuspendLayout();
             this->groupBox1->SuspendLayout();
             this->groupBox5->SuspendLayout();
@@ -443,8 +443,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton1->Size = System::Drawing::Size(71, 69);
             this->SOSbutton1->TabIndex = 9;
             this->SOSbutton1->UseVisualStyleBackColor = true;
-            this->SOSbutton1->Enabled = true;
-            this->SOSbutton1->Visible = true;
             this->SOSbutton1->Click += gcnew System::EventHandler(this, &Form1::SOSbutton1_Click);
             // 
             // SOSbutton2
@@ -459,8 +457,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton2->Size = System::Drawing::Size(71, 69);
             this->SOSbutton2->TabIndex = 1;
             this->SOSbutton2->UseVisualStyleBackColor = true;
-            this->SOSbutton2->Enabled = true;
-            this->SOSbutton2->Visible = true;
             this->SOSbutton2->Click += gcnew System::EventHandler(this, &Form1::SOSbutton2_Click);
             // 
             // SOSbutton3
@@ -475,8 +471,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton3->Size = System::Drawing::Size(71, 69);
             this->SOSbutton3->TabIndex = 2;
             this->SOSbutton3->UseVisualStyleBackColor = true;
-            this->SOSbutton3->Enabled = true;
-            this->SOSbutton3->Visible = true;
             this->SOSbutton3->Click += gcnew System::EventHandler(this, &Form1::SOSbutton3_Click);
             // 
             // SOSbutton4
@@ -491,8 +485,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton4->Size = System::Drawing::Size(71, 69);
             this->SOSbutton4->TabIndex = 3;
             this->SOSbutton4->UseVisualStyleBackColor = true;
-            this->SOSbutton4->Enabled = true;
-            this->SOSbutton4->Visible = true;
             this->SOSbutton4->Click += gcnew System::EventHandler(this, &Form1::SOSbutton4_Click);
             // 
             // SOSbutton5
@@ -506,8 +498,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton5->Size = System::Drawing::Size(71, 69);
             this->SOSbutton5->TabIndex = 4;
             this->SOSbutton5->UseVisualStyleBackColor = true;
-            this->SOSbutton5->Enabled = true;
-            this->SOSbutton5->Visible = true;
             this->SOSbutton5->Click += gcnew System::EventHandler(this, &Form1::SOSbutton5_Click);
             // 
             // SOSbutton6
@@ -522,8 +512,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton6->Size = System::Drawing::Size(75, 69);
             this->SOSbutton6->TabIndex = 5;
             this->SOSbutton6->UseVisualStyleBackColor = true; 
-            this->SOSbutton6->Enabled = true;
-            this->SOSbutton6->Visible = true;
             this->SOSbutton6->Click += gcnew System::EventHandler(this, &Form1::SOSbutton6_Click);
             // 
             // SOSbutton7
@@ -538,8 +526,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton7->Size = System::Drawing::Size(71, 69);
             this->SOSbutton7->TabIndex = 6;
             this->SOSbutton7->UseVisualStyleBackColor = true;
-            this->SOSbutton7->Enabled = true;
-            this->SOSbutton7->Visible = true;
             this->SOSbutton7->Click += gcnew System::EventHandler(this, &Form1::SOSbutton7_Click);
             // 
             // SOSbutton8
@@ -554,8 +540,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton8->Size = System::Drawing::Size(71, 69);
             this->SOSbutton8->TabIndex = 7;
             this->SOSbutton8->UseVisualStyleBackColor = true;
-            this->SOSbutton8->Enabled = true;
-            this->SOSbutton8->Visible = true;
             this->SOSbutton8->Click += gcnew System::EventHandler(this, &Form1::SOSbutton8_Click);
             // 
             // SOSbutton9
@@ -570,8 +554,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton9->Size = System::Drawing::Size(71, 69);
             this->SOSbutton9->TabIndex = 8;
             this->SOSbutton9->UseVisualStyleBackColor = true;
-            this->SOSbutton9->Enabled = true;
-            this->SOSbutton9->Visible = true;
             this->SOSbutton9->Click += gcnew System::EventHandler(this, &Form1::SOSbutton9_Click);
             // 
             // SOSbutton10
@@ -584,8 +566,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton10->Name = L"SOSbutton10";
             this->SOSbutton10->Size = System::Drawing::Size(71, 69);
             this->SOSbutton10->TabIndex = 10;
-            this->SOSbutton10->Enabled = true;
-            this->SOSbutton10->Visible = true;
             this->SOSbutton10->UseVisualStyleBackColor = true;
             this->SOSbutton10->Click += gcnew System::EventHandler(this, &Form1::SOSbutton10_Click);
             // 
@@ -652,7 +632,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton15->Size = System::Drawing::Size(71, 69);
             this->SOSbutton15->TabIndex = 15;
             this->SOSbutton15->UseVisualStyleBackColor = true;
-            //this->SOSbutton15->Click += gcnew System::EventHandler(this, &Form1::SOSbutton15_Click);
+            this->SOSbutton15->Click += gcnew System::EventHandler(this, &Form1::SOSbutton15_Click);
             // 
             // SOSbutton16
             // 
@@ -665,7 +645,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton16->Size = System::Drawing::Size(71, 69);
             this->SOSbutton16->TabIndex = 16;
             this->SOSbutton16->UseVisualStyleBackColor = true;
-            //this->SOSbutton16->Click += gcnew System::EventHandler(this, &Form1::SOSbutton16_Click);
+            this->SOSbutton16->Click += gcnew System::EventHandler(this, &Form1::SOSbutton16_Click);
             // 
             // SOSbutton17
             // 
@@ -1249,59 +1229,54 @@ namespace CppCLRWinFormsProject {
             textBox1->Text = "3";
         }
         int num = Convert::ToInt32(textBox1->Text);
-
+   
         if (num == 3) {
-            ;
-            
-          
-            tableLayoutPanel1->ColumnCount = num;
-            tableLayoutPanel1->RowCount = num;
+            for (int i = 26; i >= 0; i--) {
+                b_2[i]->Enabled = false;
+                b_2[i]->Visible = false;
 
-        }
-        if (num == 4) {
-           
-        }
-        if (num == 5) {
-            
-            SOSbutton36->Enabled = false;
-            SOSbutton36->Visible = false;
-            SOSbutton35->Enabled = false;
-            SOSbutton35->Visible = false;
-            SOSbutton34->Enabled = false;
-            SOSbutton34->Visible = false;
-            SOSbutton33->Enabled = false;
-            SOSbutton33->Visible = false;
-            SOSbutton32->Enabled = false;
-            SOSbutton32->Visible = false;
-            SOSbutton31->Enabled = false;
-            SOSbutton31->Visible = false;
-            SOSbutton30->Enabled = false;
-            SOSbutton30->Visible = false;
-            SOSbutton29->Enabled = false;
-            SOSbutton29->Visible = false;
-            SOSbutton28->Enabled = false;
-            SOSbutton28->Visible = false;
-            SOSbutton27->Enabled = false;
-            SOSbutton27->Visible = false;
-            SOSbutton26->Enabled = false;
-            SOSbutton26->Visible = false;
-            
-            tableLayoutPanel1->ColumnCount = num;
-            tableLayoutPanel1->RowCount = num;
-
-        }
-        if (num == 6) {
-            for (int i = matrixRow - 1; i == 0; i--) {
-                for (int j = matrixCol - 1; j == 0; j--) {
-                    b[i, j]->Enabled = true;
-                    b[i, j]->Visible = true;
-                }
             }
             tableLayoutPanel1->ColumnCount = num;
             tableLayoutPanel1->RowCount = num;
         }
-        if (num >= 7)
+        if (num == 4) {
+            for (int i = 26; i >= 7; i--) {
+                b_2[i]->Enabled = false;
+                b_2[i]->Visible = false;
+
+            }
+            tableLayoutPanel1->ColumnCount = num;
+            tableLayoutPanel1->RowCount = num;
+
+           
+           
+        }
+        
+        if (num == 5) {
+
+            for (int i = 26; i>=16; i--) {
+                b_2[i]->Enabled = false;
+                b_2[i]->Visible = false;
+
+            }
+            tableLayoutPanel1->ColumnCount = num;
+            tableLayoutPanel1->RowCount = num;
+
+        }
+        
+        if (num == 6)
         {
+            tableLayoutPanel1->ColumnCount = num;
+            tableLayoutPanel1->RowCount = num;
+            for (int i = 0; i <= 26; i++) {
+                b_2[i]->Enabled = true;
+                b_2[i]->Visible = true;
+            }
+
+        }
+        if (num > 6) {
+            tableLayoutPanel1->ColumnCount = 6;
+            tableLayoutPanel1->RowCount = 6;
             textBox1->Text = "6";
         }
     }
@@ -2105,10 +2080,6 @@ namespace CppCLRWinFormsProject {
     }
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
         button2->Text = "Hello";
-        for (int i = 0; i == 11; i++) {
-            b_5[i]->Enabled = false;
-            b_5[i]->Visible = false;
-        }
     }
 };
 }
