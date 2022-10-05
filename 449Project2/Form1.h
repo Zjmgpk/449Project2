@@ -22,11 +22,14 @@ namespace CppCLRWinFormsProject {
 			//
 			//TODO: Add the constructor code here
 			//
-            b = gcnew array<Button^, 2>(3,9)
+            b = gcnew array<Button^, 2>(6,6)
             {
-                {SOSbutton10, SOSbutton11, SOSbutton12, SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18},
-                {SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24, SOSbutton25, SOSbutton26, SOSbutton27 },
-                {SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36 }
+                {SOSbutton1,SOSbutton2,SOSbutton3,SOSbutton4,SOSbutton5,SOSbutton6}, 
+                {SOSbutton7,SOSbutton8,SOSbutton9,SOSbutton10,SOSbutton11,SOSbutton12},
+                {SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18},
+                {SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24},
+                {SOSbutton25, SOSbutton26, SOSbutton27,SOSbutton28, SOSbutton29, SOSbutton30},
+                {SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36}
             };
             b_2 = gcnew array<Button^, 1>(27)
             {
@@ -1245,11 +1248,9 @@ namespace CppCLRWinFormsProject {
                 b_2[i]->Visible = false;
 
             }
+
             tableLayoutPanel1->ColumnCount = num;
             tableLayoutPanel1->RowCount = num;
-
-           
-           
         }
         
         if (num == 5) {
@@ -1257,7 +1258,10 @@ namespace CppCLRWinFormsProject {
             for (int i = 26; i>=16; i--) {
                 b_2[i]->Enabled = false;
                 b_2[i]->Visible = false;
-
+            }
+            for (int i = 15; i >= 0; i--) {
+                b_2[i]->Enabled = true;
+                b_2[i]->Visible = true;
             }
             tableLayoutPanel1->ColumnCount = num;
             tableLayoutPanel1->RowCount = num;
@@ -1283,8 +1287,7 @@ namespace CppCLRWinFormsProject {
   
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-    private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
+    
     private: System::Void SOSbutton1_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton1->Enabled = true;
@@ -2078,8 +2081,20 @@ namespace CppCLRWinFormsProject {
 
         }
     }
+
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
         button2->Text = "Hello";
+        tableLayoutPanel1->ColumnCount = 6;
+        tableLayoutPanel1->RowCount = 6;
+        for (int i = 0; i <= 26; i++) {
+            b_2[i]->Enabled = true;
+            b_2[i]->Visible = true;
+        }
+        for (int i = 0; i <= 5;i++) {
+            for (int j = 0; j <= 5; j++) {
+                b[i, j]->Text = " ";
+            }
+        }
     }
 };
 }
