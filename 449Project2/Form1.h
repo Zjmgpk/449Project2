@@ -125,7 +125,8 @@ namespace CppCLRWinFormsProject {
 		/// </summary>
         array<Button^, 2>^ b;
         array<Button^, 1>^ b_2;
-		System::ComponentModel::Container ^components;
+private: System::Windows::Forms::Label^ label6;
+       System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -202,6 +203,7 @@ namespace CppCLRWinFormsProject {
             this->RedTurn = (gcnew System::Windows::Forms::RadioButton());
             this->BlueTurn = (gcnew System::Windows::Forms::RadioButton());
             this->label5 = (gcnew System::Windows::Forms::Label());
+            this->label6 = (gcnew System::Windows::Forms::Label());
             this->groupBox3->SuspendLayout();
             this->groupBox1->SuspendLayout();
             this->groupBox5->SuspendLayout();
@@ -318,7 +320,7 @@ namespace CppCLRWinFormsProject {
             // BluePoints
             // 
             this->BluePoints->AutoSize = true;
-            this->BluePoints->Location = System::Drawing::Point(23, 175);
+            this->BluePoints->Location = System::Drawing::Point(23, 169);
             this->BluePoints->Name = L"BluePoints";
             this->BluePoints->Size = System::Drawing::Size(47, 16);
             this->BluePoints->TabIndex = 10;
@@ -434,19 +436,84 @@ namespace CppCLRWinFormsProject {
             this->tableLayoutPanel1->Size = System::Drawing::Size(487, 476);
             this->tableLayoutPanel1->TabIndex = 35;
             // 
-            // SOSbutton1
+            // SOSbutton16
             // 
-            this->SOSbutton1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+            this->SOSbutton16->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->SOSbutton16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
+            this->SOSbutton16->Location = System::Drawing::Point(246, 162);
+            this->SOSbutton16->Name = L"SOSbutton16";
+            this->SOSbutton16->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton16->TabIndex = 16;
+            this->SOSbutton16->UseVisualStyleBackColor = true;
+            this->SOSbutton16->Click += gcnew System::EventHandler(this, &Form1::SOSbutton16_Click);
+            // 
+            // SOSbutton15
+            // 
+            this->SOSbutton15->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
+            this->SOSbutton15->Location = System::Drawing::Point(166, 162);
+            this->SOSbutton15->Name = L"SOSbutton15";
+            this->SOSbutton15->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton15->TabIndex = 15;
+            this->SOSbutton15->UseVisualStyleBackColor = true;
+            this->SOSbutton15->Click += gcnew System::EventHandler(this, &Form1::SOSbutton15_Click);
+            // 
+            // SOSbutton14
+            // 
+            this->SOSbutton14->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
+            this->SOSbutton14->Location = System::Drawing::Point(86, 162);
+            this->SOSbutton14->Name = L"SOSbutton14";
+            this->SOSbutton14->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton14->TabIndex = 14;
+            this->SOSbutton14->UseVisualStyleBackColor = true;
+            this->SOSbutton14->Click += gcnew System::EventHandler(this, &Form1::SOSbutton14_Click);
+            // 
+            // SOSbutton13
+            // 
+            this->SOSbutton13->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
+            this->SOSbutton13->Location = System::Drawing::Point(6, 162);
+            this->SOSbutton13->Name = L"SOSbutton13";
+            this->SOSbutton13->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton13->TabIndex = 13;
+            this->SOSbutton13->UseVisualStyleBackColor = true;
+            this->SOSbutton13->Click += gcnew System::EventHandler(this, &Form1::SOSbutton13_Click);
+            // 
+            // SOSbutton12
+            // 
+            this->SOSbutton12->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
+            this->SOSbutton12->Location = System::Drawing::Point(406, 84);
+            this->SOSbutton12->Name = L"SOSbutton12";
+            this->SOSbutton12->Size = System::Drawing::Size(75, 69);
+            this->SOSbutton12->TabIndex = 12;
+            this->SOSbutton12->UseVisualStyleBackColor = true;
+            this->SOSbutton12->Click += gcnew System::EventHandler(this, &Form1::SOSbutton12_Click);
+            // 
+            // SOSbutton3
+            // 
+            this->SOSbutton3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->SOSbutton1->Location = System::Drawing::Point(6, 6);
-            this->SOSbutton1->Name = L"SOSbutton1";
-            this->SOSbutton1->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton1->TabIndex = 9;
-            this->SOSbutton1->UseVisualStyleBackColor = true;
-            this->SOSbutton1->Click += gcnew System::EventHandler(this, &Form1::SOSbutton1_Click);
+            this->SOSbutton3->Location = System::Drawing::Point(166, 6);
+            this->SOSbutton3->Name = L"SOSbutton3";
+            this->SOSbutton3->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton3->TabIndex = 2;
+            this->SOSbutton3->UseVisualStyleBackColor = true;
+            this->SOSbutton3->Click += gcnew System::EventHandler(this, &Form1::SOSbutton3_Click);
             // 
             // SOSbutton2
             // 
@@ -462,19 +529,19 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton2->UseVisualStyleBackColor = true;
             this->SOSbutton2->Click += gcnew System::EventHandler(this, &Form1::SOSbutton2_Click);
             // 
-            // SOSbutton3
+            // SOSbutton1
             // 
-            this->SOSbutton3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+            this->SOSbutton1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->SOSbutton1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->SOSbutton3->Location = System::Drawing::Point(166, 6);
-            this->SOSbutton3->Name = L"SOSbutton3";
-            this->SOSbutton3->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton3->TabIndex = 2;
-            this->SOSbutton3->UseVisualStyleBackColor = true;
-            this->SOSbutton3->Click += gcnew System::EventHandler(this, &Form1::SOSbutton3_Click);
+            this->SOSbutton1->Location = System::Drawing::Point(6, 6);
+            this->SOSbutton1->Name = L"SOSbutton1";
+            this->SOSbutton1->Size = System::Drawing::Size(71, 69);
+            this->SOSbutton1->TabIndex = 9;
+            this->SOSbutton1->UseVisualStyleBackColor = true;
+            this->SOSbutton1->Click += gcnew System::EventHandler(this, &Form1::SOSbutton1_Click);
             // 
             // SOSbutton4
             // 
@@ -514,7 +581,7 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton6->Name = L"SOSbutton6";
             this->SOSbutton6->Size = System::Drawing::Size(75, 69);
             this->SOSbutton6->TabIndex = 5;
-            this->SOSbutton6->UseVisualStyleBackColor = true; 
+            this->SOSbutton6->UseVisualStyleBackColor = true;
             this->SOSbutton6->Click += gcnew System::EventHandler(this, &Form1::SOSbutton6_Click);
             // 
             // SOSbutton7
@@ -584,71 +651,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton11->TabIndex = 11;
             this->SOSbutton11->UseVisualStyleBackColor = true;
             this->SOSbutton11->Click += gcnew System::EventHandler(this, &Form1::SOSbutton11_Click);
-            // 
-            // SOSbutton12
-            // 
-            this->SOSbutton12->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
-            this->SOSbutton12->Location = System::Drawing::Point(406, 84);
-            this->SOSbutton12->Name = L"SOSbutton12";
-            this->SOSbutton12->Size = System::Drawing::Size(75, 69);
-            this->SOSbutton12->TabIndex = 12;
-            this->SOSbutton12->UseVisualStyleBackColor = true;
-            this->SOSbutton12->Click += gcnew System::EventHandler(this, &Form1::SOSbutton12_Click);
-            // 
-            // SOSbutton13
-            // 
-            this->SOSbutton13->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
-            this->SOSbutton13->Location = System::Drawing::Point(6, 162);
-            this->SOSbutton13->Name = L"SOSbutton13";
-            this->SOSbutton13->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton13->TabIndex = 13;
-            this->SOSbutton13->UseVisualStyleBackColor = true;
-            this->SOSbutton13->Click += gcnew System::EventHandler(this, &Form1::SOSbutton13_Click);
-            // 
-            // SOSbutton14
-            // 
-            this->SOSbutton14->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
-            this->SOSbutton14->Location = System::Drawing::Point(86, 162);
-            this->SOSbutton14->Name = L"SOSbutton14";
-            this->SOSbutton14->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton14->TabIndex = 14;
-            this->SOSbutton14->UseVisualStyleBackColor = true;
-            this->SOSbutton14->Click += gcnew System::EventHandler(this, &Form1::SOSbutton14_Click);
-            // 
-            // SOSbutton15
-            // 
-            this->SOSbutton15->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
-            this->SOSbutton15->Location = System::Drawing::Point(166, 162);
-            this->SOSbutton15->Name = L"SOSbutton15";
-            this->SOSbutton15->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton15->TabIndex = 15;
-            this->SOSbutton15->UseVisualStyleBackColor = true;
-            this->SOSbutton15->Click += gcnew System::EventHandler(this, &Form1::SOSbutton15_Click);
-            // 
-            // SOSbutton16
-            // 
-            this->SOSbutton16->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->SOSbutton16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36));
-            this->SOSbutton16->Location = System::Drawing::Point(246, 162);
-            this->SOSbutton16->Name = L"SOSbutton16";
-            this->SOSbutton16->Size = System::Drawing::Size(71, 69);
-            this->SOSbutton16->TabIndex = 16;
-            this->SOSbutton16->UseVisualStyleBackColor = true;
-            this->SOSbutton16->Click += gcnew System::EventHandler(this, &Form1::SOSbutton16_Click);
             // 
             // SOSbutton17
             // 
@@ -805,7 +807,6 @@ namespace CppCLRWinFormsProject {
             this->SOSbutton28->TabIndex = 29;
             this->SOSbutton28->UseVisualStyleBackColor = true;
             this->SOSbutton28->Click += gcnew System::EventHandler(this, &Form1::SOSbutton28_Click);
-           
             // 
             // SOSbutton29
             // 
@@ -942,6 +943,7 @@ namespace CppCLRWinFormsProject {
             // 
             // groupBox2
             // 
+            this->groupBox2->Controls->Add(this->label6);
             this->groupBox2->Controls->Add(this->groupBox6);
             this->groupBox2->Controls->Add(this->textBox3);
             this->groupBox2->Controls->Add(this->Computer_Red);
@@ -1016,11 +1018,11 @@ namespace CppCLRWinFormsProject {
             // 
             // button2
             // 
-            this->button2->Location = System::Drawing::Point(925, 454);
+            this->button2->Location = System::Drawing::Point(922, 469);
             this->button2->Name = L"button2";
             this->button2->Size = System::Drawing::Size(108, 48);
             this->button2->TabIndex = 40;
-            this->button2->Text = L"button2";
+            this->button2->Text = L"Reset Game";
             this->button2->UseVisualStyleBackColor = true;
             this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
             // 
@@ -1066,6 +1068,15 @@ namespace CppCLRWinFormsProject {
             this->label5->TabIndex = 28;
             this->label5->Text = L"Current Turn: ";
             // 
+            // label6
+            // 
+            this->label6->AutoSize = true;
+            this->label6->Location = System::Drawing::Point(28, 171);
+            this->label6->Name = L"label6";
+            this->label6->Size = System::Drawing::Size(47, 16);
+            this->label6->TabIndex = 36;
+            this->label6->Text = L"Points:";
+            // 
             // Form1
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1084,7 +1095,7 @@ namespace CppCLRWinFormsProject {
             this->Controls->Add(this->groupBox3);
             this->Controls->Add(this->label1);
             this->Name = L"Form1";
-            this->Text = L"Form1";
+            this->Text = L"SOS Game Comp-Sci 449";
             this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
             this->groupBox3->ResumeLayout(false);
             this->groupBox3->PerformLayout();
@@ -1232,7 +1243,7 @@ namespace CppCLRWinFormsProject {
             textBox1->Text = "3";
         }
         int num = Convert::ToInt32(textBox1->Text);
-   
+     
         if (num == 3) {
             for (int i = 26; i >= 0; i--) {
                 b_2[i]->Enabled = false;
@@ -1248,7 +1259,6 @@ namespace CppCLRWinFormsProject {
                 b_2[i]->Visible = false;
 
             }
-
             tableLayoutPanel1->ColumnCount = num;
             tableLayoutPanel1->RowCount = num;
         }
@@ -2095,6 +2105,7 @@ namespace CppCLRWinFormsProject {
                 b[i, j]->Text = " ";
             }
         }
+        textBox1->Text = "6";
     }
 };
 }
