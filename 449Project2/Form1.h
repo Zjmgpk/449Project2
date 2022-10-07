@@ -192,6 +192,7 @@ private: System::Windows::Forms::Label^ label6;
             this->textBox1 = (gcnew System::Windows::Forms::TextBox());
             this->label4 = (gcnew System::Windows::Forms::Label());
             this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+            this->label6 = (gcnew System::Windows::Forms::Label());
             this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
             this->RedO = (gcnew System::Windows::Forms::RadioButton());
             this->RedS = (gcnew System::Windows::Forms::RadioButton());
@@ -203,7 +204,6 @@ private: System::Windows::Forms::Label^ label6;
             this->RedTurn = (gcnew System::Windows::Forms::RadioButton());
             this->BlueTurn = (gcnew System::Windows::Forms::RadioButton());
             this->label5 = (gcnew System::Windows::Forms::Label());
-            this->label6 = (gcnew System::Windows::Forms::Label());
             this->groupBox3->SuspendLayout();
             this->groupBox1->SuspendLayout();
             this->groupBox5->SuspendLayout();
@@ -954,6 +954,15 @@ private: System::Windows::Forms::Label^ label6;
             this->groupBox2->TabIndex = 39;
             this->groupBox2->TabStop = false;
             // 
+            // label6
+            // 
+            this->label6->AutoSize = true;
+            this->label6->Location = System::Drawing::Point(28, 171);
+            this->label6->Name = L"label6";
+            this->label6->Size = System::Drawing::Size(47, 16);
+            this->label6->TabIndex = 36;
+            this->label6->Text = L"Points:";
+            // 
             // groupBox6
             // 
             this->groupBox6->Controls->Add(this->RedO);
@@ -1018,7 +1027,7 @@ private: System::Windows::Forms::Label^ label6;
             // 
             // button2
             // 
-            this->button2->Location = System::Drawing::Point(922, 469);
+            this->button2->Location = System::Drawing::Point(918, 483);
             this->button2->Name = L"button2";
             this->button2->Size = System::Drawing::Size(108, 48);
             this->button2->TabIndex = 40;
@@ -1067,15 +1076,6 @@ private: System::Windows::Forms::Label^ label6;
             this->label5->Size = System::Drawing::Size(85, 16);
             this->label5->TabIndex = 28;
             this->label5->Text = L"Current Turn: ";
-            // 
-            // label6
-            // 
-            this->label6->AutoSize = true;
-            this->label6->Location = System::Drawing::Point(28, 171);
-            this->label6->Name = L"label6";
-            this->label6->Size = System::Drawing::Size(47, 16);
-            this->label6->TabIndex = 36;
-            this->label6->Text = L"Points:";
             // 
             // Form1
             // 
@@ -1179,19 +1179,7 @@ private: System::Windows::Forms::Label^ label6;
 
         }
 
-        void Enable_False()
-        {
-
-            SOSbutton1->Enabled = false;
-            SOSbutton2->Enabled = false;
-            SOSbutton3->Enabled = false;
-            SOSbutton4->Enabled = false;
-            SOSbutton5->Enabled = false;
-            SOSbutton6->Enabled = false;
-            SOSbutton7->Enabled = false;
-            SOSbutton8->Enabled = false;
-            SOSbutton9->Enabled = false;
-        }
+       
 
         /*
       bool all_enabled()
@@ -1215,13 +1203,12 @@ private: System::Windows::Forms::Label^ label6;
       }
       */
 
-        void GeneralWinner()//not done
+        void GameWinner()//not done
         {
             if (Type_Game == "General") {
                 int a = Convert::ToInt32(textBox2->Text);
                 int b = Convert::ToInt32(textBox3->Text);
-                if (a > b)
-                {
+                if (a > b){
                     MessageBox::Show("Blue Player Wins!!!", "SOS", MessageBoxButtons::OK, MessageBoxIcon::Information);
                 }
                 if (b > a) {
@@ -1238,7 +1225,6 @@ private: System::Windows::Forms::Label^ label6;
         
 
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-        //int matrix;
         if (String::IsNullOrEmpty(textBox1->Text)) {
             textBox1->Text = "3";
         }
@@ -2093,7 +2079,7 @@ private: System::Windows::Forms::Label^ label6;
     }
 
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-        button2->Text = "Hello";
+        //button2->Text = "Hello";
         tableLayoutPanel1->ColumnCount = 6;
         tableLayoutPanel1->RowCount = 6;
         for (int i = 0; i <= 26; i++) {
