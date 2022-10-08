@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdlib>
+//#include <graphics>?
 
 namespace CppCLRWinFormsProject {
 
@@ -284,6 +285,7 @@ private: System::Windows::Forms::Label^ label6;
             this->textBox2->Size = System::Drawing::Size(33, 22);
             this->textBox2->TabIndex = 34;
             this->textBox2->Text = L"0";
+            this->textBox2->TextChanged += gcnew System::EventHandler(this, &Form1::textBox2_TextChanged);
             // 
             // groupBox5
             // 
@@ -1192,16 +1194,28 @@ private: System::Windows::Forms::Label^ label6;
       }
       */
 
-        /*void Score()//not done{
+        void Score(){
 
           int num = Convert::ToInt32(textBox1->Text);
           switch (num) {
-              //case(3):
-
+              case(3):
+                  if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
+                      if (BlueTurn->Checked == true) {
+                          
+                      }
+                      if (RedTurn->Checked == true) {}
+                  }
+                  if (SOSbutton4->Text == "S" && SOSbutton5->Text == "O" && SOSbutton6->Text == "S") {}
+                  if (SOSbutton7->Text == "S" && SOSbutton8->Text == "O" && SOSbutton9->Text == "S") {}
+                  if (SOSbutton1->Text == "S" && SOSbutton4->Text == "O" && SOSbutton7->Text == "S") {}
+                  if (SOSbutton2->Text == "S" && SOSbutton5->Text == "O" && SOSbutton8->Text == "S") {}
+                  if (SOSbutton3->Text == "S" && SOSbutton6->Text == "O" && SOSbutton9->Text == "S") {}
+                  if (SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S") {}
+                  if (SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S") {}
           }
 
       }
-      */
+      
 
         void GameWinner()//not done
         {
@@ -2093,5 +2107,6 @@ private: System::Windows::Forms::Label^ label6;
         }
         textBox1->Text = "6";
     }
+
 };
 }
