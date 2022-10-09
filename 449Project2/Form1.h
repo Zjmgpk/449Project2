@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdlib>
-//#include <graphics>?
+
+
 
 namespace CppCLRWinFormsProject {
 
@@ -284,8 +285,8 @@ private: System::Windows::Forms::Label^ label6;
             this->textBox2->Name = L"textBox2";
             this->textBox2->Size = System::Drawing::Size(33, 22);
             this->textBox2->TabIndex = 34;
-            this->textBox2->Text = L"0";
-            this->textBox2->TextChanged += gcnew System::EventHandler(this, &Form1::textBox2_TextChanged);
+            this->textBox2->Text = "0";
+            
             // 
             // groupBox5
             // 
@@ -1003,7 +1004,7 @@ private: System::Windows::Forms::Label^ label6;
             this->textBox3->Name = L"textBox3";
             this->textBox3->Size = System::Drawing::Size(33, 22);
             this->textBox3->TabIndex = 34;
-            this->textBox3->Text = L"0";
+            this->textBox3->Text = "0";
             // 
             // Computer_Red
             // 
@@ -1116,15 +1117,40 @@ private: System::Windows::Forms::Label^ label6;
             this->PerformLayout();
 
         }
+        int BlueScore;
+        int RedScore;
 #pragma endregion
-        int Blue_Score = 0;
-        int Red_Score = 0;
+
         int matrixRow = 3;
         int matrixCol = 9;
         char symbol;
         String^ Type_Game;
-        //need this many? 
         
+        //need this many? 
+
+        void Score() {
+
+            int num = Convert::ToInt32(textBox1->Text);
+            switch (num) {
+            case(3):
+                if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
+                    
+
+                }
+                if (SOSbutton4->Text == "S" && SOSbutton5->Text == "O" && SOSbutton6->Text == "S") {
+                    if (BlueTurn->Checked == true) {}
+                    if (RedTurn->Checked == true) {}
+                }
+                if (SOSbutton7->Text == "S" && SOSbutton8->Text == "O" && SOSbutton9->Text == "S") {}
+                if (SOSbutton1->Text == "S" && SOSbutton4->Text == "O" && SOSbutton7->Text == "S") {}
+                if (SOSbutton2->Text == "S" && SOSbutton5->Text == "O" && SOSbutton8->Text == "S") {}
+                if (SOSbutton3->Text == "S" && SOSbutton6->Text == "O" && SOSbutton9->Text == "S") {}
+                if (SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S") {}
+                if (SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S") {}
+            }
+
+        }
+
         void GameType()
         {
             if (radioButton9->Checked == true && radioButton10->Checked == false)
@@ -1193,30 +1219,7 @@ private: System::Windows::Forms::Label^ label6;
 
       }
       */
-
-        void Score(){
-
-          int num = Convert::ToInt32(textBox1->Text);
-          switch (num) {
-              case(3):
-                  if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
-                      if (BlueTurn->Checked == true) {
-                          
-                      }
-                      if (RedTurn->Checked == true) {}
-                  }
-                  if (SOSbutton4->Text == "S" && SOSbutton5->Text == "O" && SOSbutton6->Text == "S") {}
-                  if (SOSbutton7->Text == "S" && SOSbutton8->Text == "O" && SOSbutton9->Text == "S") {}
-                  if (SOSbutton1->Text == "S" && SOSbutton4->Text == "O" && SOSbutton7->Text == "S") {}
-                  if (SOSbutton2->Text == "S" && SOSbutton5->Text == "O" && SOSbutton8->Text == "S") {}
-                  if (SOSbutton3->Text == "S" && SOSbutton6->Text == "O" && SOSbutton9->Text == "S") {}
-                  if (SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S") {}
-                  if (SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S") {}
-          }
-
-      }
       
-
         void GameWinner()//not done
         {
             if (Type_Game == "General") {
@@ -1296,12 +1299,18 @@ private: System::Windows::Forms::Label^ label6;
     }
   
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
+        
 	}
     
     private: System::Void SOSbutton1_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "S";
+           
+            Graphics^ pg = CreateGraphics();
+            Pen^ red_pen = gcnew Pen(Color::Red);
+            pg->DrawLine(red_pen, 300,150, 60,60);
+            delete pg;
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
