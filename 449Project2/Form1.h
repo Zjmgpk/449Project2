@@ -1,4 +1,5 @@
 #pragma once
+
 #include <cstdlib>
 
 
@@ -43,6 +44,7 @@ namespace CppCLRWinFormsProject {
 		}
 
 	protected:
+
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
@@ -128,6 +130,7 @@ namespace CppCLRWinFormsProject {
         array<Button^, 2>^ b;
         array<Button^, 1>^ b_2;
 private: System::Windows::Forms::Label^ label6;
+private: System::Windows::Forms::PictureBox^ pictureBox1;
        System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
@@ -206,6 +209,7 @@ private: System::Windows::Forms::Label^ label6;
             this->RedTurn = (gcnew System::Windows::Forms::RadioButton());
             this->BlueTurn = (gcnew System::Windows::Forms::RadioButton());
             this->label5 = (gcnew System::Windows::Forms::Label());
+            this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
             this->groupBox3->SuspendLayout();
             this->groupBox1->SuspendLayout();
             this->groupBox5->SuspendLayout();
@@ -213,6 +217,7 @@ private: System::Windows::Forms::Label^ label6;
             this->groupBox2->SuspendLayout();
             this->groupBox6->SuspendLayout();
             this->groupBox4->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
             this->SuspendLayout();
             // 
             // label1
@@ -285,8 +290,7 @@ private: System::Windows::Forms::Label^ label6;
             this->textBox2->Name = L"textBox2";
             this->textBox2->Size = System::Drawing::Size(33, 22);
             this->textBox2->TabIndex = 34;
-            this->textBox2->Text = "0";
-            
+            this->textBox2->Text = L"0";
             // 
             // groupBox5
             // 
@@ -367,6 +371,7 @@ private: System::Windows::Forms::Label^ label6;
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
             this->tableLayoutPanel1->AutoSize = true;
+            this->tableLayoutPanel1->BackColor = System::Drawing::Color::Transparent;
             this->tableLayoutPanel1->CellBorderStyle = System::Windows::Forms::TableLayoutPanelCellBorderStyle::InsetDouble;
             this->tableLayoutPanel1->ColumnCount = 6;
             this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
@@ -537,13 +542,15 @@ private: System::Windows::Forms::Label^ label6;
             this->SOSbutton1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton1->BackColor = System::Drawing::Color::Transparent;
+            this->SOSbutton1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
             this->SOSbutton1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->SOSbutton1->Location = System::Drawing::Point(6, 6);
             this->SOSbutton1->Name = L"SOSbutton1";
             this->SOSbutton1->Size = System::Drawing::Size(71, 69);
             this->SOSbutton1->TabIndex = 9;
-            this->SOSbutton1->UseVisualStyleBackColor = true;
+            this->SOSbutton1->UseVisualStyleBackColor = false;
             this->SOSbutton1->Click += gcnew System::EventHandler(this, &Form1::SOSbutton1_Click);
             // 
             // SOSbutton4
@@ -1004,7 +1011,7 @@ private: System::Windows::Forms::Label^ label6;
             this->textBox3->Name = L"textBox3";
             this->textBox3->Size = System::Drawing::Size(33, 22);
             this->textBox3->TabIndex = 34;
-            this->textBox3->Text = "0";
+            this->textBox3->Text = L"0";
             // 
             // Computer_Red
             // 
@@ -1080,6 +1087,14 @@ private: System::Windows::Forms::Label^ label6;
             this->label5->TabIndex = 28;
             this->label5->Text = L"Current Turn: ";
             // 
+            // pictureBox1
+            // 
+            this->pictureBox1->Location = System::Drawing::Point(307, 73);
+            this->pictureBox1->Name = L"pictureBox1";
+            this->pictureBox1->Size = System::Drawing::Size(487, 475);
+            this->pictureBox1->TabIndex = 42;
+            this->pictureBox1->TabStop = false;
+            // 
             // Form1
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1097,6 +1112,7 @@ private: System::Windows::Forms::Label^ label6;
             this->Controls->Add(this->label3);
             this->Controls->Add(this->groupBox3);
             this->Controls->Add(this->label1);
+            this->Controls->Add(this->pictureBox1);
             this->Name = L"Form1";
             this->Text = L"SOS Game Comp-Sci 449";
             this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
@@ -1113,12 +1129,13 @@ private: System::Windows::Forms::Label^ label6;
             this->groupBox6->PerformLayout();
             this->groupBox4->ResumeLayout(false);
             this->groupBox4->PerformLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
             this->ResumeLayout(false);
             this->PerformLayout();
 
         }
-        int BlueScore;
-        int RedScore;
+        int BlueScore=0;
+        int RedScore=0;
 #pragma endregion
 
         int matrixRow = 3;
@@ -1134,19 +1151,106 @@ private: System::Windows::Forms::Label^ label6;
             switch (num) {
             case(3):
                 if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
-                    
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
+                        SOSbutton2->BackColor = System::Drawing::Color::MediumBlue;
+                        SOSbutton3->BackColor = System::Drawing::Color::MediumBlue;
+                        BlueScore += 1;
+                        textBox2->Text = Convert::ToString(BlueScore);
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
+                        SOSbutton2->BackColor = System::Drawing::Color::IndianRed;
+                        SOSbutton3->BackColor = System::Drawing::Color::IndianRed;
+                        RedScore += 1;
+                        textBox3->Text = Convert::ToString(RedScore);
+                    }
 
                 }
                 if (SOSbutton4->Text == "S" && SOSbutton5->Text == "O" && SOSbutton6->Text == "S") {
-                    if (BlueTurn->Checked == true) {}
-                    if (RedTurn->Checked == true) {}
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
+                        BlueScore += 1;
+                        textBox2->Text = Convert::ToString(BlueScore);
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
+                        RedScore += 1;
+                        textBox3->Text = Convert::ToString(RedScore);
+                    }
                 }
-                if (SOSbutton7->Text == "S" && SOSbutton8->Text == "O" && SOSbutton9->Text == "S") {}
-                if (SOSbutton1->Text == "S" && SOSbutton4->Text == "O" && SOSbutton7->Text == "S") {}
-                if (SOSbutton2->Text == "S" && SOSbutton5->Text == "O" && SOSbutton8->Text == "S") {}
-                if (SOSbutton3->Text == "S" && SOSbutton6->Text == "O" && SOSbutton9->Text == "S") {}
-                if (SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S") {}
-                if (SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S") {}
+                if (SOSbutton7->Text == "S" && SOSbutton8->Text == "O" && SOSbutton9->Text == "S") {
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
+                        BlueScore += 1;
+                        textBox2->Text = Convert::ToString(BlueScore);
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
+                        RedScore += 1;
+                        textBox3->Text = Convert::ToString(RedScore);
+                    }
+                }
+                if (SOSbutton1->Text == "S" && SOSbutton4->Text == "O" && SOSbutton7->Text == "S") {
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
+                        BlueScore += 1;
+                        textBox2->Text = Convert::ToString(BlueScore);
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
+                        RedScore += 1;
+                        textBox3->Text = Convert::ToString(RedScore);
+                    }
+                }
+                if (SOSbutton2->Text == "S" && SOSbutton5->Text == "O" && SOSbutton8->Text == "S") {
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
+                        BlueScore += 1;
+                        textBox2->Text = Convert::ToString(BlueScore);
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
+                        RedScore += 1;
+                        textBox3->Text = Convert::ToString(RedScore);
+                    }
+                }
+                if (SOSbutton3->Text == "S" && SOSbutton6->Text == "O" && SOSbutton9->Text == "S") {
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
+                        BlueScore += 1;
+                        textBox2->Text = Convert::ToString(BlueScore);
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
+                        RedScore += 1;
+                        textBox3->Text = Convert::ToString(RedScore);
+                    }
+                }
+                if (SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S") {
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
+                        BlueScore += 1;
+                        textBox2->Text = Convert::ToString(BlueScore);
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
+                        RedScore += 1;
+                        textBox3->Text = Convert::ToString(RedScore);
+                    }
+                }
+                if (SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S") {
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
+                        BlueScore += 1;
+                        textBox2->Text = Convert::ToString(BlueScore);
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
+                        RedScore += 1;
+                        textBox3->Text = Convert::ToString(RedScore);
+                    }
+                }
             }
 
         }
@@ -1207,19 +1311,7 @@ private: System::Windows::Forms::Label^ label6;
 
         }
 
-       
-
-        /*
-      bool all_enabled()
-      {
-          for each (Control var in  tableLayoutPanel1)
-          {
-
-          }
-
-      }
-      */
-      
+ 
         void GameWinner()//not done
         {
             if (Type_Game == "General") {
@@ -1306,26 +1398,29 @@ private: System::Windows::Forms::Label^ label6;
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "S";
-           
+            Score();
             Graphics^ pg = CreateGraphics();
             Pen^ red_pen = gcnew Pen(Color::Red);
-            pg->DrawLine(red_pen, 300,150, 60,60);
+            pg->DrawLine(red_pen, 60, 60, 300, 80);
+            
             delete pg;
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "O";
+            Score();
 
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "O";
+            Score();
 
         }
     }
@@ -1333,21 +1428,24 @@ private: System::Windows::Forms::Label^ label6;
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton2->Enabled = true;
             SOSbutton2->Text = "S";
+            Score();
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton2->Enabled = true;
             SOSbutton2->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton2->Enabled = true;
             SOSbutton2->Text = "S";
+            Score();
 
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton2->Enabled = true;
             SOSbutton2->Text = "O";
+            Score();
 
         }
     }
@@ -1355,11 +1453,13 @@ private: System::Windows::Forms::Label^ label6;
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton3->Enabled = true;
             SOSbutton3->Text = "S";
+            Score();
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton3->Enabled = true;
             SOSbutton3->Text = "O";
+            Score();
 
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
@@ -1370,6 +1470,7 @@ private: System::Windows::Forms::Label^ label6;
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton3->Enabled = true;
             SOSbutton3->Text = "O";
+            Score();
 
         }
     }
@@ -1377,6 +1478,7 @@ private: System::Windows::Forms::Label^ label6;
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton4->Enabled = true;
             SOSbutton4->Text = "S";
+            //Score();
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
