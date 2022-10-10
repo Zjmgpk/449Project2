@@ -1087,14 +1087,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             this->label5->TabIndex = 28;
             this->label5->Text = L"Current Turn: ";
             // 
-            // pictureBox1
-            // 
-            this->pictureBox1->Location = System::Drawing::Point(307, 73);
-            this->pictureBox1->Name = L"pictureBox1";
-            this->pictureBox1->Size = System::Drawing::Size(487, 475);
-            this->pictureBox1->TabIndex = 42;
-            this->pictureBox1->TabStop = false;
-            // 
             // Form1
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1152,16 +1144,18 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             case(3):
                 if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
                     if (BlueTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
-                        SOSbutton2->BackColor = System::Drawing::Color::MediumBlue;
-                        SOSbutton3->BackColor = System::Drawing::Color::MediumBlue;
+                        SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton2->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton3->ForeColor = System::Drawing::Color::Aqua;
                         BlueScore += 1;
                         textBox2->Text = Convert::ToString(BlueScore);
                     }
                     if (RedTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
-                        SOSbutton2->BackColor = System::Drawing::Color::IndianRed;
-                        SOSbutton3->BackColor = System::Drawing::Color::IndianRed;
+                        SOSbutton1->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton2->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton3->ForeColor = System::Drawing::Color::IndianRed;
+                        
+
                         RedScore += 1;
                         textBox3->Text = Convert::ToString(RedScore);
                     }
@@ -1391,6 +1385,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
     }
   
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
+
         
 	}
     
@@ -1399,11 +1394,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "S";
             Score();
-            Graphics^ pg = CreateGraphics();
-            Pen^ red_pen = gcnew Pen(Color::Red);
-            pg->DrawLine(red_pen, 60, 60, 300, 80);
-            
-            delete pg;
+          
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
