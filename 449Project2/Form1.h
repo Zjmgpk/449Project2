@@ -1147,105 +1147,41 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                         SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton2->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton3->ForeColor = System::Drawing::Color::Aqua;
-                        BlueScore += 1;
-                        textBox2->Text = Convert::ToString(BlueScore);
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
+                        {
+                            BlueScore += 1;
+                            textBox2->Text = Convert::ToString(BlueScore);
+                        }
+                        if (radioButton9->Checked == true && radioButton10->Checked == false)
+                        {
+                            MessageBox::Show("Blue Player is the winner!!!");
+                        }
+
                     }
                     if (RedTurn->Checked == true) {
                         SOSbutton1->ForeColor = System::Drawing::Color::IndianRed;
                         SOSbutton2->ForeColor = System::Drawing::Color::IndianRed;
                         SOSbutton3->ForeColor = System::Drawing::Color::IndianRed;
-                        
-
-                        RedScore += 1;
-                        textBox3->Text = Convert::ToString(RedScore);
-                    }
-
-                }
-                if (SOSbutton4->Text == "S" && SOSbutton5->Text == "O" && SOSbutton6->Text == "S") {
-                    if (BlueTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
-                        BlueScore += 1;
-                        textBox2->Text = Convert::ToString(BlueScore);
-                    }
-                    if (RedTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
-                        RedScore += 1;
-                        textBox3->Text = Convert::ToString(RedScore);
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
+                        {
+                            RedScore += 1;
+                            textBox3->Text = Convert::ToString(RedScore);
+                        }
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
+                        {
+                            MessageBox::Show("Red Player is the winner!!!");
+                        }
                     }
                 }
-                if (SOSbutton7->Text == "S" && SOSbutton8->Text == "O" && SOSbutton9->Text == "S") {
-                    if (BlueTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
-                        BlueScore += 1;
-                        textBox2->Text = Convert::ToString(BlueScore);
+                if(SOSbutton4->Text == "S" && SOSbutton5->Text == "O" && SOSbutton6->Text == "S") {
+                    if (BlueTurn->Checked == true) 
+                    {
+                        SOSbutton4->ForeColor = System::Drawing::Color::Aqua;
                     }
-                    if (RedTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
-                        RedScore += 1;
-                        textBox3->Text = Convert::ToString(RedScore);
-                    }
-                }
-                if (SOSbutton1->Text == "S" && SOSbutton4->Text == "O" && SOSbutton7->Text == "S") {
-                    if (BlueTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
-                        BlueScore += 1;
-                        textBox2->Text = Convert::ToString(BlueScore);
-                    }
-                    if (RedTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
-                        RedScore += 1;
-                        textBox3->Text = Convert::ToString(RedScore);
-                    }
-                }
-                if (SOSbutton2->Text == "S" && SOSbutton5->Text == "O" && SOSbutton8->Text == "S") {
-                    if (BlueTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
-                        BlueScore += 1;
-                        textBox2->Text = Convert::ToString(BlueScore);
-                    }
-                    if (RedTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
-                        RedScore += 1;
-                        textBox3->Text = Convert::ToString(RedScore);
-                    }
-                }
-                if (SOSbutton3->Text == "S" && SOSbutton6->Text == "O" && SOSbutton9->Text == "S") {
-                    if (BlueTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
-                        BlueScore += 1;
-                        textBox2->Text = Convert::ToString(BlueScore);
-                    }
-                    if (RedTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
-                        RedScore += 1;
-                        textBox3->Text = Convert::ToString(RedScore);
-                    }
-                }
-                if (SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S") {
-                    if (BlueTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
-                        BlueScore += 1;
-                        textBox2->Text = Convert::ToString(BlueScore);
-                    }
-                    if (RedTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
-                        RedScore += 1;
-                        textBox3->Text = Convert::ToString(RedScore);
-                    }
-                }
-                if (SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S") {
-                    if (BlueTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::MediumBlue;
-                        BlueScore += 1;
-                        textBox2->Text = Convert::ToString(BlueScore);
-                    }
-                    if (RedTurn->Checked == true) {
-                        SOSbutton1->BackColor = System::Drawing::Color::IndianRed;
-                        RedScore += 1;
-                        textBox3->Text = Convert::ToString(RedScore);
-                    }
+                
                 }
             }
+           
 
         }
 
@@ -1469,111 +1405,111 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton4->Enabled = true;
             SOSbutton4->Text = "S";
-            //Score();
+            Score();
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton4->Enabled = true;
             SOSbutton4->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton4->Enabled = true;
             SOSbutton4->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton4->Enabled = true;
             SOSbutton4->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton5_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton5->Enabled = true;
             SOSbutton5->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton5->Enabled = true;
             SOSbutton5->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton5->Enabled = true;
             SOSbutton5->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton5->Enabled = true;
             SOSbutton5->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton6_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton6->Enabled = true;
             SOSbutton6->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton6->Enabled = true;
             SOSbutton6->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton6->Enabled = true;
             SOSbutton6->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton6->Enabled = true;
             SOSbutton6->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton7_Click(System::Object^ sender, System::EventArgs^ e) {
       if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
           SOSbutton7->Enabled = true;
           SOSbutton7->Text = "S";
-
+          Score();
       }
       if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
           SOSbutton7->Enabled = true;
           SOSbutton7->Text = "O";
-
+          Score();
       }
       if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
           SOSbutton7->Enabled = true;
           SOSbutton7->Text = "S";
-
+          Score();
       }
       if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
           SOSbutton7->Enabled = true;
           SOSbutton7->Text = "O";
-
+          Score();
       }
   }
     private: System::Void SOSbutton8_Click(System::Object^ sender, System::EventArgs^ e) {
       if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
           SOSbutton8->Enabled = true;
           SOSbutton8->Text = "S";
-
+          Score();
       }
       if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
           SOSbutton8->Enabled = true;
           SOSbutton8->Text = "O";
-
+          Score();
       }
       if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
           SOSbutton8->Enabled = true;
           SOSbutton8->Text = "S";
-
+          Score();
       }
       if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
           SOSbutton8->Enabled = true;
           SOSbutton8->Text = "O";
-
+          Score();
       }
   }
     private: System::Void SOSbutton9_Click(System::Object^ sender, System::EventArgs^ e) 
@@ -1581,22 +1517,22 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton9->Enabled = true;
             SOSbutton9->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton9->Enabled = true;
             SOSbutton9->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton9->Enabled = true;
             SOSbutton9->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton9->Enabled = true;
             SOSbutton9->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton10_Click(System::Object^ sender, System::EventArgs^ e) {
