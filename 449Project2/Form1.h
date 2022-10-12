@@ -546,6 +546,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             this->SOSbutton1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
             this->SOSbutton1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
+            this->SOSbutton1->ForeColor = System::Drawing::SystemColors::ControlText;
             this->SOSbutton1->Location = System::Drawing::Point(6, 6);
             this->SOSbutton1->Name = L"SOSbutton1";
             this->SOSbutton1->Size = System::Drawing::Size(71, 69);
@@ -599,6 +600,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             this->SOSbutton7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->SOSbutton7->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
             this->SOSbutton7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->SOSbutton7->Location = System::Drawing::Point(6, 84);
@@ -1087,6 +1089,14 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             this->label5->TabIndex = 28;
             this->label5->Text = L"Current Turn: ";
             // 
+            // pictureBox1
+            // 
+            this->pictureBox1->Location = System::Drawing::Point(0, 0);
+            this->pictureBox1->Name = L"pictureBox1";
+            this->pictureBox1->Size = System::Drawing::Size(100, 50);
+            this->pictureBox1->TabIndex = 42;
+            this->pictureBox1->TabStop = false;
+            // 
             // Form1
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1173,14 +1183,91 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                         }
                     }
                 }
-                if(SOSbutton4->Text == "S" && SOSbutton5->Text == "O" && SOSbutton6->Text == "S") {
+                if (SOSbutton4->Text == "S" && SOSbutton5->Text == "O" && SOSbutton6->Text == "S") {
                     if (BlueTurn->Checked == true) 
                     {
                         SOSbutton4->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton5->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton6->ForeColor = System::Drawing::Color::Aqua;
+                        if (radioButton9->Checked == false && radioButton10->Checked == true) 
+                        {
+                            BlueScore += 1;
+                            textBox2->Text = Convert::ToString(BlueScore);
+                        }
+                        if (radioButton9->Checked == true && radioButton10->Checked == false) 
+                        {
+                            MessageBox::Show("Blue Player is the winner!!!");
+                        }
                     }
-                
+                    if (RedTurn->Checked == true) {
+                        SOSbutton4->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton5->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton6->ForeColor = System::Drawing::Color::IndianRed;
+                        if(radioButton9->Checked == false && radioButton10->Checked == true)
+                        {
+                            RedScore += 1;
+                            textBox3->Text = Convert::ToString(RedScore);
+                        }
+                        if(radioButton9->Checked == true && radioButton10->Checked == false)
+                        {
+                            MessageBox::Show("Red Player is the winner!!!");
+                        }
+                    }
                 }
+                if (SOSbutton7->Text == "S" && SOSbutton8->Text == "O" && SOSbutton9->Text == "S") {
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton7->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton8->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton9->ForeColor = System::Drawing::Color::Aqua;
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
+                        {
+                            BlueScore += 1;
+                            textBox2->Text = Convert::ToString(BlueScore);
+                        }
+                        if (radioButton9->Checked == true && radioButton10->Checked == false)
+                        {
+                            MessageBox::Show("Blue Player is the winner!!!");
+                        }
+
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton7->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton8->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton9->ForeColor = System::Drawing::Color::IndianRed;
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
+                        {
+                            RedScore += 1;
+                            textBox3->Text = Convert::ToString(RedScore);
+                        }
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
+                        {
+                            MessageBox::Show("Red Player is the winner!!!");
+                        }
+                    }
+                }
+                if (SOSbutton1->Text == "S" && SOSbutton4->Text == "O" && SOSbutton7->Text == "S") {
+                    if (BlueTurn->Checked == true){
+                        SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton4->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton7->ForeColor = System::Drawing::Color::Aqua;
+                        if (radioButton9->Checked == false && radioButton10->Checked == true) {} 
+                        if (radioButton9->Checked == true && radioButton10->Checked == false) {}
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton1->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton4->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton7->ForeColor = System::Drawing::Color::IndianRed;
+                        if (radioButton9->Checked == false && radioButton10->Checked == true) {}
+
+                    }
+                }
+                if (SOSbutton2->Text == "S" && SOSbutton5->Text == "O" && SOSbutton8->Text == "S") {}
+                if (SOSbutton3->Text == "S" && SOSbutton6->Text == "S" && SOSbutton9->Text == "S") {}
+                if (SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S") {}
+                if (SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S") {}
+                
             }
+
            
 
         }
@@ -1243,20 +1330,14 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 
  
         void GameWinner()//not done
-        {
-            if (Type_Game == "General") {
-                int a = Convert::ToInt32(textBox2->Text);
-                int b = Convert::ToInt32(textBox3->Text);
-                if (a > b){
-                    MessageBox::Show("Blue Player Wins!!!", "SOS", MessageBoxButtons::OK, MessageBoxIcon::Information);
-                }
-                if (b > a) {
-                    MessageBox::Show("Red Player Wins!!!", "SOS", MessageBoxButtons::OK, MessageBoxIcon::Information);
-                }
+        { 
+            int a = Convert::ToInt32(textBox2->Text);
+            int b = Convert::ToInt32(textBox3->Text);
+            if (a > b){
+                MessageBox::Show("Blue Player Wins!!!", "SOS", MessageBoxButtons::OK, MessageBoxIcon::Information);
             }
-            if (Type_Game == "Simple") {
-
-
+            if (b > a) {
+                MessageBox::Show("Red Player Wins!!!", "SOS", MessageBoxButtons::OK, MessageBoxIcon::Information);
             }
         }//in progress
 
@@ -2137,10 +2218,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
         for (int i = 0; i <= 26; i++) {
             b_2[i]->Enabled = true;
             b_2[i]->Visible = true;
+            b_2[i]->ForeColor = System::Drawing::Color::Black;
         }
         for (int i = 0; i <= 5;i++) {
             for (int j = 0; j <= 5; j++) {
                 b[i, j]->Text = " ";
+                
             }
         }
         textBox1->Text = "6";
