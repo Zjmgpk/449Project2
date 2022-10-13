@@ -1184,17 +1184,17 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                     }
                 }
                 if (SOSbutton4->Text == "S" && SOSbutton5->Text == "O" && SOSbutton6->Text == "S") {
-                    if (BlueTurn->Checked == true) 
+                    if (BlueTurn->Checked == true)
                     {
                         SOSbutton4->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton5->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton6->ForeColor = System::Drawing::Color::Aqua;
-                        if (radioButton9->Checked == false && radioButton10->Checked == true) 
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
                         {
                             BlueScore += 1;
                             textBox2->Text = Convert::ToString(BlueScore);
                         }
-                        if (radioButton9->Checked == true && radioButton10->Checked == false) 
+                        if (radioButton9->Checked == true && radioButton10->Checked == false)
                         {
                             MessageBox::Show("Blue Player is the winner!!!");
                         }
@@ -1203,12 +1203,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                         SOSbutton4->ForeColor = System::Drawing::Color::IndianRed;
                         SOSbutton5->ForeColor = System::Drawing::Color::IndianRed;
                         SOSbutton6->ForeColor = System::Drawing::Color::IndianRed;
-                        if(radioButton9->Checked == false && radioButton10->Checked == true)
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
                         {
                             RedScore += 1;
                             textBox3->Text = Convert::ToString(RedScore);
                         }
-                        if(radioButton9->Checked == true && radioButton10->Checked == false)
+                        if (radioButton9->Checked == true && radioButton10->Checked == false)
                         {
                             MessageBox::Show("Red Player is the winner!!!");
                         }
@@ -1246,30 +1246,79 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                     }
                 }
                 if (SOSbutton1->Text == "S" && SOSbutton4->Text == "O" && SOSbutton7->Text == "S") {
-                    if (BlueTurn->Checked == true){
+                    if (BlueTurn->Checked == true) {
                         SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton4->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton7->ForeColor = System::Drawing::Color::Aqua;
-                        if (radioButton9->Checked == false && radioButton10->Checked == true) {} 
-                        if (radioButton9->Checked == true && radioButton10->Checked == false) {}
+                        if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                            BlueScore += 1;
+                            textBox2->Text = Convert::ToString(BlueScore);
+                        }
+                        if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                            MessageBox::Show("Blue Player is the winner!!!");
+                        }
                     }
                     if (RedTurn->Checked == true) {
                         SOSbutton1->ForeColor = System::Drawing::Color::IndianRed;
                         SOSbutton4->ForeColor = System::Drawing::Color::IndianRed;
                         SOSbutton7->ForeColor = System::Drawing::Color::IndianRed;
-                        if (radioButton9->Checked == false && radioButton10->Checked == true) {}
+                        if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                            RedScore += 1;
+                            textBox3->Text = Convert::ToString(RedScore);
+                        }
+                        if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                            MessageBox::Show("Red Player is the winner!!!");
+                        }
 
                     }
                 }
-                if (SOSbutton2->Text == "S" && SOSbutton5->Text == "O" && SOSbutton8->Text == "S") {}
-                if (SOSbutton3->Text == "S" && SOSbutton6->Text == "S" && SOSbutton9->Text == "S") {}
-                if (SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S") {}
-                if (SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S") {}
-                
-            }
+                if (SOSbutton2->Text == "S" && SOSbutton5->Text == "O" && SOSbutton8->Text == "S") {
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton2->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton5->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton8->ForeColor = System::Drawing::Color::Aqua;
+                        if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                            BlueScore += 1;
+                            textBox2->Text = Convert::ToString(BlueScore);
+                        }
+                        if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                            MessageBox::Show("Blue Player is the winner!!!");
+                        }
+                    }
+                    if (RedTurn->Checked == true) {
+                        SOSbutton2->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton5->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton8->ForeColor = System::Drawing::Color::IndianRed;
+                        if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                            RedScore += 1;
+                            textBox3->Text = Convert::ToString(RedScore);
+                        }
+                        if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                            MessageBox::Show("Red Player is the winner!!!");
+                        }
+                    }
 
-           
+                }
+                if (SOSbutton3->Text == "S" && SOSbutton6->Text == "S" && SOSbutton9->Text == "S") {
+                    if (BlueTurn->Checked == true) {
+                        SOSbutton3->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton6->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton9->ForeColor = System::Drawing::Color::Aqua;
+                        if(radioButton9->Checked == false && radioButton10->Checked == true){}
+                        if(radioButton9->Checked == true && radioButton10->Checked == false){}
+                    }
+                    if (RedTurn->Checked == true) {}
+                }
+                if (SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S") {
 
+                }
+                if (SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S") {
+
+                }
+            case(4):
+            case(5):
+            case(6):
+            }  
         }
 
         void GameType()
@@ -1327,20 +1376,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             if (Type_Game = "Simple") {}
 
         }
-
- 
-        void GameWinner()//not done
-        { 
-            int a = Convert::ToInt32(textBox2->Text);
-            int b = Convert::ToInt32(textBox3->Text);
-            if (a > b){
-                MessageBox::Show("Blue Player Wins!!!", "SOS", MessageBoxButtons::OK, MessageBoxIcon::Information);
-            }
-            if (b > a) {
-                MessageBox::Show("Red Player Wins!!!", "SOS", MessageBoxButtons::OK, MessageBoxIcon::Information);
-            }
-        }//in progress
-
        
         
 
