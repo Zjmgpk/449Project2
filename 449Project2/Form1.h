@@ -1153,7 +1153,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             switch (num) {
             case(3):
                 if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
-                    if (BlueTurn->Checked == true) {
+                    if (BlueTurn->Checked == true && RedTurn->Checked == false) {
                         SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton2->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton3->ForeColor = System::Drawing::Color::Aqua;
@@ -1168,7 +1168,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                         }
 
                     }
-                    if (RedTurn->Checked == true) {
+                    if (RedTurn->Checked == true && BlueTurn->Checked == false) {
                         SOSbutton1->ForeColor = System::Drawing::Color::IndianRed;
                         SOSbutton2->ForeColor = System::Drawing::Color::IndianRed;
                         SOSbutton3->ForeColor = System::Drawing::Color::IndianRed;
@@ -1273,7 +1273,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                     }
                 }
                 if (SOSbutton2->Text == "S" && SOSbutton5->Text == "O" && SOSbutton8->Text == "S") {
-                    if (BlueTurn->Checked == true) {
+                    if (BlueTurn->Checked == true && RedTurn->Checked == false) {
                         SOSbutton2->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton5->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton8->ForeColor = System::Drawing::Color::Aqua;
@@ -1285,7 +1285,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                             MessageBox::Show("Blue Player is the winner!!!");
                         }
                     }
-                    if (RedTurn->Checked == true) {
+                    if (RedTurn->Checked == true && BlueTurn->Checked == false) {
                         SOSbutton2->ForeColor = System::Drawing::Color::IndianRed;
                         SOSbutton5->ForeColor = System::Drawing::Color::IndianRed;
                         SOSbutton8->ForeColor = System::Drawing::Color::IndianRed;
