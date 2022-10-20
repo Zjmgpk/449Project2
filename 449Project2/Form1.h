@@ -131,6 +131,7 @@ namespace CppCLRWinFormsProject {
         array<Button^, 1>^ b_2;
 private: System::Windows::Forms::Label^ label6;
 private: System::Windows::Forms::PictureBox^ pictureBox1;
+private: System::Windows::Forms::Button^ button1;
        System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
@@ -210,6 +211,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             this->BlueTurn = (gcnew System::Windows::Forms::RadioButton());
             this->label5 = (gcnew System::Windows::Forms::Label());
             this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+            this->button1 = (gcnew System::Windows::Forms::Button());
             this->groupBox3->SuspendLayout();
             this->groupBox1->SuspendLayout();
             this->groupBox5->SuspendLayout();
@@ -1039,11 +1041,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             // 
             // button2
             // 
-            this->button2->Location = System::Drawing::Point(918, 483);
+            this->button2->Location = System::Drawing::Point(918, 418);
             this->button2->Name = L"button2";
             this->button2->Size = System::Drawing::Size(108, 48);
             this->button2->TabIndex = 40;
-            this->button2->Text = L"Reset Game";
+            this->button2->Text = L"Reset";
             this->button2->UseVisualStyleBackColor = true;
             this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
             // 
@@ -1097,11 +1099,22 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             this->pictureBox1->TabIndex = 42;
             this->pictureBox1->TabStop = false;
             // 
+            // button1
+            // 
+            this->button1->Location = System::Drawing::Point(918, 495);
+            this->button1->Name = L"button1";
+            this->button1->Size = System::Drawing::Size(108, 48);
+            this->button1->TabIndex = 43;
+            this->button1->Text = L"New Game";
+            this->button1->UseVisualStyleBackColor = true;
+            this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
+            // 
             // Form1
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
             this->ClientSize = System::Drawing::Size(1158, 614);
+            this->Controls->Add(this->button1);
             this->Controls->Add(this->groupBox4);
             this->Controls->Add(this->button2);
             this->Controls->Add(this->groupBox2);
@@ -1146,7 +1159,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
         String^ Type_Game;
         
         //need this many? 
-
+        
         void Score() {
 
             int num = Convert::ToInt32(textBox1->Text);
@@ -1183,6 +1196,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                         }
                     }
                 }
+
                 if (SOSbutton4->Text == "S" && SOSbutton5->Text == "O" && SOSbutton6->Text == "S") {
                     if (BlueTurn->Checked == true)
                     {
@@ -1214,6 +1228,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                         }
                     }
                 }
+
                 if (SOSbutton7->Text == "S" && SOSbutton8->Text == "O" && SOSbutton9->Text == "S") {
                     if (BlueTurn->Checked == true) {
                         SOSbutton7->ForeColor = System::Drawing::Color::Aqua;
@@ -1245,6 +1260,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                         }
                     }
                 }
+
                 if (SOSbutton1->Text == "S" && SOSbutton4->Text == "O" && SOSbutton7->Text == "S") {
                     if (BlueTurn->Checked == true) {
                         SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
@@ -1299,26 +1315,21 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
                     }
 
                 }
+
                 if (SOSbutton3->Text == "S" && SOSbutton6->Text == "S" && SOSbutton9->Text == "S") {
                     if (BlueTurn->Checked == true) {
                         SOSbutton3->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton6->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton9->ForeColor = System::Drawing::Color::Aqua;
-                        if(radioButton9->Checked == false && radioButton10->Checked == true){}
-                        if(radioButton9->Checked == true && radioButton10->Checked == false){}
+                        if (radioButton9->Checked == false && radioButton10->Checked == true) {}
+                        if (radioButton9->Checked == true && radioButton10->Checked == false) {}
                     }
                     if (RedTurn->Checked == true) {}
                 }
-                if (SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S") {
-
-                }
-                if (SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S") {
-
-                }
-            case(4):
-            case(5):
-            case(6):
-            }  
+               if(SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S"){}
+               if(SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S"){}
+             }
+            
         }
 
         void GameType()
@@ -1389,7 +1400,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
             for (int i = 26; i >= 0; i--) {
                 b_2[i]->Enabled = false;
                 b_2[i]->Visible = false;
-
+               
             }
             tableLayoutPanel1->ColumnCount = num;
             tableLayoutPanel1->RowCount = num;
@@ -2245,23 +2256,31 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 
         }
     }
-
+    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+        for (int i = 0; i <= 5; i++) {
+            for (int j = 0; j <= 5; j++) {
+                b[i, j]->ForeColor = System::Drawing::Color::Black;
+                b[i, j]->Text = " ";
+            }
+        }
+    }
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
         //button2->Text = "Hello";
+       
         tableLayoutPanel1->ColumnCount = 6;
         tableLayoutPanel1->RowCount = 6;
         for (int i = 0; i <= 26; i++) {
             b_2[i]->Enabled = true;
             b_2[i]->Visible = true;
-            b_2[i]->ForeColor = System::Drawing::Color::Black;
         }
         for (int i = 0; i <= 5;i++) {
             for (int j = 0; j <= 5; j++) {
-                b[i, j]->Text = " ";
-                
+                b[i, j]->ForeColor = System::Drawing::Color::Black;
+;               b[i, j]->Text = " "; 
             }
         }
         textBox1->Text = "6";
+
     }
 
 };
