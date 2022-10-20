@@ -34,11 +34,27 @@ namespace CppCLRWinFormsProject {
                 {SOSbutton25, SOSbutton26, SOSbutton27,SOSbutton28, SOSbutton29, SOSbutton30},
                 {SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36}
             };
+
             b_2 = gcnew array<Button^, 1>(27)
             {
                 SOSbutton10, SOSbutton11, SOSbutton12, SOSbutton13, SOSbutton14, SOSbutton15, SOSbutton16, SOSbutton17, SOSbutton18,
                     SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24, SOSbutton25, SOSbutton26, SOSbutton27,
                     SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36
+            };
+            b4 = gcnew array<Button^, 2>(4,4) 
+            {
+                {SOSbutton1,SOSbutton2,SOSbutton3,SOSbutton4}, 
+                {SOSbutton5,SOSbutton6,SOSbutton7,SOSbutton8}, 
+                {SOSbutton9,SOSbutton10,SOSbutton11,SOSbutton12}, 
+                {SOSbutton13,SOSbutton14,SOSbutton15,SOSbutton16}
+            };
+            b5 = gcnew array<Button^, 2>(5,5) 
+            {
+                {SOSbutton1,SOSbutton2,SOSbutton3,SOSbutton3,SOSbutton5},
+                {SOSbutton6,SOSbutton7,SOSbutton8,SOSbutton9,SOSbutton10}, 
+                {SOSbutton11,SOSbutton12,SOSbutton13,SOSbutton14,SOSbutton15}, 
+                {SOSbutton16,SOSbutton17,SOSbutton18,SOSbutton19,SOSbutton20}, 
+                {SOSbutton21,SOSbutton22,SOSbutton23,SOSbutton24,SOSbutton25}
             };
           
 		}
@@ -129,6 +145,8 @@ namespace CppCLRWinFormsProject {
 		/// </summary>
         array<Button^, 2>^ b;
         array<Button^, 1>^ b_2;
+        array<Button^, 2>^ b4;
+        array<Button^, 2>^ b5;
 private: System::Windows::Forms::Label^ label6;
 private: System::Windows::Forms::PictureBox^ pictureBox1;
 private: System::Windows::Forms::Button^ button1;
@@ -1666,597 +1684,599 @@ private: System::Windows::Forms::Button^ button1;
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton10->Enabled = true;
             SOSbutton10->Text = "S";
+            Score();
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton10->Enabled = true;
             SOSbutton10->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton10->Enabled = true;
             SOSbutton10->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton10->Enabled = true;
             SOSbutton10->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton11_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton12_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton13_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton13->Enabled = true;
             SOSbutton13->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton13->Enabled = true;
             SOSbutton13->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton13->Enabled = true;
             SOSbutton13->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton13->Enabled = true;
             SOSbutton13->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton14_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton14->Enabled = true;
             SOSbutton14->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton14->Enabled = true;
             SOSbutton14->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton14->Enabled = true;
             SOSbutton14->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton14->Enabled = true;
             SOSbutton14->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton15_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton16_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton17_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton18_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton19_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton20_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton21_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton21->Enabled = true;
             SOSbutton21->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton21->Enabled = true;
             SOSbutton21->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton21->Enabled = true;
             SOSbutton21->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton21->Enabled = true;
             SOSbutton21->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton22_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton22->Enabled = true;
             SOSbutton22->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton22->Enabled = true;
             SOSbutton22->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton22->Enabled = true;
             SOSbutton22->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton22->Enabled = true;
             SOSbutton22->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton23_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton23->Enabled = true;
             SOSbutton23->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton23->Enabled = true;
             SOSbutton23->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton23->Enabled = true;
             SOSbutton23->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton23->Enabled = true;
             SOSbutton23->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton24_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton24->Enabled = true;
             SOSbutton24->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton24->Enabled = true;
             SOSbutton24->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton24->Enabled = true;
             SOSbutton24->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton24->Enabled = true;
             SOSbutton24->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton25_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton26_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton26->Enabled = true;
             SOSbutton26->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton26->Enabled = true;
             SOSbutton26->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton26->Enabled = true;
             SOSbutton26->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton26->Enabled = true;
             SOSbutton26->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton27_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton27->Enabled = true;
             SOSbutton27->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton27->Enabled = true;
             SOSbutton27->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton27->Enabled = true;
             SOSbutton27->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton27->Enabled = true;
             SOSbutton27->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton28_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton29_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton30_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton31_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton32_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton33_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton34_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton35_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "O";
-
+            Score();
         }
     }
     private: System::Void SOSbutton36_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "S";
-
+            Score();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "O";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "S";
-
+            Score();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "O";
-
+            Score();
         }
     }
     private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+        //New Game
         for (int i = 0; i <= 5; i++) {
             for (int j = 0; j <= 5; j++) {
                 b[i, j]->ForeColor = System::Drawing::Color::Black;
@@ -2265,7 +2285,7 @@ private: System::Windows::Forms::Button^ button1;
         }
     }
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-        //button2->Text = "Hello";
+        //Reset Game
        
         tableLayoutPanel1->ColumnCount = 6;
         tableLayoutPanel1->RowCount = 6;
