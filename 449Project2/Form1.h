@@ -1346,8 +1346,24 @@ private: System::Windows::Forms::Button^ button1;
                 }
                if(SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S"){}
                if(SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S"){}
+            case(4):
+                for (int i = 0; i <= 3; i++) {
+                    for (int j = 0; j <= 3; j++) {
+
+                    }
+                }
+            case(5):
+                for (int i = 0; i <= 4; i++) {
+                    for (int j = 0; j <= 4; j++) {
+                    }
+                }
+            case(6):
+                for (int i = 0; i <= 5; i++) {
+                    for (int j = 0; j <= 5; j++) {
+                    }
+                }
+
              }
-            
         }
 
         void GameType()
@@ -1475,6 +1491,7 @@ private: System::Windows::Forms::Button^ button1;
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "S";
             Score();
+            RedTurn->Checked == true;
           
 
         }
