@@ -1339,12 +1339,31 @@ private: System::Windows::Forms::Button^ button1;
                         SOSbutton3->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton6->ForeColor = System::Drawing::Color::Aqua;
                         SOSbutton9->ForeColor = System::Drawing::Color::Aqua;
-                        if (radioButton9->Checked == false && radioButton10->Checked == true) {}
-                        if (radioButton9->Checked == true && radioButton10->Checked == false) {}
+                        if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                            BlueScore += 1;
+                            textBox2->Text = Convert::ToString(BlueScore);
+                        }
+                        if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                            MessageBox::Show("Blue Player is the winner!!!");
+                        }
                     }
-                    if (RedTurn->Checked == true) {}
+                    if (RedTurn->Checked == true) {
+                        SOSbutton3->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton6->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton9->ForeColor = System::Drawing::Color::IndianRed;
+                        if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                            RedScore += 1;
+                            textBox3->Text = Convert::ToString(RedScore);
+                        }
+                        if (radioButton9->Checked == true && radioButton10->Checked==false) 
+                        {
+                            MessageBox::Show("Red Player is the winner!!!");
+                        }
+                    }
                 }
-               if(SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S"){}
+               if(SOSbutton1->Text == "S" && SOSbutton5->Text == "O" && SOSbutton9->Text == "S"){
+               
+               }
                if(SOSbutton3->Text == "S" && SOSbutton5->Text == "O" && SOSbutton7->Text == "S"){}
             case(4):
                 for (int i = 0; i <= 3; i++) {
