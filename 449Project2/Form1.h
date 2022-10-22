@@ -1510,7 +1510,7 @@ private: System::Windows::Forms::Button^ button1;
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "S";
             Score();
-            RedTurn->Checked == true;
+            RedTurn->Checked = true;
           
 
         }
