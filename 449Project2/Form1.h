@@ -1415,20 +1415,71 @@ private: System::Windows::Forms::Button^ button1;
             case(4):
                 for (int i = 0; i <= 3; i++) {
                     for (int j = 0; j <= 3; j++) {
-
+                        if (b4[i, j]->Text == "S") {
+                            if ((b4[i,j-2]->Text == "S") && (b4[i,j-1]->Text == "O")) {
+                                if(BlueTurn)
+                            }
+                            if ((b4[i,j+1]->Text == "O") && (b4[i,j+2]->Text == "S")) {}
+                            if ((b4[i+1,j]->Text == "O") && (b4[i+2,j])->Text == "S") {}
+                            if ((b4[i-1,j]->Text == "O") && (b4[i-2,j]->Text == "S")) {}
+                            if ((b4[i+1,j+1]->Text == "O") && (b4[i+2,j+2]->Text == "S")) {}
+                            if ((b4[i-1,j-1]->Text == "O") && (b4[i-2,j-2]->Text == "S")) {}
+                            if ((b4[i+1,j-1]->Text == "O") && (b4[i+2,j-2]->Text == "S")) {}
+                            if ((b4[i-1,j+1]->Text == "O") && (b4[i-2,j+2]->Text == "S")) {}
+                        }
+                        if (b4[i, j]->Text == "O") {
+                            if ((b4[i+1,j]->Text == "S") && (b4[i-1,j]->Text == "S")) {}
+                            if ((b4[i,j+1]->Text == "S") && (b4[i,j-1]->Text == "S")) {}
+                            if ((b4[i+1,j+1]->Text == "S") && (b4[i-1,j-1]->Text == "S")) {}
+                            if ((b4[i+1,j-1]->Text == "S") && (b4[i-1,j+1]->Text == "S")) {}
+                        }
                     }
                 }
+/*
             case(5):
                 for (int i = 0; i <= 4; i++) {
                     for (int j = 0; j <= 4; j++) {
+                        if (b5[i, j]->Text == "S") {
+                            if ((b5[i,j-2]->Text == "S") && (b5[i,j-1]->Text == "O")) {}
+                            if ((b5[i,j+1]->Text == "O") && (b5[i,j+2]->Text == "S")) {}
+                            if ((b5[i+1,j]->Text == "O") && (b5[i+2,j])->Text == "S") {}
+                            if ((b5[i-1,j]->Text == "O") && (b5[i-2,j]->Text == "S")) {}
+                            if ((b5[i+1,j+1]->Text == "O") && (b5[i+2,j+2]->Text == "S")) {}
+                            if ((b5[i-1,j-1]->Text == "O") && (b5[i-2,j-2]->Text == "S")) {}
+                            if ((b5[i+1,j-1]->Text == "O") && (b5[i+2,j-2]->Text == "S")) {}
+                            if ((b5[i-1,j+1]->Text == "O") && (b5[i-2,j+2]->Text == "S")) {}
+                        }
+                        if (b5[i, j]->Text == "O") {
+                            if ((b5[i+1,j]->Text == "S") && (b5[i-1,j]->Text == "S")) {}
+                            if ((b5[i,j+1]->Text == "S") && (b5[i,j-1]->Text == "S")) {}
+                            if ((b5[i+1,j+1]->Text == "S") && (b5[i-1,j-1]->Text == "S")) {}
+                            if ((b5[i+1,j-1]->Text == "S") && (b5[i-1,j+1]->Text == "S")) {}
+                        }
                     }
                 }
+            
             case(6):
                 for (int i = 0; i <= 5; i++) {
                     for (int j = 0; j <= 5; j++) {
+                        if (b[i, j]->Text == "S") {
+                            if ((b[i, j - 2]->Text == "S") && (b[i, j - 1]->Text == "O")) {}
+                            if ((b[i, j + 1]->Text == "O") && (b[i, j + 2]->Text == "S")) {}
+                            if ((b[i + 1, j]->Text == "O") && (b[i + 2, j])->Text == "S") {}
+                            if ((b[i - 1, j]->Text == "O") && (b[i - 2, j]->Text == "S")) {}
+                            if ((b[i + 1, j + 1]->Text == "O") && (b[i + 2, j + 2]->Text == "S")) {}
+                            if ((b[i - 1, j - 1]->Text == "O") && (b[i - 2, j - 2]->Text == "S")) {}
+                            if ((b[i + 1, j - 1]->Text == "O") && (b[i + 2, j - 2]->Text == "S")) {}
+                            if ((b[i - 1, j + 1]->Text == "O") && (b[i - 2, j + 2]->Text == "S")) {}
+                        }
+                        if (b[i, j]->Text == "O") {
+                            if ((b[i + 1, j]->Text == "S") && (b[i - 1, j]->Text == "S")) {}
+                            if ((b[i, j + 1]->Text == "S") && (b[i, j - 1]->Text == "S")) {}
+                            if ((b[i + 1, j + 1]->Text == "S") && (b[i - 1, j - 1]->Text == "S")) {}
+                            if ((b[i + 1, j - 1]->Text == "S") && (b[i - 1, j + 1]->Text == "S")) {}
+                        }
                     }
                 }
-
+              */  
              }
         }
 
