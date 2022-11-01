@@ -1417,15 +1417,75 @@ private: System::Windows::Forms::Button^ button1;
                     for (int j = 0; j <= 3; j++) {
                         if (b4[i, j]->Text == "S") {
                             if ((b4[i,j-2]->Text == "S") && (b4[i,j-1]->Text == "O")) {
-                                if(BlueTurn)
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b4[i, j - 2]->ForeColor = System::Drawing::Color::Aqua;
+                                    b4[i, j - 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                    }
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b4[i, j - 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b4[i, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        RedScore += 1;
+                                        textBox2->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                    }
+                                }
                             }
-                            if ((b4[i,j+1]->Text == "O") && (b4[i,j+2]->Text == "S")) {}
-                            if ((b4[i+1,j]->Text == "O") && (b4[i+2,j])->Text == "S") {}
-                            if ((b4[i-1,j]->Text == "O") && (b4[i-2,j]->Text == "S")) {}
-                            if ((b4[i+1,j+1]->Text == "O") && (b4[i+2,j+2]->Text == "S")) {}
-                            if ((b4[i-1,j-1]->Text == "O") && (b4[i-2,j-2]->Text == "S")) {}
-                            if ((b4[i+1,j-1]->Text == "O") && (b4[i+2,j-2]->Text == "S")) {}
-                            if ((b4[i-1,j+1]->Text == "O") && (b4[i-2,j+2]->Text == "S")) {}
+                            if ((b4[i,j+1]->Text == "O") && (b4[i,j+2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b4[i, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b4[i, j + 2]->ForeColor == System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                    }
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b4[i, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b4[i, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
+
+                                }
+                            }
+                            if ((b4[i+1,j]->Text == "O") && (b4[i+2,j])->Text == "S") {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {}
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {}
+                            }
+                            if ((b4[i-1,j]->Text == "O") && (b4[i-2,j]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {}
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {}
+                            }
+                            if ((b4[i+1,j+1]->Text == "O") && (b4[i+2,j+2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {}
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {}
+                            }
+                            if ((b4[i-1,j-1]->Text == "O") && (b4[i-2,j-2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {}
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {}
+                            }
+                            if ((b4[i+1,j-1]->Text == "O") && (b4[i+2,j-2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {}
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {}
+                            }
+                            if ((b4[i-1,j+1]->Text == "O") && (b4[i-2,j+2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {}
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {}
+                            }
                         }
                         if (b4[i, j]->Text == "O") {
                             if ((b4[i+1,j]->Text == "S") && (b4[i-1,j]->Text == "S")) {}
