@@ -4,6 +4,7 @@
 
 
 
+
 namespace CppCLRWinFormsProject {
 
 	using namespace System;
@@ -25,6 +26,7 @@ namespace CppCLRWinFormsProject {
 			//
 			//TODO: Add the constructor code here
 			//
+            
             b = gcnew array<Button^, 2>(6,6)
             {
                 {SOSbutton1,SOSbutton2,SOSbutton3,SOSbutton4,SOSbutton5,SOSbutton6}, 
@@ -150,7 +152,7 @@ namespace CppCLRWinFormsProject {
 private: System::Windows::Forms::Label^ label6;
 private: System::Windows::Forms::PictureBox^ pictureBox1;
 private: System::Windows::Forms::Button^ button1;
-       System::ComponentModel::Container^ components;
+private: System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -1170,7 +1172,7 @@ private: System::Windows::Forms::Button^ button1;
         int BlueScore=0;
         int RedScore=0;
 #pragma endregion
-
+        
         int matrixRow = 3;
         int matrixCol = 9;
         char symbol;
@@ -1182,7 +1184,7 @@ private: System::Windows::Forms::Button^ button1;
 
             int num = Convert::ToInt32(textBox1->Text);
             switch (num) {
-            case(3):
+/*           case(3):
                 if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
                         SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
@@ -1412,352 +1414,638 @@ private: System::Windows::Forms::Button^ button1;
                        }
                    }
                }
-            case(4):
-                for (int i = 0; i <= 3; i++) {
-                    for (int j = 0; j <= 3; j++) {
-                        if (b4[i, j]->Text == "S") {
-                            if ((b4[i,j-2]->Text == "S") && (b4[i,j-1]->Text == "O")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i, j - 2]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i, j - 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                    }
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i, j - 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                    }
-                                }
-                            }
-                            if ((b4[i,j+1]->Text == "O") && (b4[i,j+2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i, j + 2]->ForeColor == System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                    }
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                    }
-                                }
-                            }
-                            if ((b4[i+1,j]->Text == "O") && (b4[i+2,j])->Text == "S") {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 2, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b4[i-1,j]->Text == "O") && (b4[i-2,j]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i - 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i - 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i - 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i - 2, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b4[i+1,j+1]->Text == "O") && (b4[i+2,j+2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 1, j+1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 2, j+2]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 1, j+1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 2, j+2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b4[i-1,j-1]->Text == "O") && (b4[i-2,j-2]->Text == "S")) {
-                               if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 2, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b4[i+1,j-1]->Text == "O") && (b4[i+2,j-2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 1, j-1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 2, j-2]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 1, j-1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 2, j-2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b4[i-1,j+1]->Text == "O") && (b4[i-2,j+2]->Text == "S")) {//<-
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i-1, j+1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i - 2, j+2]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i - 1, j+1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i - 2, j+2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                        }
-                        if (b4[i, j]->Text == "O") {
-                            if ((b4[i+1,j]->Text == "S") && (b4[i-1,j]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i - 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i - 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b4[i,j+1]->Text == "S") && (b4[i,j-1]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i , j+1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i , j-1]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i , j+1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i , j-1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b4[i+1,j+1]->Text == "S") && (b4[i-1,j-1]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 1, j+1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i - 1, j - 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i - 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b4[i+1,j-1]->Text == "S") && (b4[i-1,j+1]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b4[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b4[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i + 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b4[i - 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                        }
-                    }
-                }
+*/
+           case(4):
+               if (SOSbutton1->Text =="S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {}
+               if (SOSbutton2->Text == "S" && SOSbutton3->Text == "O" && SOSbutton4->Text == "S") {}
+               if (SOSbutton5->Text == "S"&& SOSbutton6->Text == "O"&& SOSbutton7->Text == "S") {}
+               if (SOSbutton6->Text == "S" && SOSbutton7->Text == "O" && SOSbutton8->Text == "S") {}
+               if (SOSbutton9->Text == "S" && SOSbutton10->Text == "O" && SOSbutton11->Text == "S") {}
+               if (SOSbutton10->Text == "S" && SOSbutton11->Text == "O" && SOSbutton12->Text == "S") {}
+               if (SOSbutton13->Text == "S" && SOSbutton14->Text == "O" && SOSbutton15->Text == "S") {}
+               if (SOSbutton14->Text =="S" && SOSbutton15->Text == "S" && SOSbutton16->Text == "S") {}
+               if (SOSbutton1->Text =="S"&&) {}
+               if () {}
+               if () {}
+               if () {}
+               if () {}
+               if () {}
+               if () {}
+               if () {}
+               if () {}
+               if () {}
+               if () {}
+               if () {}
+               if () {}
+               if () {}
+                
 /*
             case(5):
                 for (int i = 0; i <= 4; i++) {
                     for (int j = 0; j <= 4; j++) {
                         if (b5[i, j]->Text == "S") {
-                            if ((b5[i,j-2]->Text == "S") && (b5[i,j-1]->Text == "O")) {}
-                            if ((b5[i,j+1]->Text == "O") && (b5[i,j+2]->Text == "S")) {}
-                            if ((b5[i+1,j]->Text == "O") && (b5[i+2,j])->Text == "S") {}
-                            if ((b5[i-1,j]->Text == "O") && (b5[i-2,j]->Text == "S")) {}
-                            if ((b5[i+1,j+1]->Text == "O") && (b5[i+2,j+2]->Text == "S")) {}
-                            if ((b5[i-1,j-1]->Text == "O") && (b5[i-2,j-2]->Text == "S")) {}
-                            if ((b5[i+1,j-1]->Text == "O") && (b5[i+2,j-2]->Text == "S")) {}
-                            if ((b5[i-1,j+1]->Text == "O") && (b5[i-2,j+2]->Text == "S")) {}
+                            if ((b5[i, j - 2]->Text == "S") && (b5[i, j - 1]->Text == "O")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i, j - 2]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i, j - 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                    }
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i, j - 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                    }
+                                }
+                            }
+                            if ((b5[i, j + 1]->Text == "O") && (b5[i, j + 2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i, j + 2]->ForeColor == System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                    }
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                    }
+                                }
+                            }
+                            if ((b5[i + 1, j]->Text == "O") && (b5[i + 2, j])->Text == "S") {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 2, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b5[i - 1, j]->Text == "O") && (b5[i - 2, j]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i - 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i - 2, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i - 1, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i - 2, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b5[i + 1, j + 1]->Text == "O") && (b5[i + 2, j + 2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 2, j + 2]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 2, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b5[i - 1, j - 1]->Text == "O") && (b5[i - 2, j - 2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 2, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b5[i + 1, j - 1]->Text == "O") && (b5[i + 2, j - 2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 1, j - 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 2, j - 2]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 2, j - 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b5[i - 1, j + 1]->Text == "O") && (b5[i - 2, j + 2]->Text == "S")) {//<-
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i - 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i - 2, j + 2]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i - 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i - 2, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
                         }
                         if (b5[i, j]->Text == "O") {
-                            if ((b5[i+1,j]->Text == "S") && (b5[i-1,j]->Text == "S")) {}
-                            if ((b5[i,j+1]->Text == "S") && (b5[i,j-1]->Text == "S")) {}
-                            if ((b5[i+1,j+1]->Text == "S") && (b5[i-1,j-1]->Text == "S")) {}
-                            if ((b5[i+1,j-1]->Text == "S") && (b5[i-1,j+1]->Text == "S")) {}
+                            if ((b5[i + 1, j]->Text == "S") && (b5[i - 1, j]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i - 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i - 1, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b5[i, j + 1]->Text == "S") && (b5[i, j - 1]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i, j - 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b5[i + 1, j + 1]->Text == "S") && (b5[i - 1, j - 1]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i - 1, j - 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i - 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b5[i + 1, j - 1]->Text == "S") && (b5[i - 1, j + 1]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b5[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i - 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
                         }
                     }
                 }
-            
+ */
+
+
             case(6):
                 for (int i = 0; i <= 5; i++) {
                     for (int j = 0; j <= 5; j++) {
                         if (b[i, j]->Text == "S") {
-                            if ((b[i, j - 2]->Text == "S") && (b[i, j - 1]->Text == "O")) {}
-                            if ((b[i, j + 1]->Text == "O") && (b[i, j + 2]->Text == "S")) {}
-                            if ((b[i + 1, j]->Text == "O") && (b[i + 2, j])->Text == "S") {}
-                            if ((b[i - 1, j]->Text == "O") && (b[i - 2, j]->Text == "S")) {}
-                            if ((b[i + 1, j + 1]->Text == "O") && (b[i + 2, j + 2]->Text == "S")) {}
-                            if ((b[i - 1, j - 1]->Text == "O") && (b[i - 2, j - 2]->Text == "S")) {}
-                            if ((b[i + 1, j - 1]->Text == "O") && (b[i + 2, j - 2]->Text == "S")) {}
-                            if ((b[i - 1, j + 1]->Text == "O") && (b[i - 2, j + 2]->Text == "S")) {}
+                            if ((b[i, j - 2]->Text == "S") && (b[i, j - 1]->Text == "O")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i, j - 2]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i, j - 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                    }
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i, j - 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                    }
+                                }
+                            }
+                            if ((b[i, j + 1]->Text == "O") && (b[i, j + 2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i, j + 2]->ForeColor == System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                    }
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                    }
+                                }
+                            }
+                            if ((b[i + 1, j]->Text == "O") && (b[i + 2, j])->Text == "S") {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i + 2, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b[i - 1, j]->Text == "O") && (b[i - 2, j]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i - 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i - 2, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i - 1, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i - 2, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b[i + 1, j + 1]->Text == "O") && (b[i + 2, j + 2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 2, j + 2]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i + 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i + 2, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b[i - 1, j - 1]->Text == "O") && (b[i - 2, j - 2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i + 2, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b[i + 1, j - 1]->Text == "O") && (b[i + 2, j - 2]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 1, j - 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 2, j - 2]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i + 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i + 2, j - 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b[i - 1, j + 1]->Text == "O") && (b[i - 2, j + 2]->Text == "S")) {//<-
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i - 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i - 2, j + 2]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i - 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i - 2, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
                         }
                         if (b[i, j]->Text == "O") {
-                            if ((b[i + 1, j]->Text == "S") && (b[i - 1, j]->Text == "S")) {}
-                            if ((b[i, j + 1]->Text == "S") && (b[i, j - 1]->Text == "S")) {}
-                            if ((b[i + 1, j + 1]->Text == "S") && (b[i - 1, j - 1]->Text == "S")) {}
-                            if ((b[i + 1, j - 1]->Text == "S") && (b[i - 1, j + 1]->Text == "S")) {}
+                            if ((b[i + 1, j]->Text == "S") && (b[i - 1, j]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i - 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b5[i - 1, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b5[i, j + 1]->Text == "S") && (b5[i, j - 1]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i, j - 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b[i + 1, j + 1]->Text == "S") && (b[i - 1, j - 1]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i - 1, j - 1]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i + 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i - 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
+                            if ((b[i + 1, j - 1]->Text == "S") && (b[i - 1, j + 1]->Text == "S")) {
+                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    b[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        BlueScore += 1;
+                                        textBox2->Text += Convert::ToString(BlueScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Blue Player is the winner!!!");
+                                }
+                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i + 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    b[i - 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
+                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
+                                        RedScore += 1;
+                                        textBox3->Text += Convert::ToString(RedScore);
+                                    }
+                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
+                                        MessageBox::Show("Red Player is the winner!!!");
+                                }
+                            }
                         }
                     }
-                }
-              */  
+                }    
+*/
              }
         }
 
