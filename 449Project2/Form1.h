@@ -43,6 +43,8 @@ namespace CppCLRWinFormsProject {
                     SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24, SOSbutton25, SOSbutton26, SOSbutton27,
                     SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36
             };
+
+            
             
             b5 = gcnew array<Button^, 2>(5,5) 
             {
@@ -4397,736 +4399,1772 @@ private: System::ComponentModel::Container^ components;
                          }
                      }
                  }
+                 //Col 1-6
+                 if (SOSbutton1->Text == "S" && SOSbutton7->Text == "O" && SOSbutton13->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton7->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton13->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
 
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}//col 1-6
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton1->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton7->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton13->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton7->Text == "S" && SOSbutton13->Text == "O" && SOSbutton19->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton7->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton13->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton19->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
 
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton7->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton13->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton19->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton13->Text == "S" && SOSbutton19->Text == "O" && SOSbutton25->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton13->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton19->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton25->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
 
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton13->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton19->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton25->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton19->Text == "S" && SOSbutton25->Text == "O" && SOSbutton31->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton19->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton25->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton31->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
 
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton19->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton25->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton31->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
 
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
+                 if (SOSbutton2->Text == "S" && SOSbutton8->Text == "O" && SOSbutton14->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton2->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton8->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton14->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
 
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}//Diagonal y=x
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton2->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton8->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton14->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton8->Text == "S" && SOSbutton14->Text == "O" && SOSbutton20->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton8->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton14->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton20->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
 
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}//Diagonal y=-x
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
-/*
-            case(5):
-                for (int i = 0; i <= 4; i++) {
-                    for (int j = 0; j <= 4; j++) {
-                        if (b5[i, j]->Text == "S") {
-                            if ((b5[i, j - 2]->Text == "S") && (b5[i, j - 1]->Text == "O")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i, j - 2]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i, j - 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                    }
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i, j - 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                    }
-                                }
-                            }
-                            if ((b5[i, j + 1]->Text == "O") && (b5[i, j + 2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i, j + 2]->ForeColor == System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                    }
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                    }
-                                }
-                            }
-                            if ((b5[i + 1, j]->Text == "O") && (b5[i + 2, j])->Text == "S") {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 2, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b5[i - 1, j]->Text == "O") && (b5[i - 2, j]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i - 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i - 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i - 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i - 2, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b5[i + 1, j + 1]->Text == "O") && (b5[i + 2, j + 2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 2, j + 2]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 2, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b5[i - 1, j - 1]->Text == "O") && (b5[i - 2, j - 2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 2, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b5[i + 1, j - 1]->Text == "O") && (b5[i + 2, j - 2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 1, j - 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 2, j - 2]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 2, j - 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b5[i - 1, j + 1]->Text == "O") && (b5[i - 2, j + 2]->Text == "S")) {//<-
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i - 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i - 2, j + 2]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i - 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i - 2, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                        }
-                        if (b5[i, j]->Text == "O") {
-                            if ((b5[i + 1, j]->Text == "S") && (b5[i - 1, j]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i - 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i - 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b5[i, j + 1]->Text == "S") && (b5[i, j - 1]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i, j - 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b5[i + 1, j + 1]->Text == "S") && (b5[i - 1, j - 1]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i - 1, j - 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i - 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b5[i + 1, j - 1]->Text == "S") && (b5[i - 1, j + 1]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b5[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i - 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                        }
-                    }
-                }
- 
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton8->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton14->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton20->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton14->Text == "S" && SOSbutton20->Text == "O" && SOSbutton26->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton14->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton20->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton26->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
 
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton14->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton20->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton26->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton20->Text == "S" && SOSbutton26->Text == "O" && SOSbutton32->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton20->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton26->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton32->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
 
-            case(6):
-                for (int i = 0; i <= 5; i++) {
-                    for (int j = 0; j <= 5; j++) {
-                        if (b[i, j]->Text == "S") {
-                            if ((b[i, j - 2]->Text == "S") && (b[i, j - 1]->Text == "O")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i, j - 2]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i, j - 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                    }
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i, j - 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                    }
-                                }
-                            }
-                            if ((b[i, j + 1]->Text == "O") && (b[i, j + 2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i, j + 2]->ForeColor == System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                    }
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && radioButton10->Checked == true) {
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                    }
-                                }
-                            }
-                            if ((b[i + 1, j]->Text == "O") && (b[i + 2, j])->Text == "S") {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i + 2, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b[i - 1, j]->Text == "O") && (b[i - 2, j]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i - 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i - 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i - 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i - 2, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b[i + 1, j + 1]->Text == "O") && (b[i + 2, j + 2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 2, j + 2]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i + 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i + 2, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b[i - 1, j - 1]->Text == "O") && (b[i - 2, j - 2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i + 2, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b[i + 1, j - 1]->Text == "O") && (b[i + 2, j - 2]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 1, j - 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 2, j - 2]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i + 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i + 2, j - 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b[i - 1, j + 1]->Text == "O") && (b[i - 2, j + 2]->Text == "S")) {//<-
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i - 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i - 2, j + 2]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i - 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i - 2, j + 2]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                        }
-                        if (b[i, j]->Text == "O") {
-                            if ((b[i + 1, j]->Text == "S") && (b[i - 1, j]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i - 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b5[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i + 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b5[i - 1, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b5[i, j + 1]->Text == "S") && (b5[i, j - 1]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i, j - 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b[i + 1, j + 1]->Text == "S") && (b[i - 1, j - 1]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 1, j + 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i - 1, j - 1]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i + 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i - 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                            if ((b[i + 1, j - 1]->Text == "S") && (b[i - 1, j + 1]->Text == "S")) {
-                                if (BlueTurn->Checked == true && RedTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 1, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    b[i + 2, j]->ForeColor = System::Drawing::Color::Aqua;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        BlueScore += 1;
-                                        textBox2->Text += Convert::ToString(BlueScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Blue Player is the winner!!!");
-                                }
-                                if (RedTurn->Checked == true && BlueTurn->Checked == false) {
-                                    b[i, j]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i + 1, j - 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    b[i - 1, j + 1]->ForeColor = System::Drawing::Color::IndianRed;
-                                    if (radioButton9->Checked == true && radioButton10->Checked == false) {
-                                        RedScore += 1;
-                                        textBox3->Text += Convert::ToString(RedScore);
-                                    }
-                                    if (radioButton9->Checked == false && RedTurn->Checked == true)
-                                        MessageBox::Show("Red Player is the winner!!!");
-                                }
-                            }
-                        }
-                    }
-                }    
-*/
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton20->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton3->Text == "S" && SOSbutton9->Text == "O" && SOSbutton15->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton3->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton9->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton3->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton9->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton9->Text == "S" && SOSbutton15->Text == "O" && SOSbutton21->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton9->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton9->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton15->Text == "S" && SOSbutton21->Text == "O" && SOSbutton27->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton27->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton27->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton21->Text == "S" && SOSbutton27->Text == "O" && SOSbutton33->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton27->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton33->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton20->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton4->Text == "S" && SOSbutton10->Text == "O" && SOSbutton16->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton4->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton10->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton4->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton10->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton10->Text == "S" && SOSbutton16->Text == "O" && SOSbutton22->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton10->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton10->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton16->Text == "S" && SOSbutton22->Text == "O" && SOSbutton28->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton28->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton28->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton22->Text == "S" && SOSbutton28->Text == "O" && SOSbutton34->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton28->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton34->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton28->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton34->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton5->Text == "S" && SOSbutton11->Text == "O" && SOSbutton17->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton5->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton11->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton17->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton5->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton11->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton17->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton11->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton17->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton23->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton11->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton17->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton23->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton17->Text == "S" && SOSbutton23->Text == "O" && SOSbutton29->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton17->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton23->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton29->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton17->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton23->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton29->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton23->Text == "S" && SOSbutton29->Text == "O" && SOSbutton35->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton23->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton29->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton35->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton23->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton29->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton35->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton6->Text == "S" && SOSbutton12->Text == "O" && SOSbutton18->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton6->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton12->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton18->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton6->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton12->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton18->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton12->Text == "S" && SOSbutton18->Text == "O" && SOSbutton24->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton12->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton18->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton24->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton12->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton18->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton24->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton18->Text == "S" && SOSbutton24->Text == "O" && SOSbutton30->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton18->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton24->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton30->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton18->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton24->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton30->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton24->Text == "S" && SOSbutton30->Text == "O" && SOSbutton36->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton24->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton30->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton36->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton24->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton30->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton36->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 //dDiagonal y=x
+
+                 if (SOSbutton13->Text == "S" && SOSbutton8->Text == "O" && SOSbutton3->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton13->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton8->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton3->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton13->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton8->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton3->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }//Diagonal y=x
+
+                 if (SOSbutton19->Text == "S" && SOSbutton14->Text == "O" && SOSbutton9->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton19->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton14->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton9->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton19->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton14->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton9->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton14->Text == "S" && SOSbutton9->Text == "O" && SOSbutton4->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton14->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton9->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton4->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton14->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton9->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton4->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton25->Text == "S" && SOSbutton20->Text == "O" && SOSbutton15->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton25->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton20->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton25->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton20->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton20->Text == "S" && SOSbutton15->Text == "O" && SOSbutton10->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton20->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton10->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton20->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton10->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton15->Text == "S" && SOSbutton10->Text == "O" && SOSbutton5->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton10->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton5->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton10->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton5->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton31->Text == "S" && SOSbutton26->Text == "O" && SOSbutton21->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton31->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton26->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton31->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton26->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton26->Text == "S" && SOSbutton21->Text == "O" && SOSbutton16->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton26->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton26->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton21->Text == "S" && SOSbutton16->Text == "O" && SOSbutton11->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton11->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton11->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton16->Text == "S" && SOSbutton11->Text == "O" && SOSbutton6->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton11->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton6->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton11->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton6->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton32->Text == "S" && SOSbutton27->Text == "O" && SOSbutton22->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton32->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton27->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton32->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton27->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton27->Text == "S" && SOSbutton22->Text == "O" && SOSbutton17->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton27->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton17->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton27->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton17->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton22->Text == "S" && SOSbutton17->Text == "O" && SOSbutton12->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton17->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton12->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton17->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton12->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton33->Text == "S" && SOSbutton28->Text == "O" && SOSbutton23->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton33->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton28->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton23->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton33->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton28->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton23->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton28->Text == "S" && SOSbutton23->Text == "O" && SOSbutton18->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton28->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton23->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton18->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton28->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton23->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton18->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton34->Text == "S" && SOSbutton29->Text == "O" && SOSbutton24->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton34->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton29->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton24->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton34->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton29->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton24->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 //Diagonal y=-x
+
+                 if (SOSbutton19->Text == "S" && SOSbutton26->Text == "O" && SOSbutton33->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton19->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton26->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton33->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton19->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton26->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton33->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton13->Text == "S" && SOSbutton20->Text == "O" && SOSbutton27->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton13->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton20->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton27->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton13->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton20->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton27->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton20->Text == "S" && SOSbutton27->Text == "O" && SOSbutton34->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton20->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton27->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton34->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton20->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton27->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton34->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton7->Text == "S" && SOSbutton14->Text == "O" && SOSbutton21->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton7->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton14->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton7->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton14->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton14->Text == "S" && SOSbutton21->Text == "O" && SOSbutton28->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton14->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton28->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton14->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton28->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton21->Text == "S" && SOSbutton28->Text == "O" && SOSbutton35->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton28->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton35->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton28->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton35->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton1->Text == "S" && SOSbutton8->Text == "O" && SOSbutton15->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton8->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton1->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton8->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton8->Text == "S" && SOSbutton15->Text == "O" && SOSbutton22->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton8->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton8->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton15->Text == "S" && SOSbutton22->Text == "O" && SOSbutton29->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton29->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton29->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton22->Text == "S" && SOSbutton29->Text == "O" && SOSbutton36->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton29->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton36->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton29->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton36->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton2->Text == "S" && SOSbutton9->Text == "O" && SOSbutton16->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton2->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton9->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton2->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton9->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton9->Text == "S" && SOSbutton16->Text == "O" && SOSbutton23->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton9->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton23->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton9->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton23->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton16->Text == "S" && SOSbutton23->Text == "O" && SOSbutton30->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton23->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton30->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton23->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton30->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton3->Text == "S" && SOSbutton10->Text == "O" && SOSbutton17->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton3->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton10->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton17->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton3->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton10->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton17->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+                 if (SOSbutton10->Text == "S" && SOSbutton17->Text == "O" && SOSbutton24->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton10->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton17->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton24->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton10->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton17->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton24->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
+                 if (SOSbutton4->Text == "S" && SOSbutton11->Text == "O" && SOSbutton18->Text == "S") {
+                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                         SOSbutton4->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton11->ForeColor = System::Drawing::Color::Aqua;
+                         SOSbutton18->ForeColor = System::Drawing::Color::Aqua;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             BlueScore += 1;
+                             textBox2->Text = Convert::ToString(BlueScore);
+                         }
+                         if (radioButton9->Checked == true && radioButton10->Checked == false)
+                         {
+                             MessageBox::Show("Blue Player is the winner!!!");
+                         }
+
+                     }
+                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                         SOSbutton4->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton11->ForeColor = System::Drawing::Color::IndianRed;
+                         SOSbutton18->ForeColor = System::Drawing::Color::IndianRed;
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             RedScore += 1;
+                             textBox3->Text = Convert::ToString(RedScore);
+                         }
+                         if (radioButton9->Checked == false && radioButton10->Checked == true)
+                         {
+                             MessageBox::Show("Red Player is the winner!!!");
+                         }
+                     }
+                 }
+
              }
         }
 
-        void GameType()
-        {
-            if (radioButton9->Checked == true && radioButton10->Checked == false)
-            {
-                Type_Game = "Simple";
-                if (BlueHuman->Checked == true && RedHuman->Checked == true)
-                {
-                    Two_Player_Game();
-                }
-                if ((BlueHuman->Checked == true && RedHuman->Checked == false) ||
-                    (BlueHuman->Checked == false && RedHuman->Checked == true))
-                {
-                    Computer_Game();
-                }
-            }
-            if (radioButton9->Checked == false && radioButton10->Checked == true)
-            {
-                Type_Game = "General";
-                if (BlueHuman->Checked == true && RedHuman->Checked == true)
-                {
-                    Two_Player_Game();
-                }
-                if ((BlueHuman->Checked == true && RedHuman->Checked == false) ||
-                    (BlueHuman->Checked == false && RedHuman->Checked == true))
-                {
-                    Computer_Game();
-                }
-            }
-
-        }
-
-        void Computer_Game()
-        {
-            int begin = rand() % 2 + 1;
-            if (begin == 1)
-                BlueTurn->Checked = true;
-            if (begin == 2)
-                RedTurn->Checked = true;
-            if (Type_Game = "General") {}
-            if (Type_Game = "Simple") {}
 
 
-        }
 
-        void Two_Player_Game()
-        {
-            int begin = rand() % 2 + 1;
-            if (begin == 1)
-                BlueTurn->Checked = true;
-            if (begin == 2)
-                RedTurn->Checked = true;
-            if (Type_Game = "General") {}
-            if (Type_Game = "Simple") {}
-
-        }
-       
         
 
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -5204,18 +6242,20 @@ private: System::ComponentModel::Container^ components;
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "O";
             Score();
+            RedTurn->Checked = true;
 
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "O";
             Score();
-
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5223,23 +6263,27 @@ private: System::ComponentModel::Container^ components;
             SOSbutton2->Enabled = true;
             SOSbutton2->Text = "S";
             Score();
+            RedTurn->Checked = true;
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton2->Enabled = true;
             SOSbutton2->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton2->Enabled = true;
             SOSbutton2->Text = "S";
             Score();
+            BlueTurn->Checked = true;
 
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton2->Enabled = true;
             SOSbutton2->Text = "O";
             Score();
+            BlueTurn->Checked = true;
 
         }
     }
@@ -5248,24 +6292,26 @@ private: System::ComponentModel::Container^ components;
             SOSbutton3->Enabled = true;
             SOSbutton3->Text = "S";
             Score();
+            RedTurn->Checked = true;
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton3->Enabled = true;
             SOSbutton3->Text = "O";
             Score();
+            RedTurn->Checked = true;
 
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton3->Enabled = true;
             SOSbutton3->Text = "S";
-
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton3->Enabled = true;
             SOSbutton3->Text = "O";
             Score();
-
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton4_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5273,22 +6319,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton4->Enabled = true;
             SOSbutton4->Text = "S";
             Score();
-
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton4->Enabled = true;
             SOSbutton4->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton4->Enabled = true;
             SOSbutton4->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton4->Enabled = true;
             SOSbutton4->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton5_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5296,21 +6345,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton5->Enabled = true;
             SOSbutton5->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton5->Enabled = true;
             SOSbutton5->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton5->Enabled = true;
             SOSbutton5->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton5->Enabled = true;
             SOSbutton5->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton6_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5318,21 +6371,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton6->Enabled = true;
             SOSbutton6->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton6->Enabled = true;
             SOSbutton6->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton6->Enabled = true;
             SOSbutton6->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton6->Enabled = true;
             SOSbutton6->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton7_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5340,21 +6397,25 @@ private: System::ComponentModel::Container^ components;
           SOSbutton7->Enabled = true;
           SOSbutton7->Text = "S";
           Score();
+          RedTurn->Checked = true;
       }
       if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
           SOSbutton7->Enabled = true;
           SOSbutton7->Text = "O";
           Score();
+          RedTurn->Checked = true;
       }
       if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
           SOSbutton7->Enabled = true;
           SOSbutton7->Text = "S";
           Score();
+          BlueTurn->Checked = true;
       }
       if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
           SOSbutton7->Enabled = true;
           SOSbutton7->Text = "O";
           Score();
+          BlueTurn->Checked = true;
       }
   }
     private: System::Void SOSbutton8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5362,21 +6423,25 @@ private: System::ComponentModel::Container^ components;
           SOSbutton8->Enabled = true;
           SOSbutton8->Text = "S";
           Score();
+          RedTurn->Checked = true;
       }
       if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
           SOSbutton8->Enabled = true;
           SOSbutton8->Text = "O";
           Score();
+          RedTurn->Checked = true;
       }
       if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
           SOSbutton8->Enabled = true;
           SOSbutton8->Text = "S";
           Score();
+          BlueTurn->Checked = true;
       }
       if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
           SOSbutton8->Enabled = true;
           SOSbutton8->Text = "O";
           Score();
+          BlueTurn->Checked = true;
       }
   }
     private: System::Void SOSbutton9_Click(System::Object^ sender, System::EventArgs^ e) 
@@ -5385,21 +6450,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton9->Enabled = true;
             SOSbutton9->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton9->Enabled = true;
             SOSbutton9->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton9->Enabled = true;
             SOSbutton9->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton9->Enabled = true;
             SOSbutton9->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton10_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5407,22 +6476,26 @@ private: System::ComponentModel::Container^ components;
             SOSbutton10->Enabled = true;
             SOSbutton10->Text = "S";
             Score();
+            RedTurn->Checked = true;
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton10->Enabled = true;
             SOSbutton10->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton10->Enabled = true;
             SOSbutton10->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton10->Enabled = true;
             SOSbutton10->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton11_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5430,21 +6503,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton12_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5452,21 +6529,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton13_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5474,21 +6555,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton13->Enabled = true;
             SOSbutton13->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton13->Enabled = true;
             SOSbutton13->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton13->Enabled = true;
             SOSbutton13->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton13->Enabled = true;
             SOSbutton13->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton14_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5496,21 +6581,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton14->Enabled = true;
             SOSbutton14->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton14->Enabled = true;
             SOSbutton14->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton14->Enabled = true;
             SOSbutton14->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton14->Enabled = true;
             SOSbutton14->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton15_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5518,21 +6607,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton16_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5540,21 +6633,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton17_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5562,21 +6659,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton18_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5584,21 +6685,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton19_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5606,21 +6711,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton20_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5628,21 +6737,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton21_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5650,21 +6763,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton21->Enabled = true;
             SOSbutton21->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton21->Enabled = true;
             SOSbutton21->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton21->Enabled = true;
             SOSbutton21->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton21->Enabled = true;
             SOSbutton21->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton22_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5672,21 +6789,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton22->Enabled = true;
             SOSbutton22->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton22->Enabled = true;
             SOSbutton22->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton22->Enabled = true;
             SOSbutton22->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton22->Enabled = true;
             SOSbutton22->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton23_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5694,21 +6815,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton23->Enabled = true;
             SOSbutton23->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton23->Enabled = true;
             SOSbutton23->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton23->Enabled = true;
             SOSbutton23->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton23->Enabled = true;
             SOSbutton23->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton24_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5716,21 +6841,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton24->Enabled = true;
             SOSbutton24->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton24->Enabled = true;
             SOSbutton24->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton24->Enabled = true;
             SOSbutton24->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton24->Enabled = true;
             SOSbutton24->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton25_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5738,21 +6867,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton26_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5760,21 +6893,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton26->Enabled = true;
             SOSbutton26->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton26->Enabled = true;
             SOSbutton26->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton26->Enabled = true;
             SOSbutton26->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton26->Enabled = true;
             SOSbutton26->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton27_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5782,21 +6919,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton27->Enabled = true;
             SOSbutton27->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton27->Enabled = true;
             SOSbutton27->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton27->Enabled = true;
             SOSbutton27->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton27->Enabled = true;
             SOSbutton27->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton28_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5804,21 +6945,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton29_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5826,21 +6971,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton30_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5848,21 +6997,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton31_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5870,21 +7023,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton32_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5892,21 +7049,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton33_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5914,21 +7075,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton34_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5936,21 +7101,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton35_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5958,21 +7127,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void SOSbutton36_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5980,21 +7153,25 @@ private: System::ComponentModel::Container^ components;
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "S";
             Score();
+            RedTurn->Checked = true;
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "O";
             Score();
+            RedTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "S";
             Score();
+            BlueTurn->Checked = true;
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "O";
             Score();
+            BlueTurn->Checked = true;
         }
     }
     private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
