@@ -43,13 +43,7 @@ namespace CppCLRWinFormsProject {
                     SOSbutton19, SOSbutton20, SOSbutton21, SOSbutton22, SOSbutton23, SOSbutton24, SOSbutton25, SOSbutton26, SOSbutton27,
                     SOSbutton28, SOSbutton29, SOSbutton30, SOSbutton31, SOSbutton32, SOSbutton33, SOSbutton34, SOSbutton35, SOSbutton36
             };
-            b4 = gcnew array<Button^, 2>(4,4) 
-            {
-                {SOSbutton1,SOSbutton2,SOSbutton3,SOSbutton4}, 
-                {SOSbutton5,SOSbutton6,SOSbutton7,SOSbutton8}, 
-                {SOSbutton9,SOSbutton10,SOSbutton11,SOSbutton12}, 
-                {SOSbutton13,SOSbutton14,SOSbutton15,SOSbutton16}
-            };
+            
             b5 = gcnew array<Button^, 2>(5,5) 
             {
                 {SOSbutton1,SOSbutton2,SOSbutton3,SOSbutton3,SOSbutton5},
@@ -1184,7 +1178,7 @@ private: System::ComponentModel::Container^ components;
 
             int num = Convert::ToInt32(textBox1->Text);
             switch (num) {
-/*           case(3):
+            case(3):
                 if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
                         SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
@@ -1414,7 +1408,7 @@ private: System::ComponentModel::Container^ components;
                        }
                    }
                }
-*/
+
            case(4)://24 cases
                if (SOSbutton1->Text =="S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
                    if (BlueTurn->Checked == true && RedTurn->Checked == false) {
@@ -2160,6 +2154,87 @@ private: System::ComponentModel::Container^ components;
                        }
                    }
                }
+
+
+            case(5)://48 cases
+                if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
+                    if (BlueTurn->Checked == true && RedTurn->Checked == false) {
+                        SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton2->ForeColor = System::Drawing::Color::Aqua;
+                        SOSbutton3->ForeColor = System::Drawing::Color::Aqua;
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
+                        {
+                            BlueScore += 1;
+                            textBox2->Text = Convert::ToString(BlueScore);
+                        }
+                        if (radioButton9->Checked == true && radioButton10->Checked == false)
+                        {
+                            MessageBox::Show("Blue Player is the winner!!!");
+                        }
+
+                    }
+                    if (RedTurn->Checked == true && BlueTurn->Checked == false) {
+                        SOSbutton1->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton2->ForeColor = System::Drawing::Color::IndianRed;
+                        SOSbutton3->ForeColor = System::Drawing::Color::IndianRed;
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
+                        {
+                            RedScore += 1;
+                            textBox3->Text = Convert::ToString(RedScore);
+                        }
+                        if (radioButton9->Checked == false && radioButton10->Checked == true)
+                        {
+                            MessageBox::Show("Red Player is the winner!!!");
+                        }
+                    }
+                }
+                if (SOSbutton2->Text == "S" && SOSbutton3->Text == "O" && SOSbutton4->Text == "S"){}
+                if (SOSbutton3->Text == "S" && SOSbutton4->Text == "O" && SOSbutton5->Text == "S"){}//Row 1
+                if (SOSbutton6->Text == "S" && SOSbutton7->Text == "O" && SOSbutton8->Text == "S"){}
+                if (SOSbutton7->Text == "S" && SOSbutton8->Text == "O" && SOSbutton9->Text == "S"){}
+                if (SOSbutton9->Text == "S" && SOSbutton9->Text == "O" && SOSbutton10->Text == "S"){}//Row2
+                if (SOSbutton11->Text == "S" && SOSbutton12->Text == "O" && SOSbutton13->Text == "S"){}
+                if (SOSbutton12->Text == "S" && SOSbutton13->Text == "O" && SOSbutton14->Text == "S"){}
+                if (SOSbutton13->Text == "S" && SOSbutton14->Text == "O" && SOSbutton15->Text == "S"){}//Row 3
+                if (SOSbutton16->Text == "S" && SOSbutton17->Text == "O" && SOSbutton18->Text == "S"){}
+                if (SOSbutton17->Text == "S" && SOSbutton18->Text == "O" && SOSbutton19->Text == "S"){}
+                if (SOSbutton18->Text == "S" && SOSbutton19->Text == "O" && SOSbutton20->Text == "S") {}//Row 4
+                if (SOSbutton21->Text == "S" && SOSbutton22->Text == "O" && SOSbutton23->Text == "S") {}
+                if (SOSbutton22->Text == "S" && SOSbutton23->Text == "O" && SOSbutton24->Text == "S") {}
+                if (SOSbutton23->Text == "S" && SOSbutton24->Text == "O" && SOSbutton25->Text == "S") {}//Row 5
+                if (SOSbutton1->Text == "S" && SOSbutton6->Text == "O" && SOSbutton11->Text == "S") {}
+                if (SOSbutton6->Text == "S" && SOSbutton11->Text == "O" && SOSbutton16->Text == "S") {}
+                if (SOSbutton11->Text == "S" && SOSbutton16->Text == "O" && SOSbutton21->Text == "S") {}//Col1
+                if (SOSbutton2->Text == "S" && SOSbutton7->Text == "O" && SOSbutton12->Text == "S") {}
+                if (SOSbutton7->Text == "S" && SOSbutton12->Text == "O" && SOSbutton17->Text == "S") {}
+                if (SOSbutton12->Text == "S" && SOSbutton17->Text == "O" && SOSbutton22->Text == "S") {}//Col2
+                if (SOSbutton3->Text == "S" && SOSbutton8->Text == "O" && SOSbutton13->Text == "S") {}
+                if (SOSbutton8->Text == "S" && SOSbutton13->Text == "O" && SOSbutton18->Text == "S") {}
+                if (SOSbutton13->Text == "S" && SOSbutton18->Text == "O" && SOSbutton23->Text == "S") {}//Col3
+                if (SOSbutton4->Text == "S" && SOSbutton9->Text == "O" && SOSbutton14->Text == "S") {}
+                if (SOSbutton9->Text == "S" && SOSbutton14->Text == "O" && SOSbutton19->Text == "S") {}
+                if (SOSbutton14->Text == "S" && SOSbutton19->Text == "O" && SOSbutton24->Text == "S") {}//Col4
+                if (SOSbutton5->Text == "S" && SOSbutton10->Text == "O" && SOSbutton15->Text == "S") {}
+                if (SOSbutton10->Text == "S" && SOSbutton15->Text == "O" && SOSbutton20->Text == "S") {}
+                if (SOSbutton15->Text == "S" && SOSbutton20->Text == "O" && SOSbutton25->Text == "S") {}//Col5
+                if (SOSbutton3->Text == "S" && SOSbutton7->Text == "O" && SOSbutton11->Text == "S") {}
+                if (SOSbutton4->Text == "S" && SOSbutton8->Text == "O" && SOSbutton12->Text == "S") {}
+                if (SOSbutton8->Text == "S" && SOSbutton12->Text == "O" && SOSbutton16->Text == "S") {}
+                if (SOSbutton5->Text == "S" && SOSbutton9->Text == "O" && SOSbutton13->Text == "S") {}
+                if (SOSbutton9->Text == "S" && SOSbutton13->Text == "O" && SOSbutton17->Text == "S") {}
+                if (SOSbutton13->Text == "S" && SOSbutton17->Text == "O" && SOSbutton21->Text == "S") {}
+                if (SOSbutton10->Text == "S" && SOSbutton14->Text == "O" && SOSbutton18->Text == "S") {}
+                if (SOSbutton14->Text == "S" && SOSbutton18->Text == "O" && SOSbutton22->Text == "S") {}
+                if (SOSbutton15->Text == "S" && SOSbutton19->Text == "O" && SOSbutton23->Text == "S") {}
+                if (SOSbutton3->Text == "S" && SOSbutton9->Text == "O" && SOSbutton15->Text == "S") {}
+                if (SOSbutton2->Text == "S" && SOSbutton8->Text == "O" && SOSbutton14->Text == "S") {}
+                if (SOSbutton8->Text == "S" && SOSbutton14->Text == "O" && SOSbutton20->Text == "S") {}
+                if (SOSbutton1->Text == "S" && SOSbutton7->Text == "O" && SOSbutton13->Text == "S") {}
+                if (SOSbutton7->Text == "S" && SOSbutton13->Text == "O" && SOSbutton19->Text == "S") {}
+                if (SOSbutton13->Text == "S" && SOSbutton19->Text == "O" && SOSbutton25->Text == "S") {}
+                if (SOSbutton6->Text == "S" && SOSbutton12->Text == "O" && SOSbutton18->Text == "S") {}
+                if (SOSbutton12->Text == "S" && SOSbutton18->Text == "O" && SOSbutton24->Text == "S") {}
+                if (SOSbutton11->Text == "S" && SOSbutton17->Text == "O" && SOSbutton23->Text == "S") {}
                 
 /*
             case(5):
