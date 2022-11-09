@@ -68,6 +68,7 @@ namespace CppCLRWinFormsProject {
                 {SOSbutton21,SOSbutton22,SOSbutton23,SOSbutton24,SOSbutton25}
             };
           
+            
 		}
 
 	protected:
@@ -1184,7 +1185,8 @@ private: System::ComponentModel::Container^ components;
         int BlueScore = 0;
         int RedScore = 0;
 #pragma endregion
-        int finish = 0;
+        int finish = 0, test = 0, test2 = 0,test3 = 0,test4 = 0, test5 = 0, test6 = 0, test7 = 0, test8 = 0;
+        
         int matrixRow = 3,matrixCol = 9;
         char symbol;
         String^ Type_Game;
@@ -1196,21 +1198,15 @@ private: System::ComponentModel::Container^ components;
             int num = Convert::ToInt32(textBox1->Text);
             switch (num) {
             case(3):
-                List<String^> b3 = { };
                 if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
                             if (radioButton9->Checked == false && radioButton10->Checked == true)
                             {
-                                String^ a1 = "123";
-                                b3.Contains(a1);
-                                if (b3.Contains(a1) == true) {
-                                    break;
-                                }
-                                if(b3.Contains(a1) == false) {
+                                if (test == 0) {
                                     BlueScore += 1;
-                                    b3.Add(a1);
-                                    break;
+                                    textBox2->Text = Convert::ToString(BlueScore);
                                 }
+                                test = 1;
                             }
                             if (radioButton9->Checked == true && radioButton10->Checked == false)
                             {
@@ -1221,15 +1217,12 @@ private: System::ComponentModel::Container^ components;
                     if (RedTurn->Checked == true && BlueTurn->Checked == false) {
                         if (radioButton9->Checked == false && radioButton10->Checked == true)
                         {
-                            String^ a1 = "123";
-                            b3.Contains(a1);
-                            if (true) {
-                                break;
-                            }
-                            else {
-                                b3.Add(a1);
+
+                            if (test == 0) {
                                 RedScore += 1;
+                                textBox2->Text = Convert::ToString(RedScore);
                             }
+                            test++;
                         }
                         if (radioButton9->Checked == true && radioButton10->Checked == false)
                         {
