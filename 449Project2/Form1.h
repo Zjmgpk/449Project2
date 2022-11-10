@@ -67,8 +67,11 @@ namespace CppCLRWinFormsProject {
                 {SOSbutton16,SOSbutton17,SOSbutton18,SOSbutton19,SOSbutton20}, 
                 {SOSbutton21,SOSbutton22,SOSbutton23,SOSbutton24,SOSbutton25}
             };
-          
             
+            t3 = gcnew array<int^, 1>(8)
+            {
+                0, 0, 0, 0, 0, 0, 0, 0
+            };
 		}
 
 	protected:
@@ -160,7 +163,7 @@ namespace CppCLRWinFormsProject {
         array<Button^, 2>^ b_3;
         array<Button^, 2>^ b_4;
         array<Button^, 2>^ b_5;
-      
+        array<int^ >^ t3;
         
 private: System::Windows::Forms::Label^ label6;
 private: System::Windows::Forms::PictureBox^ pictureBox1;
@@ -1185,8 +1188,7 @@ private: System::ComponentModel::Container^ components;
         int BlueScore = 0;
         int RedScore = 0;
 #pragma endregion
-        int finish = 0, test = 0, test2 = 0,test3 = 0,test4 = 0, test5 = 0, test6 = 0, test7 = 0, test8 = 0;
-        
+        int finish = 0;
         int matrixRow = 3,matrixCol = 9;
         char symbol;
         String^ Type_Game;
@@ -1202,11 +1204,11 @@ private: System::ComponentModel::Container^ components;
                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
                             if (radioButton9->Checked == false && radioButton10->Checked == true)
                             {
-                                if (test == 0) {
+                                if (t3[1] == 0) {
                                     BlueScore += 1;
                                     textBox2->Text = Convert::ToString(BlueScore);
                                 }
-                                test = 1;
+                                t3[1] = 1;
                             }
                             if (radioButton9->Checked == true && radioButton10->Checked == false)
                             {
@@ -1218,11 +1220,11 @@ private: System::ComponentModel::Container^ components;
                         if (radioButton9->Checked == false && radioButton10->Checked == true)
                         {
 
-                            if (test == 0) {
+                            if (t3[1] == 0) {
                                 RedScore += 1;
                                 textBox2->Text = Convert::ToString(RedScore);
                             }
-                            test++;
+                            t3[1] = 1;
                         }
                         if (radioButton9->Checked == true && radioButton10->Checked == false)
                         {
@@ -1235,7 +1237,12 @@ private: System::ComponentModel::Container^ components;
                     {
                         if (radioButton9->Checked == false && radioButton10->Checked == true)
                         {
-                            
+                            if (t3[2] == 0) {
+                                BlueScore += 1;
+                                textBox2->Text = Convert::ToString(BlueScore);
+
+                            }
+                            t3[2] = 1;
                         }
                         if (radioButton9->Checked == true && radioButton10->Checked == false)
                         {
@@ -1245,7 +1252,12 @@ private: System::ComponentModel::Container^ components;
                     if (RedTurn->Checked == true) {
                         if (radioButton9->Checked == false && radioButton10->Checked == true)
                         {
-                           
+                            if (t3[2] == 0) 
+                            {
+                                RedScore += 1;
+                                textBox3->Text = Convert::ToString(RedScore);
+                            }
+                            t3[2] = 1;
                         }
                         if (radioButton9->Checked == true && radioButton10->Checked == false)
                         {
@@ -1258,7 +1270,10 @@ private: System::ComponentModel::Container^ components;
 
                         if (radioButton9->Checked == false && radioButton10->Checked == true)
                         {
-                            
+                            if (t3[3] == 0) {
+                                BlueScore += 1;
+                                textBox2->Text = Convert::ToString(BlueScore);
+                            }
                         }
                         if (radioButton9->Checked == true && radioButton10->Checked == false)
                         {
@@ -1270,7 +1285,10 @@ private: System::ComponentModel::Container^ components;
 
                         if (radioButton9->Checked == false && radioButton10->Checked == true)
                         {
-                            
+                            if(t3[3]==0){
+                                RedScore += 1;
+                                textBox3->Text = Convert::ToString(RedScore);
+                            }
                         }
                         if (radioButton9->Checked == true && radioButton10->Checked == false)
                         {
