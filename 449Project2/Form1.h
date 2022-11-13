@@ -382,6 +382,7 @@ private: System::ComponentModel::Container^ components;
             this->BlueComputer->TabStop = true;
             this->BlueComputer->Text = L"Computer";
             this->BlueComputer->UseVisualStyleBackColor = true;
+            this->BlueComputer->CheckedChanged += gcnew System::EventHandler(this, &Form1::BlueComputer_CheckedChanged);
             // 
             // BlueHuman
             // 
@@ -1064,6 +1065,7 @@ private: System::ComponentModel::Container^ components;
             this->Computer_Red->TabStop = true;
             this->Computer_Red->Text = L"Computer";
             this->Computer_Red->UseVisualStyleBackColor = true;
+            this->Computer_Red->CheckedChanged += gcnew System::EventHandler(this, &Form1::Computer_Red_CheckedChanged);
             // 
             // RedHuman
             // 
@@ -7186,5 +7188,9 @@ private: System::ComponentModel::Container^ components;
         textBox3->Text = "0";
     }
 
+private: System::Void BlueComputer_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void Computer_Red_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
