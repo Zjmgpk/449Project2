@@ -1207,8 +1207,12 @@ private: System::ComponentModel::Container^ components;
         //need this many? 
         
         void Score() {
-
+            
+        
             int num = Convert::ToInt32(textBox1->Text);
+
+
+          /*  
             switch (num) {
             case(3):
                 if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
@@ -2264,7 +2268,7 @@ private: System::ComponentModel::Container^ components;
                    }
                }
 
-/*
+
             case(5)://48 cases
                 if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
                     if (BlueTurn->Checked == true && RedTurn->Checked == false) {
@@ -5763,74 +5767,150 @@ private: System::ComponentModel::Container^ components;
                          }
                      }
                  }
-                 */
+                 
              }
+             */
         }
 
 
-        void Score_General() 
+        void Score_General()
         {
-            if (textBox1->Text == "3") {
-                for(int i = 0; i <=2; i++)
-                    for (int j = 0; j <= 2; j++) {
-                        if (b_3[i,j]->Text == "S" || b_3[i,j]->Text == "O")
-                            finish += 1;
-                        if (finish == 9) {
-                            if (BlueScore > RedScore) {
-                                MessageBox::Show("Blue Player is the winner!!!");
-                            }
-                            if (BlueScore < RedScore) {
-                                MessageBox::Show("Red Player is the winner!!!");
-                            }
-                        }
-                    }
-            }
-            if (textBox1->Text == "4") {
-                for (int i = 0; i <= 3; i++)
-                    for (int j = 0; j <= 3; j++) {
-                        if (b_4[i, j]->Text == "S" || b_4[i, j]->Text == "O")
-                            finish += 1;
-                        if (finish == 16) {
-                            if (BlueScore > RedScore) {
-                                MessageBox::Show("Blue Player is the winner!!!");
-                            }
-                            if (BlueScore < RedScore) {
-                                MessageBox::Show("Red Player is the winner!!!");
-                            }
-                        }
-                    }
-            }
-            if (textBox1->Text == "5") {
-                for (int i = 0; i <= 4; i++)
-                    for (int j = 0; j <= 4; j++) {
-                        if (b_5[i, j]->Text == "S" || b_5[i, j]->Text == "O")
-                            finish += 1;
-                        if (finish == 25) {
-                            if (BlueScore > RedScore) {
-                                MessageBox::Show("Blue Player is the winner!!!");
-                            }
-                            if (BlueScore < RedScore) {
-                                MessageBox::Show("Red Player is the winner!!!");
-                            }
-                        }
-                    }
-            }
-            if (textBox1->Text == "6") {
-                for (int i = 0; i <= 5; i++)
-                    for (int j = 0; j <= 5; j++) {
-                        if (b[i, j]->Text == "S" || b[i, j]->Text == "O")
-                            finish += 1;
-                        if (finish == 36) {
-                            if (BlueScore > RedScore) {
-                                MessageBox::Show("Blue Player is the winner!!!");
-                            }
-                            if (BlueScore < RedScore) {
-                                MessageBox::Show("Red Player is the winner!!!");
-                            }
-                        }
-                    }
-            }
+            int sos = 0;
+            if (radioButton10->Checked == true && radioButton9->Checked == false) {
 
+                if (textBox1->Text == "3") {
+                    for (int i = 0; i <= 2; i++) {
+                        for (int j = 0; j <= 2; j++) {
+                            if (BlueTurn->Checked == true || RedTurn->Checked == true) {
+                                if (BlueO->Checked == true || RedO->Checked == true) {
+                                    try {
+                                        if (b_3[i, j - 2]->Text == "S" && b_3[i, j - 1]->Text == "O") {
+                                            sos++;
+                                        }
+                                    }
+                                    catch (IndexOutOfRangeException^ e) {
+                                        continue;
+                                    }
+
+                                    try {
+                                        if (b_3[i, j + 1]->Text == "O" && b_3[i, j + 2]->Text == "O") {
+                                            sos+=1;
+                                        }
+                                    }
+                                    catch (IndexOutOfRangeException^ e) {
+                                        continue;
+                                    }
+
+                                    try {
+                                        if (b_3[i + 1, j]->Text == "O" && b_3[i + 2, j]->Text == "S") {
+                                            sos+=1;
+                                        }
+                                    }
+                                    catch (IndexOutOfRangeException^ e) {
+                                        continue;
+                                    }
+
+                                    try {
+                                        if (b_3[i - 1, j]->Text == "O" && b_3[i - 2, j]->Text == "S") {
+                                            sos+=1;
+                                        }
+                                    }
+                                    catch (IndexOutOfRangeException^ e) {
+                                        continue;
+                                    }
+                                    try {
+                                        if (b_3[i + 1, j + 1]->Text == "O" && b_3[i + 2, j + 2]->Text == "O") {
+                                            sos+=1;
+                                        }
+                                    }
+                                    catch (IndexOutOfRangeException^ e) { 
+                                        continue; 
+                                    }
+
+                                    try {
+                                        if (b_3[i - 1, j - 1]->Text == "O" && b_3[i - 2, j - 2]->Text == "S") {
+                                            sos+=1;
+                                        }
+                                    }
+                                        catch (IndexOutOfRangeException^ e) { 
+                                            continue;
+                                        }
+
+                                    try {
+                                         if (b_3[i + 1, j - 1]->Text == "O" && b_3[i + 2, j - 2]->Text == "S") {
+                                                sos+=1;
+                                            }
+                                        }
+                                    catch(IndexOutOfRangeException^ e){
+                                        continue;
+                                    }
+
+                                    try{
+                                        if (b_3[i - 1, j + 1]->Text == "O" && b_3[i - 2, j + 2]->Text == "S") {
+                                            sos+=1;
+                                        }
+                                    }
+                                    catch (IndexOutOfRangeException^ e) {
+                                        continue;
+                                    }
+                                }
+                                if (BlueS->Checked == true || RedS->Checked == true) {
+                                    try {
+                                        if (b_3[i + 1, j]->Text == "S" && b_3[i - 1, j]->Text == "S") {
+                                            sos+=1;
+                                        }
+                                    }
+                                    catch (IndexOutOfRangeException^ e) {
+                                        continue;
+                                    }
+
+                                    try {
+                                        if (b_3[i, j + 1]->Text == "S" && b_3[i, j - 1]->Text == "S") {
+                                            sos+=1;
+                                        }
+                                    }
+                                    catch (IndexOutOfRangeException^ e) {
+                                        continue;
+                                    }
+                                    try {
+                                        if (b_3[i + 1, j + 1]->Text == "S" && b_3[i - 1, j - 1]->Text == "S") {
+                                            sos+=1;
+                                        }
+                                    }
+                                    catch (IndexOutOfRangeException^ e) {
+                                        continue;
+                                    }
+
+                                    try {
+                                        if (b_3[i + 1, j - 1]->Text == "S" && b_3[i - 1, j + 1]->Text == "S") {
+                                            sos+=1;
+                                        }
+                                    }
+                                    catch (IndexOutOfRangeException^ e) {
+                                        continue;
+                                    }
+                                    
+                                    
+                                }
+                            }
+
+                            if (sos > 1) {
+                                sos = 1;
+                            }
+
+                            if (BlueTurn->Checked == true) {
+                                BlueScore = BlueScore + sos;
+                                textBox2->Text = Convert::ToString(BlueScore);
+                            }
+                            if(RedTurn->Checked == true){
+                                RedScore = RedScore + sos;
+                            }
+                        }
+                    }
+                }
+
+            }
+        
         }
 
 
@@ -7156,8 +7236,8 @@ private: System::ComponentModel::Container^ components;
                 b[i, j]->Text = " ";
             }
         }
-        textBox2->Text = "0";
-        textBox3->Text = "0";
+        //textBox2->Text = "0";
+        //textBox3->Text = "0";
 
         a1 = 0, a2 = 0, a3 = 0, a4 = 0, a5 = 0, a6 = 0, a7 = 0, a8 = 0;
         b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0, b7 = 0, b8 = 0, b9 = 0, b10 = 0, b13 = 0, b14 = 0, b15 = 0, b16 = 0;
