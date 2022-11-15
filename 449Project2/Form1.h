@@ -6,6 +6,7 @@
 namespace CppCLRWinFormsProject {
 
 	using namespace System;
+  
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
@@ -4725,6 +4726,20 @@ private: System::ComponentModel::Container^ components;
             //if()
         
         }
+
+        void Computer_Game() {
+            int a = (rand() % 3 + 1);
+            int b = (rand() % 4 + 1);
+            int c = (rand() % 5 + 1);
+            int d = (rand() % 6 + 1);
+
+            if(textBox1->Text == "3"){}
+            if(textBox1->Text == "4"){}
+            if(textBox1->Text == "5"){}
+            if(textBox1->Text == "6"){}
+
+
+        }
          
 
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -6044,6 +6059,7 @@ private: System::ComponentModel::Container^ components;
             Score_General();
         }
     }
+
     private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
         //New Game
         for (int i = 0; i <= 5; i++) {
