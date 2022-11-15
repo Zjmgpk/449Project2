@@ -146,7 +146,8 @@ namespace CppCLRWinFormsProject {
     private: System::Windows::Forms::RadioButton^ RedO;
     private: System::Windows::Forms::RadioButton^ RedS;
     private: System::Windows::Forms::TextBox^ textBox3;
-    private: System::Windows::Forms::RadioButton^ Computer_Red;
+private: System::Windows::Forms::RadioButton^ RedComputer;
+
     private: System::Windows::Forms::RadioButton^ RedHuman;
     private: System::Windows::Forms::Button^ button2;
     private: System::Windows::Forms::GroupBox^ groupBox4;
@@ -240,7 +241,7 @@ private: System::ComponentModel::Container^ components;
             this->RedO = (gcnew System::Windows::Forms::RadioButton());
             this->RedS = (gcnew System::Windows::Forms::RadioButton());
             this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-            this->Computer_Red = (gcnew System::Windows::Forms::RadioButton());
+            this->RedComputer = (gcnew System::Windows::Forms::RadioButton());
             this->RedHuman = (gcnew System::Windows::Forms::RadioButton());
             this->button2 = (gcnew System::Windows::Forms::Button());
             this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
@@ -998,7 +999,7 @@ private: System::ComponentModel::Container^ components;
             this->groupBox2->Controls->Add(this->label6);
             this->groupBox2->Controls->Add(this->groupBox6);
             this->groupBox2->Controls->Add(this->textBox3);
-            this->groupBox2->Controls->Add(this->Computer_Red);
+            this->groupBox2->Controls->Add(this->RedComputer);
             this->groupBox2->Controls->Add(this->RedHuman);
             this->groupBox2->Location = System::Drawing::Point(887, 181);
             this->groupBox2->Name = L"groupBox2";
@@ -1055,17 +1056,17 @@ private: System::ComponentModel::Container^ components;
             this->textBox3->TabIndex = 34;
             this->textBox3->Text = L"0";
             // 
-            // Computer_Red
+            // RedComputer
             // 
-            this->Computer_Red->AutoSize = true;
-            this->Computer_Red->Location = System::Drawing::Point(35, 128);
-            this->Computer_Red->Name = L"Computer_Red";
-            this->Computer_Red->Size = System::Drawing::Size(86, 20);
-            this->Computer_Red->TabIndex = 13;
-            this->Computer_Red->TabStop = true;
-            this->Computer_Red->Text = L"Computer";
-            this->Computer_Red->UseVisualStyleBackColor = true;
-            this->Computer_Red->CheckedChanged += gcnew System::EventHandler(this, &Form1::Computer_Red_CheckedChanged);
+            this->RedComputer->AutoSize = true;
+            this->RedComputer->Location = System::Drawing::Point(35, 128);
+            this->RedComputer->Name = L"RedComputer";
+            this->RedComputer->Size = System::Drawing::Size(86, 20);
+            this->RedComputer->TabIndex = 13;
+            this->RedComputer->TabStop = true;
+            this->RedComputer->Text = L"Computer";
+            this->RedComputer->UseVisualStyleBackColor = true;
+            this->RedComputer->CheckedChanged += gcnew System::EventHandler(this, &Form1::Computer_Red_CheckedChanged);
             // 
             // RedHuman
             // 
@@ -4721,6 +4722,7 @@ private: System::ComponentModel::Container^ components;
 
 
             }
+            //if()
         
         }
          
@@ -4793,6 +4795,7 @@ private: System::ComponentModel::Container^ components;
             SOSbutton1->Text = "S";
             SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
             Score();
+            Score_General();
             
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
@@ -4800,18 +4803,21 @@ private: System::ComponentModel::Container^ components;
             SOSbutton1->Text = "O";
             SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
             Score();
+            Score_General();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "S";
             SOSbutton1->ForeColor = System::Drawing::Color::IndianRed;
             Score();  
+            Score_General();
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton1->Enabled = true;
             SOSbutton1->Text = "O";
             SOSbutton1->ForeColor = System::Drawing::Color::IndianRed;
             Score();
+            Score_General();
         }
     }
     private: System::Void SOSbutton2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4820,7 +4826,6 @@ private: System::ComponentModel::Container^ components;
             SOSbutton2->Text = "S";
             SOSbutton2->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
