@@ -4784,13 +4784,50 @@ private: System::ComponentModel::Container^ components;
                 int c1 = (rand() % 5);
                 int c2 = (rand() % 5);
                 if(b_5[c1,c2]->Text != "S" && b_5[c1,c2]->Text != "O") {
+                    if (comp_choice == 1) {
+                        b_5[c1, c2]->Text == "S";
+                        if (radioButton9->Checked == true) {
+                            Score();
+                        }
+                        if(radioButton10->Checked == true){
+                            Score_General();
+                        }
+                    }
+                    if (comp_choice == 2) {
+                        b_5[c1, c2]->Text == "O";
+                        if(radioButton9->Checked == true){
+                            Score();
+                        }
+                        if(radioButton10->Checked == true){
+                            Score_General();
+                        }
+                    }
 
                 }
             }
             if(textBox1->Text == "6"){
                 int d1 = (rand() % 6);
                 int d2 = (rand() % 6);
-                if(b[d1,d2]->Text != "S" && b[d1,d2]->Text != "O"){}
+                if(b[d1,d2]->Text != "S" && b[d1,d2]->Text != "O"){
+                    if(comp_choice == 1){
+                        b[d1, d2]->Text == "S";
+                        if (radioButton9->Checked == true) {
+                            Score();
+                        }
+                        if (radioButton10->Checked == true) {
+                            Score_General();
+                        }
+                    }
+                    if(comp_choice == 2){
+                        b[d1, d2]->Text == "O";
+                        if (radioButton9->Checked == true) {
+                            Score();
+                        }
+                        if (radioButton10->Checked == true) {
+                            Score_General();
+                        }
+                    }
+                }
             }
         }
          
@@ -4856,7 +4893,7 @@ private: System::ComponentModel::Container^ components;
 
         
 	}
-    
+    //change for 
     private: System::Void SOSbutton1_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
             SOSbutton1->Enabled = true;
@@ -4864,7 +4901,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton1->ForeColor = System::Drawing::Color::Aqua;
             Score();
             Score_General();
-            
+            RedTurn->Checked = true;
+            if (RedComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton1->Enabled = true;
