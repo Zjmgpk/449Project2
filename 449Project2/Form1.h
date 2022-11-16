@@ -4727,7 +4727,7 @@ private: System::ComponentModel::Container^ components;
             
         
         }
-
+        //Computer, will it work?
         void Computer_Game() {
             srand(time(NULL));
             int comp_choice = (rand() % 2 + 1);
@@ -4762,25 +4762,35 @@ private: System::ComponentModel::Container^ components;
                 if (b_4[b1, b2]->Text != "S" && b_4[b1, b2]->Text != "O") {
                     if(comp_choice == 1){
                         b_4[b1, b2]->Text = "S";
-                        if(radioButton9->Checked == true){}
+                        if(radioButton9->Checked == true){
+                            Score();
+                        }
+                        if (radioButton10->Checked == true) {
+                            Score_General();
+                        }
                     }
                     if(comp_choice == 2){
                         b_4[b1, b2]->Text = "O";
                         if (radioButton9->Checked == true) {
-
+                            Score();
                         }
-                        if(radioButton10->Checked == true){}
+                        if(radioButton10->Checked == true){
+                            Score_General();
+                        }
                     }
                 }
             }
             if(textBox1->Text == "5"){
                 int c1 = (rand() % 5);
                 int c2 = (rand() % 5);
-                //if(){}
+                if(b_5[c1,c2]->Text != "S" && b_5[c1,c2]->Text != "O") {
+
+                }
             }
             if(textBox1->Text == "6"){
                 int d1 = (rand() % 6);
                 int d2 = (rand() % 6);
+                if(b[d1,d2]->Text != "S" && b[d1,d2]->Text != "O"){}
             }
         }
          
