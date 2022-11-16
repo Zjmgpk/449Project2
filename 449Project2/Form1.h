@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdlib>
+#include <ctime>
 
 
 namespace CppCLRWinFormsProject {
@@ -2662,7 +2663,7 @@ private: System::ComponentModel::Container^ components;
                         }
                     }
                 }
-                ////////////////////////////////////////////////////////////////////////////////////////////
+                
 
             case(6)://80 cases
                  if (SOSbutton1->Text == "S" && SOSbutton2->Text == "O" && SOSbutton3->Text == "S") {
@@ -4723,22 +4724,64 @@ private: System::ComponentModel::Container^ components;
 
 
             }
-            //if()
+            
         
         }
 
         void Computer_Game() {
-            int a = (rand() % 3 + 1);
-            int b = (rand() % 4 + 1);
-            int c = (rand() % 5 + 1);
-            int d = (rand() % 6 + 1);
+            srand(time(NULL));
+            int comp_choice = (rand() % 2 + 1);
 
-            if(textBox1->Text == "3"){}
-            if(textBox1->Text == "4"){}
-            if(textBox1->Text == "5"){}
-            if(textBox1->Text == "6"){}
+            if(textBox1->Text == "3"){
+                int a1 = (rand() % 3);
+                int a2 = (rand() % 3);
+                if(b_3[a1,a2]->Text != "S" && b_3[a1,a2]->Text != "O") {
+                    if (comp_choice == 1) {
+                        b_3[a1, a2]->Text = "S";
+                        if (radioButton9->Checked == true) {
+                            Score();
+                        }
+                        if (radioButton10->Checked == true) {
+                            Score_General();
+                        }
+                    }
+                    if (comp_choice == 2) {
+                        b_3[a1, a2]->Text = "O";
+                        if (radioButton9->Checked == true) {
+                            Score();
+                        }
+                        if (radioButton10->Checked == true) {
+                            Score_General();
+                        }
+                    }
+                }
+            }
+            if(textBox1->Text == "4"){
+                int b1 = (rand() % 4);
+                int b2 = (rand() % 4); 
+                if (b_4[b1, b2]->Text != "S" && b_4[b1, b2]->Text != "O") {
+                    if(comp_choice == 1){
+                        b_4[b1, b2]->Text = "S";
+                        if(radioButton9->Checked == true){}
+                    }
+                    if(comp_choice == 2){
+                        b_4[b1, b2]->Text = "O";
+                        if (radioButton9->Checked == true) {
 
-
+                        }
+                        if(radioButton10->Checked == true){}
+                    }
+                }
+            }
+            if(textBox1->Text == "5"){
+                int c1 = (rand() % 5);
+                int c2 = (rand() % 5);
+                //if(){}
+            }
+            if(textBox1->Text == "6"){
+                int d1 = (rand() % 6);
+                int d2 = (rand() % 6);
+            }
         }
          
 
