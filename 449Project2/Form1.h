@@ -4966,7 +4966,7 @@ namespace CppCLRWinFormsProject {
             srand(time(NULL));
             //int BlueChoice = (rand() % 10 + 1);
             //int RedChoice = (rand() % 10 + 1);
-            int game1 = 1;
+            int game1 = 1 ,game2 = 1, game3 = 1, game4 = 1;
             if (textBox1->Text == "3") {
                 if (radioButton9->Checked == true) {
                     while (game1 <= 15) {
@@ -5050,6 +5050,270 @@ namespace CppCLRWinFormsProject {
 
                         }
                         game1++;
+                        Threading::Thread::Sleep(250);
+
+                    }
+                }
+            }
+            if (textBox1->Text == "4") {
+                if (radioButton9->Checked == true) {
+                    while (game2 <= 20) {
+                        int BlueChoice = (rand() % 10 + 1);
+                        int RedChoice = (rand() % 10 + 1);
+                        int a1 = (rand() % 4);
+                        int a2 = (rand() % 4);
+                        int b1 = (rand() % 4);
+                        int b2 = (rand() % 4);
+                        BlueTurn->Enabled = true;
+                        BlueTurn->Checked = true;
+                        if (b_4[a1, a2]->Text != "S" && b_4[a1, a2]->Text != "O") {
+                            if (BlueChoice > 5) {
+                                b_4[a1, a2]->Text = "S";
+                                b_4[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+                            if (BlueChoice <= 5) {
+                                b_4[a1, a2]->Text = "O";
+                                b_4[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+
+                        }
+                        Threading::Thread::Sleep(250);
+                        RedTurn->Checked = true;
+                        if (b_4[b1, b2]->Text != "S" && b_4[b1, b2]->Text != "O") {
+                            if (RedChoice > 5) {
+                                b_4[b1, b2]->Text = "S";
+                                b_4[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score();
+                            }
+                            if (RedChoice <= 5) {
+                                b_4[b1, b2]->Text = "O";
+                                b_4[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score();
+                            }
+
+                        }
+                        game2++;
+                        Threading::Thread::Sleep(250);
+
+                    }
+                }
+                if (radioButton10->Checked == true) {
+                    while (game2 <= 20) {
+                        int BlueChoice = (rand() % 10 + 1);
+                        int RedChoice = (rand() % 10 + 1);
+                        int a1 = (rand() % 4);
+                        int a2 = (rand() % 4);
+                        int b1 = (rand() % 4);
+                        int b2 = (rand() % 4);
+                        BlueTurn->Enabled = true;
+                        BlueTurn->Checked = true;
+                        if (b_4[a1, a2]->Text != "S" && b_4[a1, a2]->Text != "O") {
+                            if (BlueChoice > 5) {
+                                b_4[a1, a2]->Text = "S";
+                                b_4[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+                            if (BlueChoice <= 5) {
+                                b_4[a1, a2]->Text = "O";
+                                b_4[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+
+                        }
+                        Threading::Thread::Sleep(250);
+                        RedTurn->Checked = true;
+                        if (b_4[b1, b2]->Text != "S" && b_4[b1, b2]->Text != "O") {
+                            if (RedChoice > 5) {
+                                b_4[b1, b2]->Text = "S";
+                                b_4[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score_General();
+                            }
+                            if (RedChoice <= 5) {
+                                b_3[b1, b2]->Text = "O";
+                                b_3[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score_General();
+                            }
+
+                        }
+                        game2++;
+                        Threading::Thread::Sleep(250);
+
+                    }
+                }
+            }
+            if (textBox1->Text == "5") {
+                if (radioButton9->Checked == true) {
+                    while (game3 <= 20) {
+                        int BlueChoice = (rand() % 10 + 1);
+                        int RedChoice = (rand() % 10 + 1);
+                        int a1 = (rand() % 5);
+                        int a2 = (rand() % 5);
+                        int b1 = (rand() % 5);
+                        int b2 = (rand() % 5);
+                        BlueTurn->Enabled = true;
+                        BlueTurn->Checked = true;
+                        if (b_5[a1, a2]->Text != "S" && b_5[a1, a2]->Text != "O") {
+                            if (BlueChoice > 5) {
+                                b_5[a1, a2]->Text = "S";
+                                b_5[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+                            if (BlueChoice <= 5) {
+                                b_5[a1, a2]->Text = "O";
+                                b_5[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+
+                        }
+                        Threading::Thread::Sleep(250);
+                        RedTurn->Checked = true;
+                        if (b_5[b1, b2]->Text != "S" && b_5[b1, b2]->Text != "O") {
+                            if (RedChoice > 5) {
+                                b_5[b1, b2]->Text = "S";
+                                b_5[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score();
+                            }
+                            if (RedChoice <= 5) {
+                                b_5[b1, b2]->Text = "O";
+                                b_5[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score();
+                            }
+
+                        }
+                        game3++;
+                        Threading::Thread::Sleep(250);
+
+                    }
+                }
+                if (radioButton10->Checked == true) {
+                    while (game3 <= 25) {
+                        int BlueChoice = (rand() % 10 + 1);
+                        int RedChoice = (rand() % 10 + 1);
+                        int a1 = (rand() % 5);
+                        int a2 = (rand() % 5);
+                        int b1 = (rand() % 5);
+                        int b2 = (rand() % 5);
+                        BlueTurn->Enabled = true;
+                        BlueTurn->Checked = true;
+                        if (b_5[a1, a2]->Text != "S" && b_5[a1, a2]->Text != "O") {
+                            if (BlueChoice > 5) {
+                                b_5[a1, a2]->Text = "S";
+                                b_5[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+                            if (BlueChoice <= 5) {
+                                b_5[a1, a2]->Text = "O";
+                                b_5[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+
+                        }
+                        Threading::Thread::Sleep(250);
+                        RedTurn->Checked = true;
+                        if (b_5[b1, b2]->Text != "S" && b_5[b1, b2]->Text != "O") {
+                            if (RedChoice > 5) {
+                                b_5[b1, b2]->Text = "S";
+                                b_5[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score_General();
+                            }
+                            if (RedChoice <= 5) {
+                                b_5[b1, b2]->Text = "O";
+                                b_5[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score_General();
+                            }
+
+                        }
+                        game3++;
+                        Threading::Thread::Sleep(250);
+
+                    }
+                }
+            }
+            if (textBox1->Text == "6") {
+                if (radioButton9->Checked == true) {
+                    while (game4 <= 20) {
+                        int BlueChoice = (rand() % 10 + 1);
+                        int RedChoice = (rand() % 10 + 1);
+                        int a1 = (rand() % 6);
+                        int a2 = (rand() % 6);
+                        int b1 = (rand() % 6);
+                        int b2 = (rand() % 6);
+                        BlueTurn->Enabled = true;
+                        BlueTurn->Checked = true;
+                        if (b[a1, a2]->Text != "S" && b[a1, a2]->Text != "O") {
+                            if (BlueChoice > 5) {
+                                b[a1, a2]->Text = "S";
+                                b[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+                            if (BlueChoice <= 5) {
+                                b[a1, a2]->Text = "O";
+                                b[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+
+                        }
+                        Threading::Thread::Sleep(250);
+                        RedTurn->Checked = true;
+                        if (b[b1, b2]->Text != "S" && b[b1, b2]->Text != "O") {
+                            if (RedChoice > 5) {
+                                b[b1, b2]->Text = "S";
+                                b[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score();
+                            }
+                            if (RedChoice <= 5) {
+                                b[b1, b2]->Text = "O";
+                                b[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score();
+                            }
+
+                        }
+                        game4++;
+                        Threading::Thread::Sleep(250);
+
+                    }
+                }
+                if (radioButton10->Checked == true) {
+                    while (game1 <= 15) {
+                        int BlueChoice = (rand() % 10 + 1);
+                        int RedChoice = (rand() % 10 + 1);
+                        int a1 = (rand() % 6);
+                        int a2 = (rand() % 6);
+                        int b1 = (rand() % 6);
+                        int b2 = (rand() % 6);
+                        BlueTurn->Enabled = true;
+                        BlueTurn->Checked = true;
+                        if (b[a1, a2]->Text != "S" && b[a1, a2]->Text != "O") {
+                            if (BlueChoice > 5) {
+                                b[a1, a2]->Text = "S";
+                                b[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+                            if (BlueChoice <= 5) {
+                                b[a1, a2]->Text = "O";
+                                b[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+
+                        }
+                        Threading::Thread::Sleep(250);
+                        RedTurn->Checked = true;
+                        if (b[b1, b2]->Text != "S" && b[b1, b2]->Text != "O") {
+                            if (RedChoice > 5) {
+                                b[b1, b2]->Text = "S";
+                                b[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score_General();
+                            }
+                            if (RedChoice <= 5) {
+                                b[b1, b2]->Text = "O";
+                                b[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score_General();
+                            }
+
+                        }
+                        game4++;
                         Threading::Thread::Sleep(250);
 
                     }
