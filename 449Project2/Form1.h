@@ -2,6 +2,7 @@
 
 #include <cstdlib>
 #include <ctime>
+#include <dos.h>
 
 
 namespace CppCLRWinFormsProject {
@@ -148,7 +149,7 @@ namespace CppCLRWinFormsProject {
     private: System::Windows::Forms::RadioButton^ RedO;
     private: System::Windows::Forms::RadioButton^ RedS;
     private: System::Windows::Forms::TextBox^ textBox3;
-private: System::Windows::Forms::RadioButton^ RedComputer;
+    private: System::Windows::Forms::RadioButton^ RedComputer;
 
     private: System::Windows::Forms::RadioButton^ RedHuman;
     private: System::Windows::Forms::Button^ button2;
@@ -156,7 +157,7 @@ private: System::Windows::Forms::RadioButton^ RedComputer;
     private: System::Windows::Forms::RadioButton^ RedTurn;
     private: System::Windows::Forms::RadioButton^ BlueTurn;
     private: System::Windows::Forms::Label^ label5;
-    protected:
+    
 
 	private:
 		/// <summary>
@@ -169,10 +170,10 @@ private: System::Windows::Forms::RadioButton^ RedComputer;
         array<Button^, 2>^ b_5;
         array<int^, 1>^ test;
         
-private: System::Windows::Forms::Label^ label6;
-private: System::Windows::Forms::PictureBox^ pictureBox1;
-private: System::Windows::Forms::Button^ button1;
-private: System::ComponentModel::Container^ components;
+    private: System::Windows::Forms::Label^ label6;
+    private: System::Windows::Forms::PictureBox^ pictureBox1;
+    private: System::Windows::Forms::Button^ button1;
+    private: System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -385,7 +386,7 @@ private: System::ComponentModel::Container^ components;
             this->BlueComputer->TabStop = true;
             this->BlueComputer->Text = L"Computer";
             this->BlueComputer->UseVisualStyleBackColor = true;
-            this->BlueComputer->CheckedChanged += gcnew System::EventHandler(this, &Form1::BlueComputer_CheckedChanged);
+            
             // 
             // BlueHuman
             // 
@@ -497,6 +498,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton16->Name = L"SOSbutton16";
             this->SOSbutton16->Size = System::Drawing::Size(71, 69);
             this->SOSbutton16->TabIndex = 16;
+            this->SOSbutton16->Text = L" ";
             this->SOSbutton16->UseVisualStyleBackColor = true;
             this->SOSbutton16->Click += gcnew System::EventHandler(this, &Form1::SOSbutton16_Click);
             // 
@@ -510,6 +512,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton15->Name = L"SOSbutton15";
             this->SOSbutton15->Size = System::Drawing::Size(71, 69);
             this->SOSbutton15->TabIndex = 15;
+            this->SOSbutton15->Text = L" ";
             this->SOSbutton15->UseVisualStyleBackColor = true;
             this->SOSbutton15->Click += gcnew System::EventHandler(this, &Form1::SOSbutton15_Click);
             // 
@@ -523,6 +526,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton14->Name = L"SOSbutton14";
             this->SOSbutton14->Size = System::Drawing::Size(71, 69);
             this->SOSbutton14->TabIndex = 14;
+            this->SOSbutton14->Text = L" ";
             this->SOSbutton14->UseVisualStyleBackColor = true;
             this->SOSbutton14->Click += gcnew System::EventHandler(this, &Form1::SOSbutton14_Click);
             // 
@@ -536,6 +540,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton13->Name = L"SOSbutton13";
             this->SOSbutton13->Size = System::Drawing::Size(71, 69);
             this->SOSbutton13->TabIndex = 13;
+            this->SOSbutton13->Text = L" ";
             this->SOSbutton13->UseVisualStyleBackColor = true;
             this->SOSbutton13->Click += gcnew System::EventHandler(this, &Form1::SOSbutton13_Click);
             // 
@@ -549,6 +554,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton12->Name = L"SOSbutton12";
             this->SOSbutton12->Size = System::Drawing::Size(75, 69);
             this->SOSbutton12->TabIndex = 12;
+            this->SOSbutton12->Text = L" ";
             this->SOSbutton12->UseVisualStyleBackColor = true;
             this->SOSbutton12->Click += gcnew System::EventHandler(this, &Form1::SOSbutton12_Click);
             // 
@@ -700,6 +706,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton10->Name = L"SOSbutton10";
             this->SOSbutton10->Size = System::Drawing::Size(71, 69);
             this->SOSbutton10->TabIndex = 10;
+            this->SOSbutton10->Text = L" ";
             this->SOSbutton10->UseVisualStyleBackColor = true;
             this->SOSbutton10->Click += gcnew System::EventHandler(this, &Form1::SOSbutton10_Click);
             // 
@@ -713,6 +720,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton11->Name = L"SOSbutton11";
             this->SOSbutton11->Size = System::Drawing::Size(71, 69);
             this->SOSbutton11->TabIndex = 11;
+            this->SOSbutton11->Text = L" ";
             this->SOSbutton11->UseVisualStyleBackColor = true;
             this->SOSbutton11->Click += gcnew System::EventHandler(this, &Form1::SOSbutton11_Click);
             // 
@@ -726,6 +734,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton17->Name = L"SOSbutton17";
             this->SOSbutton17->Size = System::Drawing::Size(71, 69);
             this->SOSbutton17->TabIndex = 17;
+            this->SOSbutton17->Text = L" ";
             this->SOSbutton17->UseVisualStyleBackColor = true;
             this->SOSbutton17->Click += gcnew System::EventHandler(this, &Form1::SOSbutton17_Click);
             // 
@@ -739,6 +748,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton18->Name = L"SOSbutton18";
             this->SOSbutton18->Size = System::Drawing::Size(75, 69);
             this->SOSbutton18->TabIndex = 18;
+            this->SOSbutton18->Text = L" ";
             this->SOSbutton18->UseVisualStyleBackColor = true;
             this->SOSbutton18->Click += gcnew System::EventHandler(this, &Form1::SOSbutton18_Click);
             // 
@@ -752,6 +762,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton19->Name = L"SOSbutton19";
             this->SOSbutton19->Size = System::Drawing::Size(71, 69);
             this->SOSbutton19->TabIndex = 19;
+            this->SOSbutton19->Text = L" ";
             this->SOSbutton19->UseVisualStyleBackColor = true;
             this->SOSbutton19->Click += gcnew System::EventHandler(this, &Form1::SOSbutton19_Click);
             // 
@@ -765,6 +776,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton20->Name = L"SOSbutton20";
             this->SOSbutton20->Size = System::Drawing::Size(71, 69);
             this->SOSbutton20->TabIndex = 20;
+            this->SOSbutton20->Text = L" ";
             this->SOSbutton20->UseVisualStyleBackColor = true;
             this->SOSbutton20->Click += gcnew System::EventHandler(this, &Form1::SOSbutton20_Click);
             // 
@@ -778,6 +790,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton21->Name = L"SOSbutton21";
             this->SOSbutton21->Size = System::Drawing::Size(71, 69);
             this->SOSbutton21->TabIndex = 21;
+            this->SOSbutton21->Text = L" ";
             this->SOSbutton21->UseVisualStyleBackColor = true;
             this->SOSbutton21->Click += gcnew System::EventHandler(this, &Form1::SOSbutton21_Click);
             // 
@@ -791,6 +804,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton22->Name = L"SOSbutton22";
             this->SOSbutton22->Size = System::Drawing::Size(71, 69);
             this->SOSbutton22->TabIndex = 22;
+            this->SOSbutton22->Text = L" ";
             this->SOSbutton22->UseVisualStyleBackColor = true;
             this->SOSbutton22->Click += gcnew System::EventHandler(this, &Form1::SOSbutton22_Click);
             // 
@@ -804,6 +818,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton23->Name = L"SOSbutton23";
             this->SOSbutton23->Size = System::Drawing::Size(71, 69);
             this->SOSbutton23->TabIndex = 23;
+            this->SOSbutton23->Text = L" ";
             this->SOSbutton23->UseVisualStyleBackColor = true;
             this->SOSbutton23->Click += gcnew System::EventHandler(this, &Form1::SOSbutton23_Click);
             // 
@@ -817,6 +832,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton24->Name = L"SOSbutton24";
             this->SOSbutton24->Size = System::Drawing::Size(75, 69);
             this->SOSbutton24->TabIndex = 24;
+            this->SOSbutton24->Text = L" ";
             this->SOSbutton24->UseVisualStyleBackColor = true;
             this->SOSbutton24->Click += gcnew System::EventHandler(this, &Form1::SOSbutton24_Click);
             // 
@@ -830,6 +846,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton25->Name = L"SOSbutton25";
             this->SOSbutton25->Size = System::Drawing::Size(71, 69);
             this->SOSbutton25->TabIndex = 25;
+            this->SOSbutton25->Text = L" ";
             this->SOSbutton25->UseVisualStyleBackColor = true;
             this->SOSbutton25->Click += gcnew System::EventHandler(this, &Form1::SOSbutton25_Click);
             // 
@@ -843,6 +860,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton26->Name = L"SOSbutton26";
             this->SOSbutton26->Size = System::Drawing::Size(71, 69);
             this->SOSbutton26->TabIndex = 26;
+            this->SOSbutton26->Text = L" ";
             this->SOSbutton26->UseVisualStyleBackColor = true;
             this->SOSbutton26->Click += gcnew System::EventHandler(this, &Form1::SOSbutton26_Click);
             // 
@@ -856,6 +874,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton27->Name = L"SOSbutton27";
             this->SOSbutton27->Size = System::Drawing::Size(71, 69);
             this->SOSbutton27->TabIndex = 27;
+            this->SOSbutton27->Text = L" ";
             this->SOSbutton27->UseVisualStyleBackColor = true;
             this->SOSbutton27->Click += gcnew System::EventHandler(this, &Form1::SOSbutton27_Click);
             // 
@@ -869,6 +888,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton28->Name = L"SOSbutton28";
             this->SOSbutton28->Size = System::Drawing::Size(71, 69);
             this->SOSbutton28->TabIndex = 29;
+            this->SOSbutton28->Text = L" ";
             this->SOSbutton28->UseVisualStyleBackColor = true;
             this->SOSbutton28->Click += gcnew System::EventHandler(this, &Form1::SOSbutton28_Click);
             // 
@@ -882,6 +902,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton29->Name = L"SOSbutton29";
             this->SOSbutton29->Size = System::Drawing::Size(71, 69);
             this->SOSbutton29->TabIndex = 31;
+            this->SOSbutton29->Text = L" ";
             this->SOSbutton29->UseVisualStyleBackColor = true;
             this->SOSbutton29->Click += gcnew System::EventHandler(this, &Form1::SOSbutton29_Click);
             // 
@@ -895,6 +916,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton30->Name = L"SOSbutton30";
             this->SOSbutton30->Size = System::Drawing::Size(75, 69);
             this->SOSbutton30->TabIndex = 32;
+            this->SOSbutton30->Text = L" ";
             this->SOSbutton30->UseVisualStyleBackColor = true;
             this->SOSbutton30->Click += gcnew System::EventHandler(this, &Form1::SOSbutton30_Click);
             // 
@@ -908,6 +930,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton31->Name = L"SOSbutton31";
             this->SOSbutton31->Size = System::Drawing::Size(71, 74);
             this->SOSbutton31->TabIndex = 30;
+            this->SOSbutton31->Text = L" ";
             this->SOSbutton31->UseVisualStyleBackColor = true;
             this->SOSbutton31->Click += gcnew System::EventHandler(this, &Form1::SOSbutton31_Click);
             // 
@@ -921,6 +944,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton32->Name = L"SOSbutton32";
             this->SOSbutton32->Size = System::Drawing::Size(71, 74);
             this->SOSbutton32->TabIndex = 28;
+            this->SOSbutton32->Text = L" ";
             this->SOSbutton32->UseVisualStyleBackColor = true;
             this->SOSbutton32->Click += gcnew System::EventHandler(this, &Form1::SOSbutton32_Click);
             // 
@@ -935,6 +959,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton33->Name = L"SOSbutton33";
             this->SOSbutton33->Size = System::Drawing::Size(71, 74);
             this->SOSbutton33->TabIndex = 33;
+            this->SOSbutton33->Text = L" ";
             this->SOSbutton33->UseVisualStyleBackColor = true;
             this->SOSbutton33->Click += gcnew System::EventHandler(this, &Form1::SOSbutton33_Click);
             // 
@@ -948,6 +973,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton34->Name = L"SOSbutton34";
             this->SOSbutton34->Size = System::Drawing::Size(71, 74);
             this->SOSbutton34->TabIndex = 34;
+            this->SOSbutton34->Text = L" ";
             this->SOSbutton34->UseVisualStyleBackColor = true;
             this->SOSbutton34->Click += gcnew System::EventHandler(this, &Form1::SOSbutton34_Click);
             // 
@@ -961,6 +987,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton35->Name = L"SOSbutton35";
             this->SOSbutton35->Size = System::Drawing::Size(71, 74);
             this->SOSbutton35->TabIndex = 35;
+            this->SOSbutton35->Text = L" ";
             this->SOSbutton35->UseVisualStyleBackColor = true;
             this->SOSbutton35->Click += gcnew System::EventHandler(this, &Form1::SOSbutton35_Click);
             // 
@@ -975,6 +1002,7 @@ private: System::ComponentModel::Container^ components;
             this->SOSbutton36->Name = L"SOSbutton36";
             this->SOSbutton36->Size = System::Drawing::Size(75, 74);
             this->SOSbutton36->TabIndex = 36;
+            this->SOSbutton36->Text = L" ";
             this->SOSbutton36->UseVisualStyleBackColor = true;
             this->SOSbutton36->Click += gcnew System::EventHandler(this, &Form1::SOSbutton36_Click);
             // 
@@ -1077,7 +1105,7 @@ private: System::ComponentModel::Container^ components;
             this->RedComputer->TabStop = true;
             this->RedComputer->Text = L"Computer";
             this->RedComputer->UseVisualStyleBackColor = true;
-            this->RedComputer->CheckedChanged += gcnew System::EventHandler(this, &Form1::Computer_Red_CheckedChanged);
+            
             // 
             // RedHuman
             // 
@@ -4175,7 +4203,7 @@ private: System::ComponentModel::Container^ components;
         {
             int sos = 0;
             if (radioButton10->Checked == true && radioButton9->Checked == false) {
-
+                int count = 9;
                 if (textBox1->Text == "3") {
                     for (int i = 0; i <= 2; i++) {
                         for (int j = 0; j <= 2; j++) {
@@ -4295,7 +4323,7 @@ private: System::ComponentModel::Container^ components;
                             if (sos > 1) {
                                 sos = 1;
                             }
-
+                            
                             if (BlueTurn->Checked == true) {
                                 BlueScore = BlueScore + sos;
                                 textBox2->Text = Convert::ToString(BlueScore);
@@ -4306,11 +4334,14 @@ private: System::ComponentModel::Container^ components;
                             }
                         }
                     }
-                    if(BlueScore > RedScore){
-                        MessageBox::Show("Blue Player is the Winner!!!");
-                    }
-                    if(RedScore > BlueScore){
-                        MessageBox::Show("Red Player is the Winner!!!");
+                   
+                    if (BlueScore >= 5 || RedScore >= 5) {
+                        if (BlueScore > RedScore) {
+                            MessageBox::Show("Blue Player is the Winner!!!");
+                        }
+                        if (RedScore > BlueScore) {
+                            MessageBox::Show("Red Player is the Winner!!!");
+                        }
                     }
                 }
                 if (textBox1->Text == "4") {
@@ -4433,25 +4464,27 @@ private: System::ComponentModel::Container^ components;
                                 sos = 1;
                             }
 
+                            
                             if (BlueTurn->Checked == true) {
                                 BlueScore = BlueScore + sos;
                                 textBox2->Text = Convert::ToString(BlueScore);
                             }
                             if (RedTurn->Checked == true) {
                                 RedScore = RedScore + sos;
-                                textBox3->Text = Convert::ToString(RedScore);
+                                 textBox3->Text = Convert::ToString(RedScore);
                             }
-                        
+                            
                         }
 
                     }
-                    if (BlueScore > RedScore) {
-                        MessageBox::Show("Blue Player is the Winner!!!");
+                    if (BlueScore >= 8 || RedScore >= 8) {
+                        if (BlueScore > RedScore) {
+                            MessageBox::Show("Blue Player is the Winner!!!");
+                        }
+                        if (RedScore > BlueScore) {
+                            MessageBox::Show("Red Player is the Winner!!!");
+                        }
                     }
-                    if (RedScore > BlueScore) {
-                        MessageBox::Show("Red Player is the Winner!!!");
-                    }
-                
                 }
                 if(textBox1->Text == "5"){
                     for (int i = 0; i <= 4; i++) {
@@ -4572,24 +4605,27 @@ private: System::ComponentModel::Container^ components;
                             if (sos > 1) {
                                 sos = 1;
                             }
-
-                            if (BlueTurn->Checked == true) {
-                                BlueScore = BlueScore + sos;
-                                textBox2->Text = Convert::ToString(BlueScore);
-                            }
-                            if (RedTurn->Checked == true) {
-                                RedScore = RedScore + sos;
-                                textBox3->Text = Convert::ToString(RedScore);
-                            }
+                            
+                                if (BlueTurn->Checked == true) {
+                                    BlueScore = BlueScore + sos;
+                                    textBox2->Text = Convert::ToString(BlueScore);
+                                }
+                                if (RedTurn->Checked == true) {
+                                    RedScore = RedScore + sos;
+                                    textBox3->Text = Convert::ToString(RedScore);
+                                }
+                            
                         }
                     }
-                    if (BlueScore > RedScore) {
-                        MessageBox::Show("Blue Player is the Winner!!!");
+                    if (BlueScore >= 13 || RedScore >= 13) {
+
+                        if (BlueScore > RedScore) {
+                            MessageBox::Show("Blue Player is the Winner!!!");
+                        }
+                        if (RedScore > BlueScore) {
+                            MessageBox::Show("Red Player is the Winner!!!");
+                        }
                     }
-                    if (RedScore > BlueScore) {
-                        MessageBox::Show("Red Player is the Winner!!!");
-                    }
-                
                 }
                 if(textBox1->Text == "6"){
                     for (int i = 0; i <= 5; i++) {
@@ -4723,11 +4759,13 @@ private: System::ComponentModel::Container^ components;
                         
                         }
                     }
-                    if (BlueScore > RedScore) {
-                        MessageBox::Show("Blue Player is the Winner!!!");
-                    }
-                    if (RedScore > BlueScore) {
-                        MessageBox::Show("Red Player is the Winner!!!");
+                    if (BlueScore >= 18 || RedScore >= 18) {
+                        if (BlueScore > RedScore) {
+                            MessageBox::Show("Blue Player is the Winner!!!");
+                        }
+                        if (RedScore > BlueScore) {
+                            MessageBox::Show("Red Player is the Winner!!!");
+                        }
                     }
                 }
 
@@ -4739,22 +4777,25 @@ private: System::ComponentModel::Container^ components;
         //Computer, will it work?
         void Computer_Game() {
             srand(time(NULL));
-            int comp_choice = (rand() % 2 + 1);
-            int game1 = 1;
+            int game1 = 1, game2 = 1, game3 = 1, game4 = 1;
             if(textBox1->Text == "3"){
+                int comp_choice = (rand() % 2 + 1);
                 while (game1 < 2) {
                     int a1 = (rand() % 3);
                     int a2 = (rand() % 3);
                     if (b_3[a1, a2]->Text != "S" && b_3[a1, a2]->Text != "O") {
                         if (comp_choice == 1) {
                             if(RedComputer->Checked == true){
+                                RedTurn->Checked = true;
                                 b_3[a1, a2]->ForeColor = System::Drawing::Color::IndianRed;
                             }
                             if (BlueComputer->Checked == true) {
+                                BlueTurn->Checked = true;
                                 b_3[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
                             }
                             b_3[a1, a2]->Text = "S";
                             if (radioButton9->Checked == true) {
+                                
                                 Score();
                             }
                             if (radioButton10->Checked == true) {
@@ -4763,16 +4804,18 @@ private: System::ComponentModel::Container^ components;
                         }
                         if (comp_choice == 2) {
                             if (RedComputer->Checked == true) {
+                                RedTurn->Checked = true;
                                 b_3[a1, a2]->ForeColor = System::Drawing::Color::IndianRed;
                             }
                             if (BlueComputer->Checked == true) {
+                                BlueTurn->Checked = true;
                                 b_3[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
                             }
                             b_3[a1, a2]->Text = "O";
-                            if (radioButton9->Checked == true) {
+                            if (radioButton9->Checked == true && radioButton10->Checked == false) {
                                 Score();
                             }
-                            if (radioButton10->Checked == true) {
+                            if (radioButton10->Checked == true && radioButton9 ->Checked == false) {
                                 Score_General();
                             }
                         }
@@ -4782,117 +4825,238 @@ private: System::ComponentModel::Container^ components;
                 game1 = 1;
             }
             if(textBox1->Text == "4"){
+                int comp_choice = (rand() % 2 + 1);
+                while (game2 < 2) {
                 int b1 = (rand() % 4);
                 int b2 = (rand() % 4); 
-                int game2 = 1;
-                if (b_4[b1, b2]->Text != "S" && b_4[b1, b2]->Text != "O") {
-                    if(comp_choice == 1){
-                        b_4[b1, b2]->Text = "S";
-                        if (RedComputer->Checked == true) {
-                            b_4[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                    if (b_4[b1, b2]->Text != "S" && b_4[b1, b2]->Text != "O") {
+                        if (comp_choice == 1) {
+                            b_4[b1, b2]->Text = "S";
+                            if (RedComputer->Checked == true) {
+                                RedTurn->Checked = true;
+                                b_4[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                            }
+                            if (BlueComputer->Checked == true) {
+                                BlueTurn->Checked = true;
+                                b_4[b1, b2]->ForeColor = System::Drawing::Color::Aqua;
+                            }
+                            if (radioButton9->Checked == true) {
+                                Score();
+                            }
+                            if (radioButton10->Checked == true) {
+                                Score_General();
+                            }
                         }
-                        if (BlueComputer->Checked == true) {
-                            b_4[b1, b2]->ForeColor = System::Drawing::Color::Aqua;
-                        }
-                        if(radioButton9->Checked == true){
-                            Score();
-                        }
-                        if (radioButton10->Checked == true) {
-                            Score_General();
+                        if (comp_choice == 2) {
+                            if (RedComputer->Checked == true) {
+                                RedTurn->Checked = true;
+                                b_4[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                            }
+                            if (BlueComputer->Checked == true) {
+                                BlueTurn->Checked = true;
+                                b_4[b1, b2]->ForeColor = System::Drawing::Color::Aqua;
+                            }
+                            b_4[b1, b2]->Text = "O";
+                            if (radioButton9->Checked == true) {
+                                Score();
+                            }
+                            if (radioButton10->Checked == true) {
+                                Score_General();
+                            }
                         }
                     }
-                    if(comp_choice == 2){
-                        if (RedComputer->Checked == true) {
-                            b_4[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
-                        }
-                        if (BlueComputer->Checked == true) {
-                            b_4[b1, b2]->ForeColor = System::Drawing::Color::Aqua;
-                        }
-                        b_4[b1, b2]->Text = "O";
-                        if (radioButton9->Checked == true) {
-                            Score();
-                        }
-                        if(radioButton10->Checked == true){
-                            Score_General();
-                        }
-                    }
+                    game2++;
                 }
+                game2 = 1;
             }
             if(textBox1->Text == "5"){
-                int c1 = (rand() % 5);
-                int c2 = (rand() % 5);
-                if(b_5[c1,c2]->Text != "S" && b_5[c1,c2]->Text != "O") {
-                    if (comp_choice == 1) {
-                        if (RedComputer->Checked == true) {
-                            b_5[c1, c2]->ForeColor = System::Drawing::Color::IndianRed;
+                int comp_choice = (rand() % 2 + 1);
+                while(game3 < 2){
+                    int c1 = (rand() % 5);
+                    int c2 = (rand() % 5);
+                    if (b_5[c1, c2]->Text != "S" && b_5[c1, c2]->Text != "O") {
+                        if (comp_choice == 1) {
+                            if (RedComputer->Checked == true) {
+                                RedTurn->Checked = true;
+                                b_5[c1, c2]->ForeColor = System::Drawing::Color::IndianRed;
+                            }
+                            if (BlueComputer->Checked == true) {
+                                BlueTurn->Checked = true;
+                                b_5[c1, c2]->ForeColor = System::Drawing::Color::Aqua;
+                            }
+                            b_5[c1, c2]->Text == "S";
+                            if (radioButton9->Checked == true) {
+                                Score();
+                            }
+                            if (radioButton10->Checked == true) {
+                                Score_General();
+                            }
                         }
-                        if (BlueComputer->Checked == true) {
-                            b_5[c1, c2]->ForeColor = System::Drawing::Color::Aqua;
-                        }
-                        b_5[c1, c2]->Text == "S";
-                        if (radioButton9->Checked == true) {
-                            Score();
-                        }
-                        if(radioButton10->Checked == true){
-                            Score_General();
+                        if (comp_choice == 2) {
+                            if (RedComputer->Checked == true) {
+                                RedTurn->Checked = true;
+                                b_5[c1, c2]->ForeColor = System::Drawing::Color::IndianRed;
+                            }
+                            if (BlueComputer->Checked == true) {
+                                BlueTurn->Checked = true;
+                                b_5[c1, c2]->ForeColor = System::Drawing::Color::Aqua;
+                            }
+                            b_5[c1, c2]->Text == "O";
+                            if (radioButton9->Checked == true) {
+                                Score();
+                            }
+                            if (radioButton10->Checked == true) {
+                                Score_General();
+                            }
                         }
                     }
-                    if (comp_choice == 2) {
-                        if (RedComputer->Checked == true) {
-                            b_5[c1, c2]->ForeColor = System::Drawing::Color::IndianRed;
-                        }
-                        if (BlueComputer->Checked == true) {
-                            b_5[c1, c2]->ForeColor = System::Drawing::Color::Aqua;
-                        }
-                        b_5[c1, c2]->Text == "O";
-                        if(radioButton9->Checked == true){
-                            Score();
-                        }
-                        if(radioButton10->Checked == true){
-                            Score_General();
-                        }
-                    }
-
+                    game3++;
                 }
+                game3 = 1;
             }
             if(textBox1->Text == "6"){
-                int d1 = (rand() % 6);
-                int d2 = (rand() % 6);
-                if(b[d1,d2]->Text != "S" && b[d1,d2]->Text != "O"){
-                    if(comp_choice == 1){
-                        b[d1, d2]->Text == "S";
-                        if (RedComputer->Checked == true) {
-                            b[d1, d2]->ForeColor = System::Drawing::Color::IndianRed;
+                int comp_choice = (rand() % 2 + 1);
+                while(game4 < 2) { 
+                    int d1 = (rand() % 6);
+                    int d2 = (rand() % 6);
+                    if (b[d1, d2]->Text != "S" && b[d1, d2]->Text != "O") {
+                        if (comp_choice == 1) {
+                            b[d1, d2]->Text == "S";
+                            if (RedComputer->Checked == true) {
+                                RedTurn->Checked = true;
+                                b[d1, d2]->ForeColor = System::Drawing::Color::IndianRed;
+                            }
+                            if (BlueComputer->Checked == true) {
+                                BlueTurn->Checked = true;
+                                b[d1, d2]->ForeColor = System::Drawing::Color::Aqua;
+                            }
+                            if (radioButton9->Checked == true) {
+                                Score();
+                            }
+                            if (radioButton10->Checked == true) {
+                                Score_General();
+                            }
                         }
-                        if (BlueComputer->Checked == true) {
-                            b[d1, d2]->ForeColor = System::Drawing::Color::Aqua;
-                        }
-                        if (radioButton9->Checked == true) {
-                            Score();
-                        }
-                        if (radioButton10->Checked == true) {
-                            Score_General();
+                        if (comp_choice == 2) {
+                            b[d1, d2]->Text == "O";
+                            if (RedComputer->Checked == true) {
+                                RedTurn->Checked = true;
+                                b[d1, d2]->ForeColor = System::Drawing::Color::IndianRed;
+                            }
+                            if (BlueComputer->Checked == true) {
+                                BlueTurn->Checked = true;
+                                b[d1, d2]->ForeColor = System::Drawing::Color::Aqua;
+                            }
+                            if (radioButton9->Checked == true) {
+                                Score();
+                            }
+                            if (radioButton10->Checked == true) {
+                                Score_General();
+                            }
                         }
                     }
-                    if(comp_choice == 2){
-                        b[d1, d2]->Text == "O";
-                        if (RedComputer->Checked == true) {
-                            b[d1, d2]->ForeColor = System::Drawing::Color::IndianRed;
+                    game4++;
+                }
+                game4 = 1;
+            }
+        }
+         
+
+        void CompVComp() {
+            srand(time(NULL));
+            //int BlueChoice = (rand() % 10 + 1);
+            //int RedChoice = (rand() % 10 + 1);
+            int game1 = 1;
+            if (textBox1->Text == "3") {
+                if (radioButton9->Checked == true) {
+                    while (game1 <= 15) {
+                        int BlueChoice = (rand() % 10 + 1);
+                        int RedChoice = (rand() % 10 + 1);
+                        int a1 = (rand() % 3);
+                        int a2 = (rand() % 3);
+                        int b1 = (rand() % 3);
+                        int b2 = (rand() % 3);
+                        BlueTurn->Enabled = true;
+                        BlueTurn->Checked = true;
+                        if (b_3[a1, a2]->Text != "S" && b_3[a1, a2]->Text != "O") {
+                            if (BlueChoice > 5) {
+                                b_3[a1, a2]->Text = "S";
+                                b_3[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+                            if (BlueChoice <=5) {
+                                b_3[a1, a2]->Text = "O";
+                                b_3[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+                            
                         }
-                        if (BlueComputer->Checked == true) {
-                            b[d1, d2]->ForeColor = System::Drawing::Color::Aqua;
+                        Threading::Thread::Sleep(250);
+                        RedTurn->Checked = true;
+                        if (b_3[b1, b2]->Text != "S" && b_3[b1, b2]->Text != "O") {
+                            if (RedChoice > 5) {
+                                b_3[b1, b2]->Text = "S";
+                                b_3[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score();
+                            }
+                            if (RedChoice <= 5) {
+                                b_3[b1, b2]->Text = "O";
+                                b_3[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score();
+                            }
+                           
                         }
-                        if (radioButton9->Checked == true) {
-                            Score();
+                        game1++;
+                        Threading::Thread::Sleep(250);
+                        
+                    }
+                }
+                if (radioButton10->Checked == true) {
+                    while (game1 <= 15) {
+                        int BlueChoice = (rand() % 10 + 1);
+                        int RedChoice = (rand() % 10 + 1);
+                        int a1 = (rand() % 3);
+                        int a2 = (rand() % 3);
+                        int b1 = (rand() % 3);
+                        int b2 = (rand() % 3);
+                        BlueTurn->Enabled = true;
+                        BlueTurn->Checked = true;
+                        if (b_3[a1, a2]->Text != "S" && b_3[a1, a2]->Text != "O") {
+                            if (BlueChoice > 5) {
+                                b_3[a1, a2]->Text = "S";
+                                b_3[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+                            if (BlueChoice <= 5) {
+                                b_3[a1, a2]->Text = "O";
+                                b_3[a1, a2]->ForeColor = System::Drawing::Color::Aqua;
+                                Score();
+                            }
+
                         }
-                        if (radioButton10->Checked == true) {
-                            Score_General();
+                        Threading::Thread::Sleep(250);
+                        RedTurn->Checked = true;
+                        if (b_3[b1, b2]->Text != "S" && b_3[b1, b2]->Text != "O") {
+                            if (RedChoice > 5) {
+                                b_3[b1, b2]->Text = "S";
+                                b_3[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score_General();
+                            }
+                            if (RedChoice <= 5) {
+                                b_3[b1, b2]->Text = "O";
+                                b_3[b1, b2]->ForeColor = System::Drawing::Color::IndianRed;
+                                Score_General();
+                            }
+
                         }
+                        game1++;
+                        Threading::Thread::Sleep(250);
+
                     }
                 }
             }
         }
-         
+
 
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
         if (String::IsNullOrEmpty(textBox1->Text)) {
@@ -4953,8 +5117,9 @@ private: System::ComponentModel::Container^ components;
   
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
 
-        
+ 
 	}
+
     //change for 
     private: System::Void SOSbutton1_Click(System::Object^ sender, System::EventArgs^ e) {
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
@@ -5332,8 +5497,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton9->Text = "O";
             SOSbutton9->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton10_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5342,8 +5509,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton10->Text = "S";
             SOSbutton10->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
 
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
@@ -5351,24 +5520,30 @@ private: System::ComponentModel::Container^ components;
             SOSbutton10->Text = "O";
             SOSbutton10->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton10->Enabled = true;
             SOSbutton10->Text = "S";
             SOSbutton10->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton10->Enabled = true;
             SOSbutton10->Text = "O"; 
             SOSbutton10->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton11_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5377,32 +5552,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton11->Text = "S";
             SOSbutton11->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "O";
             SOSbutton11->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "S";
             SOSbutton11->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton11->Enabled = true;
             SOSbutton11->Text = "O";
             SOSbutton11->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton12_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5411,32 +5594,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton12->Text = "S";
             SOSbutton12->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "O";
             SOSbutton12->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "S";
             SOSbutton12->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton12->Enabled = true;
             SOSbutton12->Text = "O";
             SOSbutton12->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton13_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5445,16 +5636,20 @@ private: System::ComponentModel::Container^ components;
             SOSbutton13->Text = "S";
             SOSbutton13->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton13->Enabled = true;
             SOSbutton13->Text = "O";
             SOSbutton13->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
 
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
@@ -5462,16 +5657,20 @@ private: System::ComponentModel::Container^ components;
             SOSbutton13->Text = "S";
             SOSbutton13->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton13->Enabled = true;
             SOSbutton13->Text = "O";
             SOSbutton13->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
          }
     }
     private: System::Void SOSbutton14_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5480,8 +5679,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton14->Text = "S";
             SOSbutton14->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
          
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
@@ -5489,8 +5690,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton14->Text = "O";
             SOSbutton14->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
          
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
@@ -5498,16 +5701,20 @@ private: System::ComponentModel::Container^ components;
             SOSbutton14->Text = "S";
             SOSbutton14->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton14->Enabled = true;
             SOSbutton14->Text = "O";
             SOSbutton14->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton15_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5516,32 +5723,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton15->Text = "S";
             SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "O";
             SOSbutton15->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "S";
             SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton15->Enabled = true;
             SOSbutton15->Text = "O";
             SOSbutton15->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton16_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5550,32 +5765,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton16->Text = "S";
             SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "O";
             SOSbutton16->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "S";
             SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton16->Enabled = true;
             SOSbutton16->Text = "O";
             SOSbutton16->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton17_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5584,31 +5807,41 @@ private: System::ComponentModel::Container^ components;
             SOSbutton17->Text = "S";
             SOSbutton17->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "O";
             SOSbutton17->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
+
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "S";
             SOSbutton17->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            BlueTurn->Checked = true;
+            Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton17->Enabled = true;
             SOSbutton17->Text = "O";
             SOSbutton17->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton18_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5617,32 +5850,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton18->Text = "S";
             SOSbutton18->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "O";
             SOSbutton18->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "S";
             SOSbutton18->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton18->Enabled = true;
             SOSbutton18->Text = "O";
             SOSbutton18->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton19_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5651,32 +5892,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton19->Text = "S";
             SOSbutton19->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "O";
             SOSbutton19->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "S";
             SOSbutton19->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton19->Enabled = true;
             SOSbutton19->Text = "O";
             SOSbutton19->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton20_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5685,32 +5934,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton20->Text = "S";
             SOSbutton20->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "O";
             SOSbutton20->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "S";
             SOSbutton20->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton20->Enabled = true;
             SOSbutton20->Text = "O";
             SOSbutton20->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton21_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5719,16 +5976,20 @@ private: System::ComponentModel::Container^ components;
             SOSbutton21->Text = "S";
             SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton21->Enabled = true;
             SOSbutton21->Text = "O";
             SOSbutton21->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
             
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
@@ -5736,8 +5997,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton21->Text = "S";
             SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
            
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
@@ -5745,8 +6008,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton21->Text = "O";
             SOSbutton21->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
             
         }
     }
@@ -5756,8 +6021,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton22->Text = "S";
             SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
            
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
@@ -5765,8 +6032,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton22->Text = "O";
             SOSbutton22->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
             
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
@@ -5774,8 +6043,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton22->Text = "S";
             SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
             
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
@@ -5783,8 +6054,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton22->Text = "O";
             SOSbutton22->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
             
         }
     }
@@ -5794,8 +6067,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton23->Text = "S";
             SOSbutton23->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
            
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
@@ -5803,8 +6078,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton23->Text = "O";
             SOSbutton23->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
            
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
@@ -5812,8 +6089,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton23->Text = "S";
             SOSbutton23->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
             
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
@@ -5821,8 +6100,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton23->Text = "O";
             SOSbutton23->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
             
         }
     }
@@ -5832,8 +6113,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton24->Text = "S";
             SOSbutton24->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
             
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
@@ -5841,27 +6124,30 @@ private: System::ComponentModel::Container^ components;
             SOSbutton24->Text = "O";
             SOSbutton24->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton24->Enabled = true;
             SOSbutton24->Text = "S";
             SOSbutton24->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton24->Enabled = true;
             SOSbutton24->Text = "O";
             SOSbutton24->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton25_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5870,36 +6156,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton25->Text = "S";
             SOSbutton25->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "O";
             SOSbutton25->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
-           
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "S";
             SOSbutton25->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton25->Enabled = true;
             SOSbutton25->Text = "O";
             SOSbutton25->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
-           
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton26_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5908,17 +6198,20 @@ private: System::ComponentModel::Container^ components;
             SOSbutton26->Text = "S";
             SOSbutton26->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton26->Enabled = true;
             SOSbutton26->Text = "O";
             SOSbutton26->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
            
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
@@ -5926,8 +6219,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton26->Text = "S";
             SOSbutton26->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
             
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
@@ -5935,8 +6230,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton26->Text = "O";
             SOSbutton26->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton27_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5945,8 +6242,10 @@ private: System::ComponentModel::Container^ components;
             SOSbutton27->Text = "S";
             SOSbutton27->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
             
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
@@ -5954,27 +6253,30 @@ private: System::ComponentModel::Container^ components;
             SOSbutton27->Text = "O";
             SOSbutton27->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton27->Enabled = true;
             SOSbutton27->Text = "S";
             SOSbutton27->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
-           
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton27->Enabled = true;
             SOSbutton27->Text = "O";
             SOSbutton27->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton28_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -5983,36 +6285,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton28->Text = "S";
             SOSbutton28->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "O";
             SOSbutton28->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "S";
             SOSbutton28->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton28->Enabled = true;
             SOSbutton28->Text = "O";
             SOSbutton28->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
-            
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton29_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -6021,32 +6327,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton29->Text = "S";
             SOSbutton29->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "O";
             SOSbutton29->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "S";
             SOSbutton29->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton29->Enabled = true;
             SOSbutton29->Text = "O";
             SOSbutton29->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton30_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -6055,32 +6369,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton30->Text = "S";
             SOSbutton30->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "O";
             SOSbutton30->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "S";
             SOSbutton30->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton30->Enabled = true;
             SOSbutton30->Text = "O";
             SOSbutton30->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton31_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -6089,32 +6411,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton31->Text = "S";
             SOSbutton31->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "O";
             SOSbutton31->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "S";
             SOSbutton31->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton31->Enabled = true;
             SOSbutton31->Text = "O";
             SOSbutton31->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton32_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -6123,32 +6453,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton32->Text = "S";
             SOSbutton32->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "O";
             SOSbutton32->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "S";
             SOSbutton32->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton32->Enabled = true;
             SOSbutton32->Text = "O";
             SOSbutton32->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton33_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -6157,32 +6495,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton33->Text = "S";
             SOSbutton33->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "O";
             SOSbutton33->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "S";
             SOSbutton33->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton33->Enabled = true;
             SOSbutton33->Text = "O";
             SOSbutton33->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton34_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -6191,32 +6537,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton34->Text = "S";
             SOSbutton34->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "O";
             SOSbutton34->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "S";
             SOSbutton34->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton34->Enabled = true;
             SOSbutton34->Text = "O";
             SOSbutton34->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton35_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -6225,32 +6579,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton35->Text = "S";
             SOSbutton35->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "O";
             SOSbutton35->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "S";
             SOSbutton35->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton35->Enabled = true;
             SOSbutton35->Text = "O";
             SOSbutton35->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
     private: System::Void SOSbutton36_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -6259,32 +6621,40 @@ private: System::ComponentModel::Container^ components;
             SOSbutton36->Text = "S";
             SOSbutton36->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueO->Checked == true) {
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "O";
             SOSbutton36->ForeColor = System::Drawing::Color::Aqua;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedS->Checked == true) {
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "S";
             SOSbutton36->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
         if (RedTurn->Checked == true && RedHuman->Checked == true && RedO->Checked == true) {
             SOSbutton36->Enabled = true;
             SOSbutton36->Text = "O";
             SOSbutton36->ForeColor = System::Drawing::Color::IndianRed;
             Score();
-            finish = 0;
             Score_General();
+            if (RedComputer->Checked == true || BlueComputer->Checked == true) {
+                Computer_Game();
+            }
         }
     }
 
@@ -6298,7 +6668,9 @@ private: System::ComponentModel::Container^ components;
         }
         //textBox2->Text = "0";
         //textBox3->Text = "0";
-
+        if (RedComputer->Checked == true && BlueComputer->Checked == true) {
+            CompVComp();
+        }
        
 
         
@@ -6328,9 +6700,6 @@ private: System::ComponentModel::Container^ components;
         RedScore = 0;
     }
 
-private: System::Void BlueComputer_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void Computer_Red_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+
 };
 }
