@@ -71,10 +71,7 @@ namespace CppCLRWinFormsProject {
                 {SOSbutton16,SOSbutton17,SOSbutton18,SOSbutton19,SOSbutton20}, 
                 {SOSbutton21,SOSbutton22,SOSbutton23,SOSbutton24,SOSbutton25}
             };
-            test = gcnew array<int^>(8)
-            {
-                1,1,1,1,1,1,1,1
-            };
+            
             
 		}
 
@@ -150,14 +147,16 @@ namespace CppCLRWinFormsProject {
     private: System::Windows::Forms::RadioButton^ RedS;
     private: System::Windows::Forms::TextBox^ textBox3;
     private: System::Windows::Forms::RadioButton^ RedComputer;
-
     private: System::Windows::Forms::RadioButton^ RedHuman;
     private: System::Windows::Forms::Button^ button2;
     private: System::Windows::Forms::GroupBox^ groupBox4;
     private: System::Windows::Forms::RadioButton^ RedTurn;
     private: System::Windows::Forms::RadioButton^ BlueTurn;
     private: System::Windows::Forms::Label^ label5;
-    
+    private: System::Windows::Forms::Label^ label6;
+    private: System::Windows::Forms::PictureBox^ pictureBox1;
+    private: System::Windows::Forms::Button^ button1;
+    private: System::ComponentModel::Container^ components;
 
 	private:
 		/// <summary>
@@ -168,12 +167,6 @@ namespace CppCLRWinFormsProject {
         array<Button^, 2>^ b_3;
         array<Button^, 2>^ b_4;
         array<Button^, 2>^ b_5;
-        array<int^, 1>^ test;
-        
-    private: System::Windows::Forms::Label^ label6;
-    private: System::Windows::Forms::PictureBox^ pictureBox1;
-    private: System::Windows::Forms::Button^ button1;
-    private: System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -181,7 +174,7 @@ namespace CppCLRWinFormsProject {
 		/// the contents of this method with the code editor.
 		/// </summary>
         
-        //add clicks
+        
 		void InitializeComponent(void)
 		{
             this->label1 = (gcnew System::Windows::Forms::Label());
@@ -401,6 +394,8 @@ namespace CppCLRWinFormsProject {
             // checkBox1
             // 
             this->checkBox1->AutoSize = true;
+            this->checkBox1->Checked = true;
+            this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
             this->checkBox1->Location = System::Drawing::Point(52, 524);
             this->checkBox1->Name = L"checkBox1";
             this->checkBox1->Size = System::Drawing::Size(114, 20);
@@ -6964,8 +6959,8 @@ namespace CppCLRWinFormsProject {
     }
 
 
-private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 
-}
+    }
 };
 }
