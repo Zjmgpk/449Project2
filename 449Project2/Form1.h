@@ -386,7 +386,6 @@ namespace CppCLRWinFormsProject {
             this->BlueComputer->TabStop = true;
             this->BlueComputer->Text = L"Computer";
             this->BlueComputer->UseVisualStyleBackColor = true;
-            
             // 
             // BlueHuman
             // 
@@ -408,6 +407,7 @@ namespace CppCLRWinFormsProject {
             this->checkBox1->TabIndex = 34;
             this->checkBox1->Text = L"Record Game";
             this->checkBox1->UseVisualStyleBackColor = true;
+            this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &Form1::checkBox1_CheckedChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -1105,7 +1105,6 @@ namespace CppCLRWinFormsProject {
             this->RedComputer->TabStop = true;
             this->RedComputer->Text = L"Computer";
             this->RedComputer->UseVisualStyleBackColor = true;
-            
             // 
             // RedHuman
             // 
@@ -6965,5 +6964,8 @@ namespace CppCLRWinFormsProject {
     }
 
 
+private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+
+}
 };
 }
