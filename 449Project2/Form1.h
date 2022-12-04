@@ -8,7 +8,7 @@
 namespace CppCLRWinFormsProject {
 
 	using namespace System;
-  
+    using namespace System::IO;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
@@ -1225,7 +1225,6 @@ namespace CppCLRWinFormsProject {
         int BlueScore = 0;
         int RedScore = 0;
 #pragma endregion
-        int finish = 0;
         int matrixRow = 3,matrixCol = 9;
        
         String^ Type_Game;
@@ -4970,7 +4969,6 @@ namespace CppCLRWinFormsProject {
                         int a2 = (rand() % 3);
                         int b1 = (rand() % 3);
                         int b2 = (rand() % 3);
-                        BlueTurn->Enabled = true;
                         BlueTurn->Checked = true;
                         if (b_3[a1, a2]->Text != "S" && b_3[a1, a2]->Text != "O") {
                             if (BlueChoice > 5) {
@@ -5277,7 +5275,7 @@ namespace CppCLRWinFormsProject {
                         int a2 = (rand() % 6);
                         int b1 = (rand() % 6);
                         int b2 = (rand() % 6);
-                        BlueTurn->Enabled = true;
+                        //BlueTurn->Enabled = true;
                         BlueTurn->Checked = true;
                         if (b[a1, a2]->Text != "S" && b[a1, a2]->Text != "O") {
                             if (BlueChoice > 5) {
@@ -5313,6 +5311,13 @@ namespace CppCLRWinFormsProject {
                     }
                 }
             }
+        }
+
+
+        void Record_Game(){
+            FileStream ^ fs = File::Create("Game.txt");
+
+        
         }
 
 
@@ -5681,6 +5686,7 @@ namespace CppCLRWinFormsProject {
       if (BlueTurn->Checked == true && BlueHuman->Checked == true && BlueS->Checked == true) {
           SOSbutton8->Enabled = true;
           SOSbutton8->Text = "S";
+          SOSbutton8->ForeColor = System::Drawing::Color::Aqua;
           Score();
           Score_General();
           if (RedComputer->Checked == true || BlueComputer->Checked == true) {
